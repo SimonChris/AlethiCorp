@@ -1,0 +1,13 @@
+﻿@model AlethiCorp.ViewModels.GenderType
+
+<table>
+    <tr>
+        <td>@Html.LabelFor(x => x, "Male")</td>
+        <td>@Html.RadioButtonFor(x => x, (int)AlethiCorp.ViewModels.GenderType.Male, new { @checked = "checked" })</td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(x => x, "Female")</td>
+        <td>@Html.RadioButtonFor(x => x, (int)AlethiCorp.ViewModels.GenderType.Female)</td>
+    </tr>
+</table>
+<br />

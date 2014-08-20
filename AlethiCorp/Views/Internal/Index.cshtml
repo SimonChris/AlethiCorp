@@ -1,0 +1,39 @@
+﻿@model IEnumerable<AlethiCorp.ViewModels.NewsItemViewModel>
+
+@{
+    ViewBag.Title = "News";
+}
+
+<h2>News</h2>
+
+@if (!ViewBag.IsEmployee)
+{
+  <p><i>I like your initiative, but you should probably get a job with the company before you come here.</i></p>
+  <p><i>You don't want to draw attention to yourself.</i></p>
+  
+  <p><i>Omega</i></p>
+}
+else
+{
+  <table class="table">
+  @*    <tr>
+          <th>
+              @Html.DisplayNameFor(model => model.HeadLine)
+          </th>
+          <th>
+              @Html.DisplayNameFor(model => model.MainText)
+          </th>
+      </tr>*@
+
+  @foreach (var item in Model)
+  {
+      <tr>
+          <td><h3>@Html.DisplayFor(modelItem => item.HeadLine)</h3></td>
+      </tr>
+      <tr>
+          <td>@Html.Raw(item.MainText)</td>
+      </tr>
+  }
+
+  </table>
+}

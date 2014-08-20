@@ -1,0 +1,50 @@
+﻿@model AlethiCorp.ViewModels.InterMailViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>InterMail</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Author)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Author)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Subject)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Subject)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Message)
+        </dt>
+
+        <dd>
+            @Html.Raw(Model.Message)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <a class="btn btn-default" href="@Url.Action("Index")">Inbox</a>
+    @if(ViewBag.Ongoing && ViewBag.Enabled)
+    {
+      <a class="btn btn-default" href="@Url.Action("Create", new { id = Model.Id })">Reply</a>
+      <a class="btn btn-default" href="@Url.Action("Create", new { id = Model.Id, forward = true })">Forward</a>
+      <a class="btn btn-default" href="@Url.Action("Delete", new { id = Model.Id })">Delete</a>
+    }
+    else if (ViewBag.ComplyMail)
+    {
+      <a class="btn btn-default" href="@Url.Action("Index", "Final")">Comply</a>
+    }
+</p>

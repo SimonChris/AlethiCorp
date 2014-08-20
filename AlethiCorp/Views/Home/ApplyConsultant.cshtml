@@ -1,0 +1,20 @@
+﻿@using AlethiCorp.DAL
+
+@{
+    ViewBag.Title = "ApplyConsultant";
+}
+
+<h2>Associate Information Management Consultant</h2>
+
+@if (ViewBag.IsEmployee)
+{
+    <p>You are already employeed with AlethiCorp. Please go to the internal page for further instructions.</p>
+}
+else
+{
+    <p>Thank you for your interest in this position.</p>
+
+    <p>All potential AlethiCorp employees are required to take the AlethiCorp personality test.</p>
+
+    <p><a class="btn btn-default" href="@Url.Action("Create", "PersonalityTest")">Click here to start the test</a></p>
+}

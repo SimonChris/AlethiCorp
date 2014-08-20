@@ -1,0 +1,41 @@
+﻿@model AlethiCorp.Models.SentMail
+
+@{
+    ViewBag.Title = "Sent Mail";
+}
+
+<h2>Sent Mail</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Recipient)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Recipient)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Subject)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Subject)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Message)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Message)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <a class="btn btn-default" href="@Url.Action("Sent")">Sent Mail</a>
+    <a class="btn btn-default" href="@Url.Action("Index")">Inbox</a>
+</p>

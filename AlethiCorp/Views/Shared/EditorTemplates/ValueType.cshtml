@@ -1,0 +1,17 @@
+﻿@model AlethiCorp.ViewModels.ValueType
+
+<table>
+<tr>
+    <td>@Html.LabelFor(x => x, "Aletheia")</td>
+    <td>@Html.RadioButtonFor(x => x, (int)AlethiCorp.ViewModels.ValueType.Aletheia, new { @checked = "checked" })</td>
+</tr>
+<tr>
+    <td>@Html.LabelFor(x => x, "Integrity")</td>
+    <td>@Html.RadioButtonFor(x => x, (int)AlethiCorp.ViewModels.ValueType.Integrity)</td>
+</tr>
+<tr>
+    <td>@Html.LabelFor(x => x, "Magnanimity")</td>
+    <td>@Html.RadioButtonFor(x => x, (int)AlethiCorp.ViewModels.ValueType.Magnanimity)</td>
+</tr>
+</table>
+<br />

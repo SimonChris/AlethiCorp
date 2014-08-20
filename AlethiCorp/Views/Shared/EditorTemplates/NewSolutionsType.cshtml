@@ -1,0 +1,13 @@
+﻿@model AlethiCorp.ViewModels.NewSolutionsType
+
+<table>
+    <tr>
+        <td>@Html.LabelFor(x => x, "I try new things as often as possible!")</td>
+        <td>@Html.RadioButtonFor(x => x, (int)AlethiCorp.ViewModels.NewSolutionsType.PreferNew, new { @checked = "checked" })</td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(x => x, "I prefer solutions I know will work")</td>
+        <td>@Html.RadioButtonFor(x => x, (int)AlethiCorp.ViewModels.NewSolutionsType.PreferOld)</td>
+    </tr>
+</table>
+<br />

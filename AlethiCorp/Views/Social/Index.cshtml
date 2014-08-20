@@ -1,0 +1,62 @@
+﻿@model IEnumerable<AlethiCorp.Models.SocialEvent>
+
+@{
+    ViewBag.Title = "Events";
+}
+
+<h2>Events</h2>
+
+@if (ViewBag.Active)
+{
+    <p>Your currently available social events are listed below.</p>
+    <p>Employees who regularly attend social events are @ViewBag.Percent % more productive on average.</p>
+}
+else
+{
+    <p>There are currently no available social events.</p>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Attending)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contribution)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Attending)
+        </td>
+        <td>
+            @if (!item.Contribution.IsEmpty())
+            {
+                @Html.DisplayFor(modelItem => item.Contribution)<span>!</span>
+            }
+        </td>
+        <td>
+            @if (!item.Attending)
+            {
+                <a class="btn btn-default" href="@Url.Action("Edit", new { id = item.Id })">Sign up!</a>
+            }
+        </td>
+    </tr>
+}
+
+</table>

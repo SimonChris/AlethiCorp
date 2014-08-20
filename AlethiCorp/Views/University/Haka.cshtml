@@ -1,0 +1,229 @@
+﻿@model int?
+@{
+    ViewBag.Title = "Introduction to Haka";
+}
+
+<h2>Introduction to Haka</h2>
+
+@if (Model == 0)
+{
+    <h3>Lesson 1: Adroit work processes</h3>
+
+    <p>
+        Haka is an implementation of the principles of Adroit work. The concept of an adroit work process
+        developed from earlier more anarchist work methods, which nonetheless contained useful concepts, that
+        merely needed to be adapted for corporate use.
+    </p>
+
+    <p>
+        The values and principles of adroit work are contained in The Adroit Manifesto, which we
+        will be looking at next. Click the button below to read the manifesto.
+    </p>
+
+    <a class="btn btn-default" href="@Url.Action("Haka", new { page = 1 })">Next &raquo;</a>
+}
+else if (Model == 1)
+{
+    <h2><b>Manifesto for Adroit Work</b></h2>
+    <p>
+
+        <font size="+2">
+            We have determined new superior ways of achieving
+            <br>results by combining the needs of
+            individuals and organisations.
+            <br>Through this work, we have learned to demand:<br>
+        </font>
+    </p>
+    <p>
+        <font size="+2">
+        </font><font size="+3">Processes and tools </font><font size="+2">facilitating synergistic interaction between resources<br></font>
+        <font size="+2"></font><font size="+3">Comprehensive documentation </font><font size="+2">facilitating functional deliverables<br></font>
+        <font size="+2"></font><font size="+3">Regular contract renegotiations </font><font size="+2">facilitating customer collaboration<br></font>
+        <font size="+2"></font><font size="+3">Rigorous change management procedures and planning </font><font size="+2">facilitating adaptability and flexibility in responding to change in ways that leverage the synergies intrinsic to the resource team<br></font>
+    </p>
+    <p>
+        <font size="+2">
+            That is, while the items on the left are fine,<br>they must be adapted to facilitate the items
+            on the right,<br>without losing control of the process.<br>
+        </font>
+    </p>
+
+    <a class="btn btn-default" href="@Url.Action("Haka", new { page = 2 })">Next &raquo;</a>
+}
+else if (Model == 2)
+{
+    <h3>Lesson 2: What is Haka?</h3>
+
+    <p><img src='../../Images/Haka.jpg' /></p>
+
+    <p>
+        Haka is a framework for controlling complex work processes. It takes its name from a traditional Maori war dance, which
+        was performed by the New Zealand rugby team prior to international matches.
+    </p>
+
+    <p>
+        Haka developed from earlier rugby-based work methods, which were popular in the early 21th century. In the rugby approach, the
+        whole process is performed by one cross-functional team across multiple overlapping phases.
+    </p>
+
+    <a class="btn btn-default" href="@Url.Action("Haka", new { page = 3 })">Next &raquo;</a>
+}
+else if (Model == 3)
+{
+    <h3>Lesson 3: The Haka Team</h3>
+
+    <p>The Haka team consists of the Haka Leader, the Haka Manager, the Haka Facilitator and the Resource Team.</p>
+
+    <h4>The Haka Leader</h4>
+
+    <p>
+        The Haka Leader is responsible for communicating with the customers, and ensuring that the currently negotiated
+        contract reflects customer demands. The Haka Leader also manages the morning Haka meeting.
+    </p>
+
+    <h4>The Haka Manager</h4>
+
+    <p>
+        The Haka Manager determines what should be achieved in the current jump, after dicussing the customer
+        requirements with the Haka Leader. The Haka Manager also manages the afternoon and late-afternoon Haka meetings.
+        When Impediments are identified during the afternoon Haka meeting, the Haka Manager is responsible for assigning
+        resources to the impediments.
+    </p>
+
+    <h4>The Haka Facilitator</h4>
+
+    <p>
+        The Haka Facilitator is responsible for ensuring that everyone follows the rules and processes of Haka. While the
+        Haka Facilitator does not manage any of the Haka meetings, (s)he is responsible for ensuring that everyone participates.
+        The Haka Facilitator has the authority to replace the other roles, if they do not follow the Haka rules.
+    </p>
+
+    <h4>The Resource Team</h4>
+
+    <p>
+        The Resource Team consists of all the resources assigned to the current jump. The Resource Team works in accordance
+        with the rules and processes of Haka, to ensure maximum synergy.
+    </p>
+
+    <a class="btn btn-default" href="@Url.Action("Haka", new { page = 4 })">Next &raquo;</a>
+}
+else if (Model == 4)
+{
+    <h3>Lesson 4: Haka meetings</h3>
+
+    <p>
+        Haka is an iterative work process, in which work is divided into discreet intervals. Each iteration of work
+        is called a "Quantum Jump", or "Jump" for short, to indicate the leap in understanding that is experienced by
+        the Haka team. Haka jumps must be between 3 and 5 weeks in length, and the duration must be agreed upon beforehand.
+    </p>
+
+    <p>
+        During each jump a specific series of meetings must occur. The Haka Facilitator is responsible for ensuring that the
+        meetings are held in accordance with the Haka rules.
+    </p>
+
+    <h3>The Daily Meetings</h3>
+
+    <p>During the jump, a series of short meetings are held each day, to create synergy.</p>
+
+    <h4>Morning Haka Meeting</h4>
+
+    <p>
+        The Morning Haka Meeting takes place at the start of the workday. At the morning meeting, the resources take turns
+        describing what work they performed the day before. The meeting is a stand-up, to keep the resources alert and attentive.
+    </p>
+
+    <h4>Afternoon Haka Meeting</h4>
+
+    <p>
+        The Afternoon Haka Meeting takes place in the early afternoon. At the afternoon meeting, the resources describe what
+        work they are doing, and identify any Impediments which might be preventing them from working optimally. The afternoon meeting
+        is also a stand-up.
+    </p>
+
+    <h4>Late-afternoon Haka Meeting</h4>
+
+    <p>
+        The Late-afternoon Haka Meeting takes place shortly before the end of the workday. At the late-afternoon meeting, the
+        resources describe what work they are planning to perfom the following day. Unlike the previous daily meetings, the
+        late-afternoon meeting is held sitting, so the resources can relax and reflect on the lessons of the day.
+    </p>
+
+    <a class="btn btn-default" href="@Url.Action("Haka", new { page = 5 })">Next &raquo;</a>
+}
+else if (Model == 5)
+{
+    <h3>Lesson 5: The big Haka meetings</h3>
+    
+    <p>In the addition to the daily meetings, several big meetings must be held once every jump.</p>
+
+    <h3>The Jump Planning Meeting</h3>
+
+    <p>
+        The jump planning meeting must be held at the beginning of each jump. Before the start of the jump planning meeting, the
+        Haka Leader renegotiates the contract with the customers to reflect the new knowledge gained during the previous jump. The
+        Haka Leader then meets with the Haka Manager, to decide what work must be done during the next jump. The work is broken
+        into individual tasks, which are assigned to the resources by the Haka Manager.
+    </p>
+
+    <h3>Mid-Jump Replanning Meeting</h3>
+
+    <p>
+        The Mid-Jump Replanning meeting takes place during the mid-third of the jump. The exact time must be different each jump, and
+        is determined privately by the Haka Facilitator. The time of the meeting must come as a surprise to the resources. In this
+        way, the resources do not become complacent. At the meeting, the Haka Manager assigns new tasks to the resources, in collaboration
+        with the Haka Facilitator.
+    </p>
+
+    <h3>The Touchdown Meeting</h3>
+
+    <p>
+        The Touchdown Meeting is held at the end of the jump. The three Haka officers meet with the customers in an undisclosed
+        location, to discuss the results of the jump. Haka recognizes that work must be a black box, where the resources are kept isolated
+        from the customers.
+    </p>
+
+    <h3>The Jump Introspective</h3>
+
+    <p>
+        The Jump Introspective meeting occurs right after the Touchdown Meeting. The Haka Facilitator relocates to a secluded
+        location, to meditate on how to improve the work process for the next jump. No one alse is allowed to attend the introspective.
+        Only the final conclusions of the Haka Facilitator are relayed to the other team members.
+    </p>
+    
+    <a class="btn btn-default" href="@Url.Action("Haka", new { page = 6 })">Next &raquo;</a>
+}
+else if (Model == 6)
+{
+    <h3>Final exam</h3>
+    
+    <p>You should now be familiar with all the essential components of a succesful Haka project.</p>
+    <p>Click the button below to take the final test, and become Haka certified!</p>
+    
+    <a class="btn btn-default" href="@Url.Action("HakaExam")">Take the test &raquo;</a>
+}
+else if(ViewBag.Day < 1)
+{
+    <p>Nice job! Omega didn't think you'd make it here by yourself, but thon is always so cynical.
+    I always knew you had it in you :)</p>
+    
+    <p>Check back here later, and we might have a job for you...</p>
+    
+    <p>Alpha</p>
+}
+else
+{
+  <p>
+    Great, you're here! Omega still has some doubts about you, but I've convinced thon that
+    you're worth giving a chance :). If you would like to prove yourself, we have
+    a job for you...
+  </p>
+
+  <p>Benedetto Tornincasa is with us. You are to contact him, and let him know that we are ready.
+    This is what you are to say to him: "IAM has sent me to you."
+  </p>
+  
+  <p>He will know what to do. We will be in touch later.</p>
+
+  <p>Alpha</p>
+}

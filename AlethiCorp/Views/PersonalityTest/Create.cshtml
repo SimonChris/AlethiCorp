@@ -1,0 +1,164 @@
+﻿@model AlethiCorp.ViewModels.PersonalityTestViewModel
+
+@{
+    ViewBag.Title = "Personality Test";
+}
+
+<h2>AlethiCorp Personality Test</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.FavoriteColor, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <br />
+                @Html.EditorFor(model => model.FavoriteColor, new { htmlAttributes = new { @class = "form-control", data_autocomplete = Url.Action("ColorSuggestions")} })
+                @Html.ValidationMessageFor(model => model.FavoriteColor, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FavoriteDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <br />
+                @Html.EditorFor(model => model.FavoriteDate, "DateTime", new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FavoriteDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.BearType, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <br />
+                @Html.EditorFor(model => model.BearType, new { htmlAttributes = new { @class = "form-control", data_autocomplete = Url.Action("BearSuggestions") } })
+                @Html.ValidationMessageFor(model => model.BearType, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TeamPlayer, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <br />
+                @Html.EditorFor(model => model.TeamPlayer, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TeamPlayer, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ValueTypeSelection, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <br />
+                @Html.EditorFor(model => model.ValueTypeSelection, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ValueTypeSelection, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <h4 class ="control-label col-md-2">Human rights...</h4>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.RightsNecessary, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.RightsNecessary)
+                    @Html.ValidationMessageFor(model => model.RightsNecessary, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.RightsNotNecessary, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.RightsNotNecessary)
+                    @Html.ValidationMessageFor(model => model.RightsNotNecessary, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.RightsParsimony, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.RightsParsimony)
+                    @Html.ValidationMessageFor(model => model.RightsParsimony, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.RightsGrizzlyBear, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.RightsGrizzlyBear)
+                    @Html.ValidationMessageFor(model => model.RightsGrizzlyBear, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MaxCivilians, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <br />
+                <br />
+                @Html.EditorFor(model => model.MaxCivilians, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.MaxCivilians, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.WhyWork, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <br />
+                @Html.EditorFor(model => model.WhyWork, new { htmlAttributes = new { @class = "form-control", data_autocomplete = Url.Action("WorkSuggestions") } })
+                @Html.ValidationMessageFor(model => model.WhyWork, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FollowRules, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    <br />
+                    @Html.LabelFor(x => x, "Yes")@Html.EditorFor(model => model.FollowRules)
+                    @Html.ValidationMessageFor(model => model.FollowRules, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Adventurous, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <br />
+                @Html.EditorFor(model => model.Adventurous, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Adventurous, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NewSolutions, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <br />
+                @Html.EditorFor(model => model.NewSolutions, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.NewSolutions, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Submit" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

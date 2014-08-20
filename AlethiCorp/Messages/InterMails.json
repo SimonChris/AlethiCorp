@@ -1,0 +1,527 @@
+﻿[
+    {
+        "Name": "DefaultMail",
+        "Author": "Oskar Jönsson",
+        "Subject": "Dear Employee",
+        "Date": "0",
+        "Message": "Messages/DayOne/InterMail/DefaultMail.html"
+    },
+
+    {
+        "Name": "AlexDuMaurierWelcome",
+        "Author": "Alex DuMaurier",
+        "Subject": "New challenges ahead",
+        "Date": "0",
+        "Message": "Messages/DayOne/InterMail/AlexDuMaurierWelcome.html"
+    },
+
+    {
+        "Name": "OskarWebsite",
+        "Author": "Oskar Jönsson",
+        "Subject": "Website problems",
+        "Date": "0",
+        "Message": "Messages/DayOne/InterMail/OskarWebsite.html"
+    },
+
+    {
+        "Name": "SandraWelcome",
+        "Author": "Sandra Silvern",
+        "Subject": "Welcome to the team!",
+        "Date": "0",
+        "Message": "Messages/DayOne/InterMail/SandraWelcome.html"
+    },
+
+    {
+        "Name": "SandraWeekly",
+        "Author": "Sandra Silvern",
+        "Subject": "Weekly update",
+        "Date": "0",
+        "Message": "Messages/DayOne/InterMail/SandraWeekly.html"
+    },
+
+    {
+        "Name": "Benedetto",
+        "Author": "Benedetto Tornincasa",
+        "Subject": "Team potluck tonight!",
+        "Date": "0",
+        "Message": "Messages/DayOne/InterMail/Benedetto.html"
+    },
+
+
+    {
+        "Name": "VedeninFound",
+        "Author": "Vitaly Vedenin",
+        "Subject": "Information",
+        "Date": "1",
+        "Message": "Messages/DayTwo/InterMail/VedeninFound.html"
+    },
+
+    {
+        "Name": "VedeninMany",
+        "Author": "Vitaly Vedenin",
+        "Subject": "By the way",
+        "Date": "1",
+        "Message": "Messages/DayTwo/InterMail/VedeninMany.html"
+    },
+
+    {
+        "Name": "OmegaSnitch",
+        "Author": "Omega",
+        "Subject": "Hello, snitch",
+        "Date": "1",
+        "Message": "Messages/DayTwo/InterMail/OmegaSnitch.html"
+    },
+
+    {
+        "Name": "VedeninNone",
+        "Author": "Vitaly Vedenin",
+        "Subject": "Information",
+        "Date": "1",
+        "Message": "Messages/DayTwo/InterMail/VedeninNone.html"
+    },
+
+    {
+        "Name": "OmegaSurprised",
+        "Author": "Omega",
+        "Subject": "Pleasantly surprised...",
+        "Date": "1",
+        "Message": "Messages/DayTwo/InterMail/OmegaSurprised.html"
+    },
+
+    {
+        "Name": "OmegaSurprisedNoFound",
+        "Author": "Omega",
+        "Subject": "Pleasantly surprised...",
+        "Date": "1",
+        "Message": "Messages/DayTwo/InterMail/OmegaSurprisedNoFound.html"
+    },
+
+    {
+        "Name": "OmegaDeletedAll",
+        "Author": "Omega",
+        "Subject": "Ahahahaha",
+        "Date": "1",
+        "Message": "Messages/DayTwo/InterMail/OmegaDeletedAll.html"
+    },
+
+    {
+        "Name": "OmegaNothingFlaggedDeletedSuspicious",
+        "Author": "Omega",
+        "Subject": "Nice job!",
+        "Date": "1",
+        "Message": "Messages/DayTwo/InterMail/OmegaNothingFlaggedDeletedSuspicious.html"
+    },
+
+    {
+        "Name": "BenedettoContrib",
+        "Author": "Benedetto Tornincasa",
+        "Subject": "Potluck review!",
+        "Date": "1",
+        "Message": "Messages/DayTwo/InterMail/BenedettoContrib.html"
+    },
+
+    {
+        "Name": "BenedettoNoShow",
+        "Author": "Benedetto Tornincasa",
+        "Subject": "Missed you at the potluck!",
+        "Date": "1",
+        "Message": "Messages/DayTwo/InterMail/BenedettoNoShow.html"
+    },
+
+    {
+        "Name": "BenedettoNoContrib",
+        "Author": "Benedetto Tornincasa",
+        "Subject": "Potluck review!",
+        "Date": "1",
+        "Message": "Messages/DayTwo/InterMail/BenedettoNoContrib.html"
+    },
+
+    {
+        "Name": "BenedettoGrizzly",
+        "Author": "Benedetto Tornincasa",
+        "Subject": "AWESOME!",
+        "Date": "1",
+        "Message": "Messages/DayTwo/InterMail/BenedettoGrizzly.html"
+    },
+
+    {
+        "Name": "BenedettoSpatula",
+        "Author": "Benedetto Tornincasa",
+        "Subject": "Potluck review!",
+        "Date": "1",
+        "Message": "Messages/DayTwo/InterMail/BenedettoSpatula.html"
+    },
+
+    {
+        "Name": "SandraCorrectFlagged",
+        "Author": "Sandra Silvern",
+        "Subject": "Great job!",
+        "Date": "1",
+        "Message": "Messages/DayTwo/InterMail/SandraCorrectFlagged.html"
+    },
+
+    {
+        "Name": "SandraDeletedAll",
+        "Author": "Sandra Silvern",
+        "Subject": "What the hell...",
+        "Date": "1",
+        "Message": "Messages/DayTwo/InterMail/SandraDeletedAll.html"
+    },
+
+    {
+        "Name": "SandraNothingFlagged",
+        "Author": "Sandra Silvern",
+        "Subject": "Really?",
+        "Date": "1",
+        "Message": "Messages/DayTwo/InterMail/SandraNothingFlagged.html"
+    },
+
+    {
+        "Name": "SandraNothingFlaggedDeletedSuspicious",
+        "Author": "Sandra Silvern",
+        "Subject": "Really?",
+        "Date": "1",
+        "Message": "Messages/DayTwo/InterMail/SandraNothingFlaggedDeletedSuspicious.html"
+    },
+
+    {
+        "Name": "SandraSomethingFlagged",
+        "Author": "Sandra Silvern",
+        "Subject": "Good job, but there is room for improvement",
+        "Date": "1",
+        "Message": "Messages/DayTwo/InterMail/SandraSomethingFlagged.html"
+    },
+
+    {
+        "Name": "SandraSomethingFlaggedDeletedSuspicious",
+        "Author": "Sandra Silvern",
+        "Subject": "Good job",
+        "Date": "1",
+        "Message": "Messages/DayTwo/InterMail/SandraSomethingFlaggedDeletedSuspicious.html"
+    },
+
+    {
+        "Name": "ShaoGreeting",
+        "Author": "Shào Lingfei",
+        "Subject": "Looking forward to working with you",
+        "Date": "1",
+        "Message": "Messages/DayTwo/InterMail/ShaoGreeting.html"
+    },
+
+    {
+        "Name": "ShaoBear",
+        "Author": "Shào Lingfei",
+        "Subject": "Looking forward to working with you",
+        "Date": "1",
+        "Message": "Messages/DayTwo/InterMail/ShaoBear.html"
+    },
+
+    {
+        "Name": "AlexReply",
+        "Author": "Alex DuMaurier",
+        "Date": "1",
+        "Message": "Messages/DayTwo/InterMail/Replies/AlexReply.html"
+    },
+
+    {
+        "Name": "AndreaMalcolm",
+        "Author": "Andrea Schueler",
+        "Date": "1",
+        "Message": "Messages/DayTwo/InterMail/Replies/AndreaMalcolm.html"
+    },
+
+    {
+        "Name": "AndreaReply",
+        "Author": "Andrea Schueler",
+        "Date": "1",
+        "Message": "Messages/DayTwo/InterMail/Replies/AndreaReply.html"
+    },
+
+    {
+        "Name": "BenedettoReply",
+        "Author": "Benedetto Tornincasa",
+        "Date": "1",
+        "Message": "Messages/DayTwo/InterMail/Replies/BenedettoReply.html"
+    },
+
+    {
+        "Name": "BenedettoHaka",
+        "Author": "Benedetto Tornincasa",
+        "Date": "1",
+        "Message": "Messages/DayTwo/InterMail/Replies/BenedettoHaka.html"
+    },
+
+    {
+        "Name": "OmegaReply",
+        "Author": "Omega",
+        "Date": "1",
+        "Message": "Messages/DayTwo/InterMail/Replies/OmegaReply.html"
+    },
+
+    {
+        "Name": "OskarReply",
+        "Author": "Oskar Jönsson",
+        "Date": "1",
+        "Message": "Messages/DayTwo/InterMail/Replies/OskarReply.html"
+    },
+
+    {
+        "Name": "OskarHackers",
+        "Author": "Oskar Jönsson",
+        "Date": "1",
+        "Message": "Messages/DayTwo/InterMail/Replies/OskarHackers.html"
+    },
+
+    {
+        "Name": "SandraReply",
+        "Author": "Sandra Silvern",
+        "Date": "1",
+        "Message": "Messages/DayTwo/InterMail/Replies/SandraReply.html"
+    },
+
+    {
+        "Name": "SandraHaka",
+        "Author": "Sandra Silvern",
+        "Date": "1",
+        "Message": "Messages/DayTwo/InterMail/Replies/SandraHaka.html"
+    },
+
+    {
+        "Name": "VitalyReply",
+        "Author": "Vitaly Vedenin",
+        "Date": "1",
+        "Message": "Messages/DayTwo/InterMail/Replies/VitalyReply.html"
+    },
+
+    {
+        "Name": "OskarArrestedDeletedAll",
+        "Author": "Oskar Jönsson",
+        "Subject": "Well, that was easy",
+        "Date": "2",
+        "Message": "Messages/Conclusion/InterMail/OskarArrestedDeletedAll.html"
+    },
+
+    {
+        "Name": "OskarArrestedDeletedAllMail",
+        "Author": "Oskar Jönsson",
+        "Subject": "Well, that was easy",
+        "Date": "2",
+        "Message": "Messages/Conclusion/InterMail/OskarArrestedDeletedAllMail.html"
+    },
+
+    {
+        "Name": "SandraArrestedDeletedAll",
+        "Author": "Sandra Silvern",
+        "Subject": "Disappointed",
+        "Date": "2",
+        "Message": "Messages/Conclusion/InterMail/SandraArrestedDeletedAll.html"
+    },
+
+    {
+        "Name": "VedeninArrested",
+        "Author": "Vitaly Vedenin",
+        "Subject": "Comply",
+        "Date": "2",
+        "Message": "Messages/Conclusion/InterMail/VedeninArrested.html"
+    },
+
+    {
+        "Name": "BenedettoReplyDayThree",
+        "Author": "Benedetto Tornincasa",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/Replies/BenedettoReply.html"
+    },
+
+    {
+        "Name": "BenedettoIAM",
+        "Author": "Benedetto Tornincasa",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/Replies/BenedettoIAM.html"
+    },
+
+    {
+        "Name": "DayThreeVedeninFound",
+        "Author": "Vitaly Vedenin",
+        "Subject": "Information",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/DayThreeVedeninFound.html"
+    },
+
+    {
+        "Name": "DayThreeVedeninNone",
+        "Author": "Vitaly Vedenin",
+        "Subject": "Information",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/DayThreeVedeninNone.html"
+    },
+
+    {
+        "Name": "DayThreeVedeninMany",
+        "Author": "Vitaly Vedenin",
+        "Subject": "One more thing",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/DayThreeVedeninMany.html"
+    },
+
+    {
+        "Name": "DayThreeOmegaInfiltrator",
+        "Author": "Omega",
+        "Subject": "Excellent",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/OmegaInfiltrator.html"
+    },
+
+    {
+        "Name": "DayThreeOmegaNoInfiltrator",
+        "Author": "Omega",
+        "Subject": "Pity",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/OmegaNoInfiltrator.html"
+    },
+
+    {
+        "Name": "DayThreeAlphaNoInfiltrator",
+        "Author": "Alpha",
+        "Subject": "I still believe in you!",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/AlphaNoInfiltrator.html"
+    },
+
+    {
+        "Name": "DayThreeSalvinuContrib",
+        "Author": "Salvinu Manduca",
+        "Subject": "About your case",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/DayThreeSalvinuContrib.html"
+    },
+
+    {
+        "Name": "DayThreeSalvinuNoShow",
+        "Author": "Salvinu Manduca",
+        "Subject": "About your case",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/DayThreeSalvinuNoShow.html"
+    },
+
+    {
+        "Name": "DayThreeSalvinuNoContrib",
+        "Author": "Salvinu Manduca",
+        "Subject": "About your case",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/DayThreeSalvinuNoContrib.html"
+    },
+
+    {
+        "Name": "DayThreeSalvinuGrizzly",
+        "Author": "Salvinu Manduca",
+        "Subject": "About your bear!",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/DayThreeSalvinuGrizzly.html"
+    },
+
+    {
+        "Name": "DayThreeSalvinuSpatula",
+        "Author": "Salvinu Manduca",
+        "Subject": "Spatula",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/DayThreeSalvinuSpatula.html"
+    },
+
+    {
+        "Name": "DayThreeBenedettoNoShow",
+        "Author": "Benedetto Tornincasa",
+        "Subject": "Missed you at the onboarding event!",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/DayThreeBenedettoNoShow.html"
+    },
+
+    {
+        "Name": "DayThreeBenedettoExpectedContrib",
+        "Author": "Benedetto Tornincasa",
+        "Subject": "Onboarding follow-up",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/DayThreeBenedettoExpectedContrib.html"
+    },
+
+    {
+        "Name": "DayThreeBenedettoDoubleGrizzly",
+        "Author": "Benedetto Tornincasa",
+        "Subject": "Hahahaha",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/DayThreeBenedettoDoubleGrizzly.html"
+    },
+
+    {
+        "Name": "DayThreeBenedettoGrizzly",
+        "Author": "Benedetto Tornincasa",
+        "Subject": "AWESOME!",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/DayThreeBenedettoGrizzly.html"
+    },
+
+    {
+        "Name": "DayThreeBenedettoDifferentContrib",
+        "Author": "Benedetto Tornincasa",
+        "Subject": "Onboarding follow-up",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/DayThreeBenedettoDifferentContrib.html"
+    },
+
+    {
+        "Name": "DayThreeSandraResults",
+        "Author": "Sandra Silvern",
+        "Subject": "Congratulations!",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/DayThreeSandraResults.html"
+    },
+
+    {
+        "Name": "DayThreeSandraNoResults",
+        "Author": "Sandra Silvern",
+        "Subject": "Some concern",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/DayThreeSandraNoResults.html"
+    },
+
+    {
+        "Name": "DayThreeShaoAllResults",
+        "Author": "Shào Lingfei",
+        "Subject": "Great job!",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/DayThreeShaoAllResults.html"
+    },
+
+    {
+        "Name": "DayThreeShaoResults",
+        "Author": "Shào Lingfei",
+        "Subject": "Good job",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/DayThreeShaoResults.html"
+    },
+
+    {
+        "Name": "DayThreeShaoResultsDeletedSuspicious",
+        "Author": "Shào Lingfei",
+        "Subject": "Fine job",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/DayThreeShaoResultsDeletedSuspicious.html"
+    },
+
+    {
+        "Name": "DayThreeShaoNoResults",
+        "Author": "Shào Lingfei",
+        "Subject": "You can do better",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/DayThreeShaoNoResults.html"
+    },
+
+    {
+        "Name": "DayThreeShaoNoResultsDeletedSuspicious",
+        "Author": "Shào Lingfei",
+        "Subject": "You can do better than this",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/DayThreeShaoNoResultsDeletedSuspicious.html"
+    }
+
+
+]

@@ -1,0 +1,54 @@
+﻿body {
+    background-image:url("../Images/CorpBackground.jpg");
+    background-size: cover;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.jumbotron {
+  padding: 20px;
+  margin-bottom: 30px;
+  font-size: 21px;
+  font-weight: 200;
+  line-height: 2.1428571435;
+  color: inherit;
+  background-color: #eeeeee;
+}
+
+.navbar {
+    background-image:url("../Images/BlackMarble.png");
+    background-size: contain;
+}
+
+/* unvisited link */
+a:link {
+color: #000000;
+}
+
+/* visited link */
+a:visited {
+color: #000000;
+}
+
+/* mouse over link */
+a:hover {
+color: #000000;
+}
+
+/* selected link */
+a:active {
+color: #000000;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}

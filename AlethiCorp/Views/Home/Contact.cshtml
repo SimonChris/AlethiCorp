@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<h2>@ViewBag.Title</h2>
+
+@if(ViewBag.Comply)
+{
+  <h3>We will contact you.</h3>
+  
+  <h3>Check your InterMail for instructions.</h3>
+}
+else
+{
+  <address>
+      <p>The addresses of AlethiCorp offices are kept confidential for security purposes.</p>
+      <p>Employees will be told where to report on a need-to-know basis.</p>
+      <abbr title="Phone">Phone:</abbr>
+      Classified
+  </address>
+
+  <address>
+      <strong>Support:</strong><strong><a href="mailto:Simon@sichris.com">Simon@sichris.com</a></strong><br />
+      <strong>Management:</strong> Classified <br />
+      <strong>Sales:</strong> Classified
+  </address>
+}

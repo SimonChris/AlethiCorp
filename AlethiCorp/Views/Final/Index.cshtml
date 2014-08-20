@@ -1,0 +1,40 @@
+﻿@{
+  Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width" />
+  <title>The End</title>
+</head>
+<body>
+  <div>
+    <audio autoplay src="../../Images/Larkin.wav"></audio>
+
+    <p><b>Take One Home for the Kiddies</b></p>
+
+    <p>On shallow straw, in shadeless glass,</p>
+    <p>Huddled by empty bowls, they sleep:</p>
+    <p>No dark, no dam, no earth, no grass -</p>
+    <p><i>Mam, get us one of them to keep.</i></p>
+
+    <p>Living toys are something novel,</p>
+    <p>But it soon wears off somehow.</p>
+    <p>Fetch the shoebox, fetch the shovel -</p>
+    <p><i>Mam, we're playing funerals now.</i></p>
+
+    <p>Philip Larkin - 1960</p>
+
+    @if (Request.IsAuthenticated)
+    {
+      using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+      {
+        @Html.AntiForgeryToken()
+        <p><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a> | @Html.ActionLink("Restart game", "ResetAll", "Internal")</p>
+      }
+    }
+  </div>
+</body>
+</html>

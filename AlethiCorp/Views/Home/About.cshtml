@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "History";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title</h1>
+</hgroup>
+
+<article>
+  @if (ViewBag.Comply)
+  {
+    <h2>Yours ends now.</h2>
+  }
+  else
+  {
+    <p>
+        This interactive history tour requires WebViewer 7.5 or higher.
+    </p>
+    <p>Please upgrade your browser.</p>
+    if (ViewBag.Omega)
+    {
+        <p><i>Yeah, you seem to be the only employee still using that antiquated browser.</i></p>
+        <p>
+            <i>
+                No one else will see this, unless they are as old-fashioned as you, in which case they probably won't
+                know what to do with it...
+            </i>
+        </p>
+        <p>
+            <i>
+                Nonetheless, this isn't quite secure enough for IAM purposes. If you're serious about making a difference, here
+                is a little test: Look in your browser address bar. You'll notice that some areas include parameters, such as
+                "page=..." Find us at a page that doesn't exist.
+            </i>
+        </p>
+        <p>Omega</p>
+    }
+  }
+</article>
+
+@*<aside>
+    <h3>Aside Title</h3>
+    <p>
+        Use this area to provide additional information.
+    </p>
+    <ul>
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+    </ul>
+</aside>*@

@@ -1,0 +1,13 @@
+﻿@model AlethiCorp.ViewModels.AdventurousType
+
+<table>
+    <tr>
+        <td>@Html.LabelFor(x => x, "Yes, I love fun!")</td>
+        <td>@Html.RadioButtonFor(x => x, (int)AlethiCorp.ViewModels.AdventurousType.IsAdventurous, new { @checked = "checked" })</td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(x => x, "No, I prefer routine")</td>
+        <td>@Html.RadioButtonFor(x => x, (int)AlethiCorp.ViewModels.AdventurousType.NotAdventurous)</td>
+    </tr>
+</table>
+<br />

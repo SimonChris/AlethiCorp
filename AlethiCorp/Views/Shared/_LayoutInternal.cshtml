@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/themes/base/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img src="../../Images/Eye.png" width="95" height="50" />
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                  @if (ViewBag.Arrested)
+                  {
+                    <li>@Html.ActionLink("News", "Index", "Internal")</li>
+                    <li>@LinkExtensions.ActionLink(Html, "InterMail" + @ViewBag.InterMailCount, "Index", "InterMail")</li>
+                    @*<li>@Html.ActionLink("myCareer", "myCareer", "Internal")</li>*@
+                    <li>@Html.ActionLink("University", "Comply", "Internal")</li>
+                    <li>@Html.ActionLink("Social", "Comply", "Internal")</li>
+                    <li>@Html.ActionLink("Information", "Comply", "Internal")</li>
+                    <li>@Html.ActionLink("TimeLog", "Comply", "Internal")</li>
+                    <li>@Html.ActionLink("Public Page", "Comply", "Internal")</li>
+                    @*<li>@Html.ActionLink("Reset", "Reset", "Internal")</li>*@
+                  }
+                  else if(ViewBag.Comply)
+                  {
+                    <li>@Html.ActionLink("News", "Index", "Internal")</li>
+                    <li>@LinkExtensions.ActionLink(Html, "InterMail" + @ViewBag.InterMailCount, "Index", "InterMail")</li>
+                    @*<li>@Html.ActionLink("myCareer", "myCareer", "Internal")</li>*@
+                    <li>@Html.ActionLink("Comply", "Comply", "Internal")</li>
+                    <li>@Html.ActionLink("Comply", "Comply", "Internal")</li>
+                    <li>@Html.ActionLink("Comply", "Comply", "Internal")</li>
+                    <li>@Html.ActionLink("Comply", "Comply", "Internal")</li>
+                    <li>@Html.ActionLink("Comply", "Comply", "Internal")</li>
+                    @*<li>@Html.ActionLink("Reset", "Reset", "Internal")</li>*@
+                  }
+                  else
+                  {
+                    <li>@Html.ActionLink("News", "Index", "Internal")</li>
+                    <li>@LinkExtensions.ActionLink(Html, "InterMail" + @ViewBag.InterMailCount, "Index", "InterMail")</li>
+                    @*<li>@Html.ActionLink("myCareer", "myCareer", "Internal")</li>*@
+                    <li>@Html.ActionLink("University", "Index", "University")</li>
+                    <li>@Html.ActionLink("Social", "Index", "Social")</li>
+                    <li>@Html.ActionLink("Information", "Front", "Report")</li>
+                    <li>@Html.ActionLink("TimeLog", "Create", "TimeLog")</li>
+                    <li>@Html.ActionLink("Public Page", "Index", "Home")</li>
+                    @*<li>@Html.ActionLink("Reset", "Reset", "Internal")</li>*@
+                  }
+                  }
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @(DateTime.Now.Year + 40) - AlethiCorp</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jqueryui")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

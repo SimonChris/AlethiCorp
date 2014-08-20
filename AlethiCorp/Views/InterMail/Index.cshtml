@@ -1,0 +1,77 @@
+﻿@model IEnumerable<AlethiCorp.ViewModels.InterMailViewModel>
+
+@{
+    ViewBag.Title = "InterMail";
+}
+
+<h2>Inbox</h2>
+
+@if(ViewBag.Ongoing)
+{
+  <p>
+      <a class="btn btn-default" href="@Url.Action("Create")">New</a>
+      <a class="btn btn-default" href="@Url.Action("Sent")">Sent Mail</a>
+      @*@Html.ActionLink("Create New", "Create")*@
+  </p>
+}
+
+@if(ViewBag.Count > 0)
+{
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Author)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Subject)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th></th>
+        </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @if(item.Read)
+                {
+                    @Html.DisplayFor(modelItem => item.Author)
+                }
+                else
+                {
+                    <b>@Html.DisplayFor(modelItem => item.Author)</b>
+                }
+            </td>
+            <td>
+                @if(item.Read)
+                {
+                    @Html.DisplayFor(modelItem => item.Subject)
+                }
+                else
+                {
+                    <b>@Html.DisplayFor(modelItem => item.Subject)</b>
+                }
+            </td>
+            <td>
+                @if (item.Read)
+                {
+                    @Html.DisplayFor(modelItem => item.Date)
+                }
+                else
+                {
+                    <b>@Html.DisplayFor(modelItem => item.Date)</b>
+                }
+            </td>
+            <td>
+                <a class="btn btn-default" href="@Url.Action("Details", new { id = item.Id })">Read</a>
+                @if(ViewBag.Ongoing)
+                {
+                  <a class="btn btn-default" href="@Url.Action("Delete", new { id = item.Id })">Delete</a>
+                }
+            </td>
+        </tr>
+    }
+
+    </table>
+}

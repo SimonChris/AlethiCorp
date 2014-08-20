@@ -1,0 +1,98 @@
+﻿@model AlethiCorp.ViewModels.ReportViewModel
+
+@{
+    ViewBag.Title = "Report";
+}
+
+<h2>Report</h2>
+
+<fieldset>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        @if (ViewBag.Type == 0 || ViewBag.Type == 3)
+        {
+            <dt>
+                @Html.DisplayNameFor(model => model.Author)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Author)
+            </dd>
+        }
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Information)
+        </dt>
+
+        <dd>
+            @Html.Raw(Model.Information)
+        </dd>
+    </dl>
+</fieldset>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Flag suspicious information</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Id)
+        @Html.HiddenFor(model => model.RowVersion)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model, "Flag", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.Flagged)
+                    @Html.ValidationMessageFor(model => model.Flagged, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<p>
+    @switch ((int)ViewBag.Type)
+    {
+        case 0:
+            <a class="btn btn-default" href="@Url.Action("Reports", new { id = Model.Id })">Back to List</a>
+            break;
+        case 1:
+            <a class="btn btn-default" href="@Url.Action("EMail", new { id = Model.Id })">Back to List</a>
+            break;
+        case 2:
+            <a class="btn btn-default" href="@Url.Action("Phone", new { id = Model.Id })">Back to List</a>
+            break;
+        case 3:
+            <a class="btn btn-default" href="@Url.Action("Surveillance", new { id = Model.Id })">Back to List</a>
+            break;
+    }
+</p>

@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Concurrency";
+}
+
+<h2>Concurrency Error</h2>
+
+<p>A concurrency error occurred when attempting to update the database.</p>
+
+<p>Please do not repeat the action that caused the error.</p>
+
+
+@if (ViewBag.Infiltrator)
+{
+  <p><i>Sorry, but going here manually won't do any good. You have to trigger the error from
+    a database update.</i></p>
+
+  <p><i>Omega</i></p>
+}
+@if(ViewBag.Concurrency)
+{
+  <p><i>Excellent, I'm through! Thanks for your assistance. We will be in touch...</i></p>
+  
+  <p><i>Omega</i></p>
+}
+

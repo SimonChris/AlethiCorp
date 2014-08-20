@@ -1,0 +1,69 @@
+﻿@model IEnumerable<AlethiCorp.Models.SentMail>
+
+@{
+    ViewBag.Title = "InterMail";
+}
+
+<h2>Sent Mail</h2>
+
+<p>
+    <a class="btn btn-default" href="@Url.Action("Index")">Inbox</a>
+</p>
+
+@if (ViewBag.Count > 0)
+{
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Recipient)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Subject)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @if (item.Read)
+                    {
+                        @Html.DisplayFor(modelItem => item.Recipient)
+                    }
+                    else
+                    {
+                        <b>@Html.DisplayFor(modelItem => item.Recipient)</b>
+                    }
+                </td>
+                <td>
+                    @if (item.Read)
+                    {
+                        @Html.DisplayFor(modelItem => item.Subject)
+                    }
+                    else
+                    {
+                        <b>@Html.DisplayFor(modelItem => item.Subject)</b>
+                    }
+                </td>
+                <td>
+                    @if (item.Read)
+                    {
+                        @Html.DisplayFor(modelItem => item.Date)
+                    }
+                    else
+                    {
+                        <b>@Html.DisplayFor(modelItem => item.Date)</b>
+                    }
+                </td>
+                <td>
+                    <a class="btn btn-default" href="@Url.Action("SentDetails", new { id = item.Id })">Read</a>
+                </td>
+            </tr>
+        }
+
+    </table>
+}
