@@ -19,7 +19,6 @@ Thumbs.db
 *.log
 *.mdf
 *.ldf
-*.pubxml
 [Bb]in
 [Dd]ebug*/
 *.lib

@@ -408,6 +408,7 @@
     <Content Include="Messages\InterMails.json" />
     <Content Include="Messages\Reports.json" />
     <Content Include="Messages\NewsItems.json" />
+    <None Include="Properties\PublishProfiles\AlethiCorp.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -512,7 +513,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
