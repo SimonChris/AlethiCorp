@@ -331,6 +331,9 @@
     <Content Include="Messages\DayThree\InterMail\AlphaNoInfiltrator.html" />
     <Content Include="Messages\DayThree\InterMail\OmegaNoInfiltrator.html" />
     <Content Include="Messages\DayThree\InterMail\OmegaInfiltrator.html" />
+    <Content Include="Messages\DayThree\InterMail\Replies\DayThreeAlexReply.html" />
+    <Content Include="Messages\DayThree\InterMail\Replies\DayThreeAndreaNelie.html" />
+    <Content Include="Messages\DayThree\InterMail\Replies\DayThreeAndreaNellie.html" />
     <Content Include="Messages\DayThree\InterMail\Replies\BenedettoReply.html" />
     <Content Include="Messages\DayThree\InterMail\Replies\BenedettoIAM.html" />
     <Content Include="Messages\DayThree\InterMail\DayThreeVedeninFound.html" />

@@ -521,7 +521,26 @@
         "Subject": "You can do better than this",
         "Date": "2",
         "Message": "Messages/DayThree/InterMail/DayThreeShaoNoResultsDeletedSuspicious.html"
+    },
+
+    {
+        "Name": "DayThreeAlexReply",
+        "Author": "Alex DuMaurier",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/Replies/DayThreeAlexReply.html"
+    },
+
+    {
+        "Name": "DayThreeAndreaNellie",
+        "Author": "Andrea Schueler",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/Replies/DayThreeAndreaNellie.html"
+    },
+
+    {
+        "Name": "DayThreeAndreaNelie",
+        "Author": "Andrea Schueler",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/Replies/DayThreeAndreaNelie.html"
     }
-
-
 ]

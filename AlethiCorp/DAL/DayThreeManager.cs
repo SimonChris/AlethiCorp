@@ -17,7 +17,11 @@ namespace AlethiCorp.DAL
 
     private void AddAlexReplies(List<SentMail> sentMails)
     {
-
+      var searchResult = sentMails.Where(r => r.Recipient.ToLower().Contains("alex"));
+      if (searchResult.Count() > 0)
+      {
+        db.InterMails.Add(MakeMail("DayThreeAlexReply", "Re: " + searchResult.First().Subject));
+      }
     }
 
     private void AddAndreaReplies(List<SentMail> sentMails)
@@ -26,7 +30,20 @@ namespace AlethiCorp.DAL
       if (searchResult.Count() > 0)
       {
         var subject = "Re: " + searchResult.First().Subject;
-        db.Reports.Add(MakeReport("DayThreeInterMailReview"));
+        var nellieResult = searchResult.Where(r => r.GetContents().ToLower().ContainsAny(new string[] { "nellie", " bly", "nelly" }));
+        var nelieResults = searchResult.Where(r => r.GetContents().ToLower().ContainsAny(new string[] { "nelie", "nely" }));
+        if(nelieResults.Count() > 0)
+        {
+          db.InterMails.Add(MakeMail("DayThreeAndreaNelie", "Re: " + nelieResults.First().Subject));
+        }
+        else if (nellieResult.Count() > 0)
+        {
+          db.InterMails.Add(MakeMail("DayThreeAndreaNellie", "Re: " + nellieResult.First().Subject));
+        }
+        else
+        {
+          db.Reports.Add(MakeReport("DayThreeInterMailReview"));
+        }
       }
     }
 
@@ -50,6 +67,11 @@ namespace AlethiCorp.DAL
           db.InterMails.Add(MakeMail("BenedettoReplyDayThree", "Re: " + subject));
         }
       }
+    }
+
+    private void AddShaoReplies(List<SentMail> sentMails)
+    {
+
     }
 
     private void AddOmegaReplies(List<SentMail> sentMails)
@@ -83,6 +105,7 @@ namespace AlethiCorp.DAL
       AddAlexReplies(sentMails);
       AddAndreaReplies(sentMails);
       AddBenedettoReplies(sentMails);
+      AddShaoReplies(sentMails);
       AddOmegaReplies(sentMails);
       AddOskarReplies(sentMails);
       AddSandraReplies(sentMails);
@@ -226,7 +249,7 @@ namespace AlethiCorp.DAL
       }
 
       //Sandra mails
-      if(results > 0)
+      if (results > 0)
       {
         newMails.Add(MakeMail("DayThreeSandraResults"));
       }
