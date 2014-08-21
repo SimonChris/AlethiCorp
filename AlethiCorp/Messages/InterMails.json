@@ -598,5 +598,19 @@
         "Author": "Oskar Jönsson",
         "Date": "2",
         "Message": "Messages/DayThree/InterMail/Replies/DayThreeOskarReply.html"
+    },
+
+    {
+        "Name": "DayThreeSandraReply",
+        "Author": "Sandra Silvern",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/Replies/DayThreeSandraReply.html"
+    },
+
+    {
+        "Name": "DayThreeVitalyReply",
+        "Author": "Vitaly Vedenin",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/Replies/DayThreeVitalyReply.html"
     }
 ]

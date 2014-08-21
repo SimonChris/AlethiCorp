@@ -353,6 +353,8 @@
     <Content Include="Messages\DayThree\InterMail\Replies\DayThreeOmegaInfiltratorReply.html" />
     <Content Include="Messages\DayThree\InterMail\Replies\DayThreeOskarOmega.html" />
     <Content Include="Messages\DayThree\InterMail\Replies\DayThreeOskarReply.html" />
+    <Content Include="Messages\DayThree\InterMail\Replies\DayThreeSandraReply.html" />
+    <Content Include="Messages\DayThree\InterMail\Replies\DayThreeVitalyReply.html" />
     <Content Include="Messages\DayThree\News\Students.html" />
     <Content Include="Messages\DayThree\News\Synergy.html" />
     <Content Include="Messages\DayThree\Reports\MailBlackUnknown.html" />

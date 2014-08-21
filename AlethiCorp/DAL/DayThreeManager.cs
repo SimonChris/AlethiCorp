@@ -142,12 +142,20 @@ namespace AlethiCorp.DAL
 
     private void AddSandraReplies(List<SentMail> sentMails)
     {
-
+      var searchResult = sentMails.Where(r => r.Recipient.ToLower().Contains("sandra"));
+      if (searchResult.Count() > 0)
+      {
+        db.InterMails.Add(MakeMail("DayThreeSandraReply", "Re: " + searchResult.First().Subject));
+      }
     }
 
     private void AddVitalyReplies(List<SentMail> sentMails)
     {
-
+      var searchResult = sentMails.Where(r => r.Recipient.ToLower().Contains("sandra"));
+      if (searchResult.Count() > 0)
+      {
+        db.InterMails.Add(MakeMail("DayThreeVitalyReply", "Re: " + searchResult.First().Subject));
+      }
     }
 
     private void AddReplies()
