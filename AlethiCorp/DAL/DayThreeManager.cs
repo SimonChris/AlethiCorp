@@ -89,7 +89,36 @@ namespace AlethiCorp.DAL
 
     private void AddOmegaReplies(List<SentMail> sentMails)
     {
-
+      var searchResult = sentMails.Where(r => r.Recipient.ToLower().ContainsAny(new string[] { "omega" }));
+      if (searchResult.Count() > 0)
+      {
+        bool infiltrator = db.GameStates.Where(s => s.UserName == UserName).Single().HackingProgression == HackingProgression.Infiltrator;
+        var subject = "Re: " + searchResult.First().Subject;
+        var searchTerms = new string[] { "oskar", "jönsson"};
+        var detailedResult = searchResult.Where(s => s.GetContents().ToLower().ContainsAny(searchTerms));
+        if (detailedResult.Count() > 0)
+        {
+          if (infiltrator)
+          {
+            db.InterMails.Add(MakeMail("DayThreeOmegaOskarInfiltrator", "Re: " + detailedResult.First().Subject));
+          }
+          else
+          {
+            db.InterMails.Add(MakeMail("DayThreeOmegaOskarNoInfiltrator", "Re: " + detailedResult.First().Subject));
+          }
+        }
+        else
+        {
+          if (infiltrator)
+          {
+            db.InterMails.Add(MakeMail("DayThreeOmegaInfiltratorReply", subject));
+          }
+          else
+          {
+            db.InterMails.Add(MakeMail("DayThreeOmegaNoInfiltratorReply", subject));
+          }
+        }
+      }
     }
 
     private void AddOskarReplies(List<SentMail> sentMails)

@@ -345,8 +345,12 @@
     <Content Include="Messages\DayThree\InterMail\DayThreeShaoNoResultsDeletedSuspicious.html" />
     <Content Include="Messages\DayThree\InterMail\DayThreeShaoResults.html" />
     <Content Include="Messages\DayThree\InterMail\DayThreeShaoAllResults.html" />
+    <Content Include="Messages\DayThree\InterMail\Replies\DayThreeOmegaNoInfiltratorReply.html" />
+    <Content Include="Messages\DayThree\InterMail\Replies\DayThreeOmegaOskarNoInfiltrator.html" />
     <Content Include="Messages\DayThree\InterMail\Replies\DayThreeShaoReply.html" />
     <Content Include="Messages\DayThree\InterMail\Replies\DayThreeShaoZhang.html" />
+    <Content Include="Messages\DayThree\InterMail\Replies\DayThreeOmegaOskarInfiltrator.html" />
+    <Content Include="Messages\DayThree\InterMail\Replies\DayThreeOmegaInfiltratorReply.html" />
     <Content Include="Messages\DayThree\News\Students.html" />
     <Content Include="Messages\DayThree\News\Synergy.html" />
     <Content Include="Messages\DayThree\Reports\MailBlackUnknown.html" />

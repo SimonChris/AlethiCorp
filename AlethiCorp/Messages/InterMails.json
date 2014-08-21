@@ -556,5 +556,33 @@
         "Author": "Shào Lingfei",
         "Date": "2",
         "Message": "Messages/DayThree/InterMail/Replies/DayThreeShaoZhang.html"
+    },
+
+    {
+        "Name": "DayThreeOmegaOskarInfiltrator",
+        "Author": "Omega",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/Replies/DayThreeOmegaOskarInfiltrator.html"
+    },
+
+    {
+        "Name": "DayThreeOmegaOskarNoInfiltrator",
+        "Author": "Omega",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/Replies/DayThreeOmegaOskarNoInfiltrator.html"
+    },
+
+    {
+        "Name": "DayThreeOmegaInfiltratorReply",
+        "Author": "Omega",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/Replies/DayThreeOmegaInfiltratorReply.html"
+    },
+
+    {
+        "Name": "DayThreeOmegaNoInfiltratorReply",
+        "Author": "Omega",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/Replies/DayThreeOmegaNoInfiltratorReply.html"
     }
 ]
