@@ -247,6 +247,11 @@ namespace AlethiCorp.DAL
           return terms.Any(t => text.Contains(t));
         }
 
+        public static bool ContainsAll(this string text, string[] terms)
+        {
+          return terms.All(t => text.Contains(t));
+        }
+
         private static Random rng = new Random();
 
         //Fisher–Yates shuffle

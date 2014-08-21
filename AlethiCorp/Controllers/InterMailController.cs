@@ -158,7 +158,7 @@ namespace AlethiCorp.Controllers
         }
         else
         {
-          sentMail.Subject = "Fwd: " + mailDetails.Subject;
+          sentMail.Subject = "Fwd: " + ( mailDetails.Subject ?? intermail.Subject );
           var message = db.GetHTMLString(User.Identity.Name, mailDetails.Message);
           sentMail.Message = "---Forwarded Message---\r\n" + htmlRegex.Replace(message, string.Empty);
         }

@@ -584,5 +584,19 @@
         "Author": "Omega",
         "Date": "2",
         "Message": "Messages/DayThree/InterMail/Replies/DayThreeOmegaNoInfiltratorReply.html"
+    },
+
+    {
+        "Name": "DayThreeOskarOmega",
+        "Author": "Oskar Jönsson",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/Replies/DayThreeOskarOmega.html"
+    },
+
+    {
+        "Name": "DayThreeOskarReply",
+        "Author": "Oskar Jönsson",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/Replies/DayThreeOskarReply.html"
     }
 ]

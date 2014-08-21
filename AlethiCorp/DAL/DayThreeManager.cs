@@ -123,7 +123,21 @@ namespace AlethiCorp.DAL
 
     private void AddOskarReplies(List<SentMail> sentMails)
     {
-
+      var searchResult = sentMails.Where(r => r.Recipient.ToLower().Contains("oskar"));
+      if (searchResult.Count() > 0)
+      {
+        var subject = "Re: " + searchResult.First().Subject;
+        var searchTerms = new string[] { "omega", "forwarded message"};
+        var detailedResult = searchResult.Where(r => r.GetContents().ToLower().ContainsAll(searchTerms));
+        if (detailedResult.Count() > 0)
+        {
+          db.InterMails.Add(MakeMail("DayThreeOskarOmega", "Re: " + detailedResult.First().Subject));
+        }
+        else
+        {
+          db.InterMails.Add(MakeMail("DayThreeOskarReply", subject));
+        }
+      }
     }
 
     private void AddSandraReplies(List<SentMail> sentMails)
