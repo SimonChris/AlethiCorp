@@ -29,7 +29,6 @@ namespace AlethiCorp.DAL
       var searchResult = sentMails.Where(r => r.Recipient.ToLower().Contains("andrea"));
       if (searchResult.Count() > 0)
       {
-        var subject = "Re: " + searchResult.First().Subject;
         var nellieResult = searchResult.Where(r => r.GetContents().ToLower().ContainsAny(new string[] { "nellie", " bly", "nelly" }));
         var nelieResults = searchResult.Where(r => r.GetContents().ToLower().ContainsAny(new string[] { "nelie", "nely" }));
         if(nelieResults.Count() > 0)
@@ -64,14 +63,28 @@ namespace AlethiCorp.DAL
         }
         else
         {
-          db.InterMails.Add(MakeMail("BenedettoReplyDayThree", "Re: " + subject));
+          db.InterMails.Add(MakeMail("BenedettoReplyDayThree", subject));
         }
       }
     }
 
     private void AddShaoReplies(List<SentMail> sentMails)
     {
-
+      var searchResult = sentMails.Where(r => r.Recipient.ToLower().ContainsAny(new string [] {"sháo", "lingfei" }));
+      if (searchResult.Count() > 0)
+      {
+        var subject = "Re: " + searchResult.First().Subject;
+        var searchTerms = new string[] { "zhang", "ailing", "eileen", "chang", "ai-ling", "shi nai'an", "luo guanzhong", "wu cheng'en", "cao xueqin" };
+        var detailedResult = searchResult.Where(s => s.GetContents().ToLower().ContainsAny(searchTerms));
+        if (detailedResult.Count() > 0)
+        {
+          db.InterMails.Add(MakeMail("DayThreeShaoZhang", "Re: " + detailedResult.First().Subject));
+        }
+        else
+        {
+          db.InterMails.Add(MakeMail("DayThreeShaoReply", subject));
+        }
+      }
     }
 
     private void AddOmegaReplies(List<SentMail> sentMails)

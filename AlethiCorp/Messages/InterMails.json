@@ -542,5 +542,19 @@
         "Author": "Andrea Schueler",
         "Date": "2",
         "Message": "Messages/DayThree/InterMail/Replies/DayThreeAndreaNelie.html"
+    },
+
+    {
+        "Name": "DayThreeShaoReply",
+        "Author": "Shào Lingfei",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/Replies/DayThreeShaoReply.html"
+    },
+
+    {
+        "Name": "DayThreeShaoZhang",
+        "Author": "Shào Lingfei",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/Replies/DayThreeShaoZhang.html"
     }
 ]

@@ -57,7 +57,7 @@ namespace AlethiCorp.DAL
         }
         else
         {
-          db.InterMails.Add(MakeMail("BenedettoReply", "Re: " + subject));
+          db.InterMails.Add(MakeMail("BenedettoReply", subject));
         }
       }
     }
