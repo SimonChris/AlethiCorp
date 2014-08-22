@@ -25,7 +25,7 @@ namespace AlethiCorp.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(TimeLogViewModel timelogviewmodel)
         {
-            if (db.GetDay(User.Identity.Name) > 1)
+            if (db.GetDay(User.Identity.Name) > 2)
             {
                 return RedirectToAction("Final");
             }

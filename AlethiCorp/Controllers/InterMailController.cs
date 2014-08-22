@@ -37,6 +37,10 @@ namespace AlethiCorp.Controllers
         {
           viewMail.Subject = mail.Subject;
         }
+        else
+        {
+          viewMail.Subject = db.ReplaceTextTokens(User.Identity.Name, viewMail.Subject);
+        }
         finalList.Add(viewMail);
       }
 
@@ -70,6 +74,10 @@ namespace AlethiCorp.Controllers
       if (intermail.Subject != null)
       {
         intermailViewModel.Subject = intermail.Subject;
+      }
+      else
+      {
+        intermailViewModel.Subject = db.ReplaceTextTokens(User.Identity.Name, intermailViewModel.Subject);
       }
       intermailViewModel.Message = db.GetHTMLString(User.Identity.Name, intermailViewModel.Message);
       return View(intermailViewModel);

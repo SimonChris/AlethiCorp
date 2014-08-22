@@ -139,7 +139,7 @@ namespace AlethiCorp.Controllers
         {
             if (ModelState.IsValid)
             {
-                var hakaCourse = db.Courses.Where(x => x.UserName == User.Identity.Name && x.Title.Contains("Haka")).Single();
+                var hakaCourse = db.Courses.Where(x => x.UserName == User.Identity.Name && x.Title.ToLower().Contains("haka")).Single();
                 var grade = rng.Next(100);
                 hakaCourse.Completed = true;
                 hakaCourse.Grade = grade.ToString() + "/100";
@@ -154,7 +154,7 @@ namespace AlethiCorp.Controllers
 
         public ActionResult HakaResult()
         {
-            var hakaCourse = db.Courses.Where(x => x.UserName == User.Identity.Name && x.Title.Contains("Haka")).Single();
+            var hakaCourse = db.Courses.Where(x => x.UserName == User.Identity.Name && x.Title.ToLower().Contains("haka")).Single();
             return View((object) hakaCourse.Grade);
         }
     }

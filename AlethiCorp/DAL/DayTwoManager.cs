@@ -314,7 +314,7 @@ namespace AlethiCorp.DAL
 
     private void UpdateSocialEvents()
     {
-      var potluck = db.SocialEvents.Where(x => x.UserName == UserName && x.Title.Contains("potluck")).Single();
+      var potluck = db.SocialEvents.Where(x => x.UserName == UserName && x.Title.ToLower().Contains("potluck")).Single();
       potluck.Enabled = false;
       db.Entry(potluck).State = EntityState.Modified;
       var socialEvents = new List<SocialEvent>

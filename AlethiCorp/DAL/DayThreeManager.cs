@@ -369,7 +369,7 @@ namespace AlethiCorp.DAL
 
     private void UpdateSocialEvents()
     {
-      var onboarding = db.SocialEvents.Where(x => x.UserName == UserName && x.Title.Contains("onboarding")).Single();
+      var onboarding = db.SocialEvents.Where(x => x.UserName == UserName && x.Title.ToLower().Contains("onboarding")).Single();
       onboarding.Enabled = false;
       db.Entry(onboarding).State = EntityState.Modified;
       var socialEvents = new List<SocialEvent>

@@ -1,43 +1,57 @@
 ﻿[
-    { "Name": "DuMaurier", 
-      "HeadLine": "Alex DuMaurier appointed new CEO of AlethiCorp Global",
-      "MainText": "Messages/DayOne/News/DuMaurier.html",
-      "Date": "-1"
+    {
+        "Name": "DuMaurier",
+        "HeadLine": "Alex DuMaurier appointed new CEO of AlethiCorp Global",
+        "MainText": "Messages/DayOne/News/DuMaurier.html",
+        "Date": "-1"
     },
 
-    { "Name": "Contract", 
-      "HeadLine": "New contract!",
-      "MainText": "Messages/DayOne/News/Contract.html",
-      "Date": "-1"
+    {
+        "Name": "Contract",
+        "HeadLine": "New contract!",
+        "MainText": "Messages/DayOne/News/Contract.html",
+        "Date": "-1"
     },
 
-    { "Name": "Welcome", 
-      "HeadLine": "AlethiCorp welcomes a new employee",
-      "MainText": "Messages/DayOne/News/Welcome.html",
-      "Date": "0"
+    {
+        "Name": "Welcome",
+        "HeadLine": "AlethiCorp welcomes a new employee",
+        "MainText": "Messages/DayOne/News/Welcome.html",
+        "Date": "0"
     },
 
-    { "Name": "SiChrisConsulting", 
-      "HeadLine": "AlethiCorp acquires SiChris Consulting Ltd",
-      "MainText": "Messages/DayTwo/News/SiChrisConsulting.html",
-      "Date": "1"
+    {
+        "Name": "SiChrisConsulting",
+        "HeadLine": "AlethiCorp acquires SiChris Consulting Ltd",
+        "MainText": "Messages/DayTwo/News/SiChrisConsulting.html",
+        "Date": "1"
     },
 
-    { "Name": "ArrestedDeletedAll", 
-      "HeadLine": "AlethiCorp employee exposed as undercover operative",
-      "MainText": "Messages/Conclusion/News/ArrestedDeletedAll.html",
-      "Date": "2"
+    {
+        "Name": "ArrestedDeletedAll",
+        "HeadLine": "AlethiCorp employee exposed as undercover operative",
+        "MainText": "Messages/Conclusion/News/ArrestedDeletedAll.html",
+        "Date": "2"
     },
 
-    { "Name": "Synergy", 
-      "HeadLine": "Alex DuMaurier announces new synergy initiative",
-      "MainText": "Messages/DayThree/News/Synergy.html",
-      "Date": "2"
+    {
+        "Name": "Synergy",
+        "HeadLine": "Alex DuMaurier announces new synergy initiative",
+        "MainText": "Messages/DayThree/News/Synergy.html",
+        "Date": "2"
     },
 
-    { "Name": "Students", 
-      "HeadLine": "AlethiCorp signs contract with the Eurasian Association of Students",
-      "MainText": "Messages/DayThree/News/Students.html",
-      "Date": "2"
+    {
+        "Name": "Students",
+        "HeadLine": "AlethiCorp signs contract with the Eurasian Association of Students",
+        "MainText": "Messages/DayThree/News/Students.html",
+        "Date": "2"
+    },
+
+    {
+        "Name": "DayFourArrestedDeletedAll",
+        "HeadLine": "AlethiCorp employee exposed as undercover operative",
+        "MainText": "Messages/Conclusion/News/ArrestedDeletedAll.html",
+        "Date": "3"
     }
 ]

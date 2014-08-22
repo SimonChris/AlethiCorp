@@ -612,5 +612,53 @@
         "Author": "Vitaly Vedenin",
         "Date": "2",
         "Message": "Messages/DayThree/InterMail/Replies/DayThreeVitalyReply.html"
+    },
+
+    {
+        "Name": "DayFourOskarArrestedDeletedAll",
+        "Author": "Oskar Jönsson",
+        "Subject": "Well, that was easy",
+        "Date": "3",
+        "Message": "Messages/Conclusion/InterMail/OskarArrestedDeletedAll.html"
+    },
+
+    {
+        "Name": "DayFourOskarArrestedDeletedAllMail",
+        "Author": "Oskar Jönsson",
+        "Subject": "Well, that was easy",
+        "Date": "3",
+        "Message": "Messages/Conclusion/InterMail/OskarArrestedDeletedAllMail.html"
+    },
+
+    {
+        "Name": "DayFourSandraArrestedDeletedAll",
+        "Author": "Sandra Silvern",
+        "Subject": "Disappointed",
+        "Date": "3",
+        "Message": "Messages/Conclusion/InterMail/SandraArrestedDeletedAll.html"
+    },
+
+    {
+        "Name": "DayFourVedeninArrested",
+        "Author": "Vitaly Vedenin",
+        "Subject": "Comply",
+        "Date": "3",
+        "Message": "Messages/Conclusion/InterMail/VedeninArrested.html"
+    },
+
+    {
+        "Name": "DayFourSalvinuArrested",
+        "Author": "Salvinu Manduca",
+        "Subject": "Oh, FIRSTNAME",
+        "Date": "3",
+        "Message": "Messages/Conclusion/InterMail/DayFourSalvinuArrested.html"
+    },
+
+    {
+        "Name": "DayFourSalvinuArrestedSpatula",
+        "Author": "Salvinu Manduca",
+        "Subject": "Oh, FIRSTNAME",
+        "Date": "3",
+        "Message": "Messages/Conclusion/InterMail/DayFourSalvinuArrestedSpatula.html"
     }
 ]

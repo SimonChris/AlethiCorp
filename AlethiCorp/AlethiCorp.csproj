@@ -184,6 +184,7 @@
     <Compile Include="DAL\DataBaseInitializer.cs" />
     <Compile Include="DAL\DayManager.cs" />
     <Compile Include="DAL\DayOneManager.cs" />
+    <Compile Include="DAL\DayFourManager.cs" />
     <Compile Include="DAL\DayThreeManager.cs" />
     <Compile Include="DAL\DayTwoManager.cs" />
     <Compile Include="DAL\GameStateExtensions.cs" />
@@ -292,9 +293,12 @@
     <Content Include="Images\Eye.png" />
     <Content Include="Images\Haka.jpg" />
     <Content Include="Images\Larkin.wav" />
+    <Content Include="Images\Spatula.jpg" />
     <Content Include="Images\Steam Train.jpg" />
     <Content Include="Images\TrainWithWagon.jpg" />
     <Content Include="Images\Yellow Train.jpg" />
+    <Content Include="Messages\Conclusion\InterMail\DayFourSalvinuArrested.html" />
+    <Content Include="Messages\Conclusion\InterMail\DayFourSalvinuArrestedSpatula.html" />
     <Content Include="Messages\Conclusion\InterMail\OskarArrestedDeletedAllMail.html" />
     <Content Include="Messages\Conclusion\InterMail\OskarArrestedDeletedAll.html" />
     <Content Include="Messages\Conclusion\InterMail\SandraArrestedDeletedAll.html" />
