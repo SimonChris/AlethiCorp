@@ -75,7 +75,7 @@ namespace AlethiCorp.DAL
 
     private void AddUnconditionalReports(List<Report> newReports)
     {
-
+      newReports.Add(MakeReport("DayFourSurveillanceStudentMeeting"));
     }
 
     private int AddReports(List<Report> extantReports, List<Report> flaggedReports)
@@ -90,6 +90,8 @@ namespace AlethiCorp.DAL
       }
 
       int results = 0;
+
+      newReports.ForEach(x => db.Reports.Add(x));
       return results;
     }
 
