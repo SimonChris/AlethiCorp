@@ -660,5 +660,13 @@
         "Subject": "Oh, FIRSTNAME",
         "Date": "3",
         "Message": "Messages/Conclusion/InterMail/DayFourSalvinuArrestedSpatula.html"
+    },
+
+    {
+        "Name": "DayFourSandraReminder",
+        "Author": "Sandra Silvern",
+        "Subject": "Quick reminder",
+        "Date": "3",
+        "Message": "Messages/DayFour/InterMail/DayFourSandraReminder.html"
     }
 ]

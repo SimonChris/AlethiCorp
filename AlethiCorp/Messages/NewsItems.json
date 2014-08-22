@@ -53,5 +53,12 @@
         "HeadLine": "AlethiCorp employee exposed as undercover operative",
         "MainText": "Messages/Conclusion/News/ArrestedDeletedAll.html",
         "Date": "3"
+    },
+
+    {
+        "Name": "InvestigationUpdate",
+        "HeadLine": "AlethiCorp investigations draws to a close",
+        "MainText": "Messages/DayFour/News/InvestigationUpdate.html",
+        "Date": "3"
     }
 ]

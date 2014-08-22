@@ -65,7 +65,7 @@ namespace AlethiCorp.Controllers
       }
 
       ViewBag.Enabled = intermail.Name != "DefaultMail";
-      ViewBag.ComplyMail = intermail.Name == "VedeninArrested";
+      ViewBag.ComplyMail = intermail.Name.Contains("VedeninArrested");
 
       var mailList = JsonConvert.DeserializeObject<List<InterMailViewModel>>(
       System.IO.File.ReadAllText(HttpRuntime.AppDomainAppPath + "Messages/InterMails.json"));

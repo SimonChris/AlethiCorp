@@ -101,23 +101,31 @@ namespace AlethiCorp.DAL
 
       var newMails = new List<InterMail>();
 
+      newMails.Add(MakeMail("DayFourSandraReminder"));
+
       newMails.ForEach(s => db.InterMails.Add(s));
     }
 
     private void AddNewsItems()
     {
-
+      var newsItems = new List<NewsItem>
+          {
+              MakeNewsItem("InvestigationUpdate")
+          };
+      newsItems.ForEach(x => db.NewsItems.Add(x));
     }
 
     private void UpdateSocialEvents()
     {
-      var onboarding = db.SocialEvents.Where(x => x.UserName == UserName && x.Title.ToLower().Contains("team club night")).Single();
-      onboarding.Enabled = false;
-      db.Entry(onboarding).State = EntityState.Modified;
+      var clubNight = db.SocialEvents.Where(x => x.UserName == UserName && x.Title.ToLower().Contains("team club night")).Single();
+      clubNight.Enabled = false;
+      db.Entry(clubNight).State = EntityState.Modified;
     }
 
     private void EndGameWithArrest()
     {
+      UpdateSocialEvents();
+
       var gameState = db.GameStates.Where(s => s.UserName == UserName).Single();
       gameState.GameProgression = GameProgression.Arrested;
       db.Entry(gameState).State = EntityState.Modified;
@@ -137,7 +145,7 @@ namespace AlethiCorp.DAL
       var sentMail = db.SentMails.Where(s => s.UserName == UserName).ToList();
       bool informedOskar = sentMail.Any(s => s.GetContents().ToLower().ContainsAny(searchTerms));
       if (informedOskar)
-     { 
+      {
         db.InterMails.Add(MakeMail("DayFourOskarArrestedDeletedAllMail"));
       }
       else

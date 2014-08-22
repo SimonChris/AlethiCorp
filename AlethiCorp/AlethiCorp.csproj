@@ -288,6 +288,7 @@
     <Content Include="Images\BackgroundSimple.jpg" />
     <Content Include="Images\BackgroundWave.jpg" />
     <Content Include="Images\BlackMarble.png" />
+    <Content Include="Images\BlackTrain.jpg" />
     <Content Include="Images\CorpBackground.jpg" />
     <Content Include="Images\CorpBackgroundWave.jpg" />
     <Content Include="Images\Eye.png" />
@@ -304,6 +305,8 @@
     <Content Include="Messages\Conclusion\InterMail\SandraArrestedDeletedAll.html" />
     <Content Include="Messages\Conclusion\InterMail\VedeninArrested.html" />
     <Content Include="Messages\Conclusion\News\ArrestedDeletedAll.html" />
+    <Content Include="Messages\DayFour\InterMail\DayFourSandraReminder.html" />
+    <Content Include="Messages\DayFour\News\InvestigationUpdate.html" />
     <Content Include="Messages\DayOne\InterMail\DefaultMail.html" />
     <Content Include="Messages\DayOne\InterMail\SandraWeekly.html" />
     <Content Include="Messages\DayOne\InterMail\Benedetto.html" />
@@ -530,6 +533,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Messages\DayFour\Reports\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
