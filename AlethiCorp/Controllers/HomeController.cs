@@ -115,7 +115,7 @@ namespace AlethiCorp.Controllers
             {
               for (int i = 0; i < 18; i++)
               {
-                services.Add("Information Retrieval");
+                services.Add("Information Acquisition");
               }
             }
 
