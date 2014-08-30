@@ -83,20 +83,6 @@ namespace AlethiCorp.Controllers
       return View(intermailViewModel);
     }
 
-
-    //
-    // GET: /InterMail/Delete/5
-
-    public ActionResult Delete(int id = 0)
-    {
-      InterMail intermail = db.InterMails.Find(id);
-      if (intermail == null)
-      {
-        return HttpNotFound();
-      }
-      return View(intermail);
-    }
-
     //
     // POST: /InterMail/Delete/5
 

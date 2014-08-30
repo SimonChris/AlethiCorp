@@ -171,22 +171,6 @@ namespace AlethiCorp.Controllers
     }
 
     //
-    // GET: /Report/Delete/5
-
-    public ActionResult Delete(int id = 0)
-    {
-      Report Report = db.Reports.Find(id);
-      if (Report == null)
-      {
-        return HttpNotFound();
-      }
-      //return RedirectToAction("DeleteConfirmed");
-      var viewReport = reportList.Find(x => x.Name == Report.Name);
-      ViewBag.Type = (int)viewReport.Type;
-      return View(viewReport);
-    }
-
-    //
     // POST: /Report/Delete/5
 
     [HttpPost, ActionName("Delete")]

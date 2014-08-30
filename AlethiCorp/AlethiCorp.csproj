@@ -490,7 +490,6 @@
     <Content Include="Views\Shared\EditorTemplates\PoliticsType.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\ValueType.cshtml" />
     <Content Include="Views\InterMail\Create.cshtml" />
-    <Content Include="Views\InterMail\Delete.cshtml" />
     <Content Include="Views\InterMail\Details.cshtml" />
     <Content Include="Views\InterMail\Edit.cshtml" />
     <Content Include="Views\InterMail\Index.cshtml" />
@@ -501,7 +500,6 @@
     <Content Include="Views\Internal\University.cshtml" />
     <Content Include="Views\Internal\_ViewStart.cshtml" />
     <Content Include="Views\PersonalityTest\Register.cshtml" />
-    <Content Include="Views\Report\Delete.cshtml" />
     <Content Include="Views\Report\Details.cshtml" />
     <Content Include="Views\Report\Front.cshtml" />
     <Content Include="Views\Report\Index.cshtml" />
