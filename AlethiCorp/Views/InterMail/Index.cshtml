@@ -64,10 +64,18 @@
                 }
             </td>
             <td>
-                <a class="btn btn-default" href="@Url.Action("Details", new { id = item.Id })">Read</a>
-                @if(ViewBag.Ongoing)
+                @if (ViewBag.Ongoing)
                 {
-                  <a class="btn btn-default" href="@Url.Action("Delete", new { id = item.Id })">Delete</a>
+                  using (Html.BeginForm("Delete", "InterMail", new { id = item.Id }))
+                  {
+                    @Html.AntiForgeryToken()
+                    <a class="btn btn-default" href="@Url.Action("Details", new { id = item.Id })">Read</a>
+                    <input type="submit" value="Delete" class="btn btn-default" />
+                  }
+                }
+                else
+                {
+                  <a class="btn btn-default" href="@Url.Action("Details", new { id = item.Id })">Read</a>
                 }
             </td>
         </tr>

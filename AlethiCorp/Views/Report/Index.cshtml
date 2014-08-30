@@ -3,54 +3,59 @@
 <h2>@ViewBag.Title</h2>
 
 <table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Title)
-        </th>
-        @if (ViewBag.Title == "Reports" || ViewBag.Title == "Surveillance")
-        {
-            <th>
-                @Html.DisplayNameFor(model => model.Author)
-            </th>
-        }
-        <th>
-            @Html.DisplayNameFor(model => model.Date)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Flagged)
-        </th>
-        <th></th>
-    </tr>
+  <tr>
+    <th>
+      @Html.DisplayNameFor(model => model.Title)
+    </th>
+    @if (ViewBag.Title == "Reports" || ViewBag.Title == "Surveillance")
+    {
+      <th>
+        @Html.DisplayNameFor(model => model.Author)
+      </th>
+    }
+    <th>
+      @Html.DisplayNameFor(model => model.Date)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => model.Flagged)
+    </th>
+    <th></th>
+  </tr>
 
-@foreach (var item in Model) {
+  @foreach (var item in Model)
+  {
     <tr>
-        <td>
-            @if (item.Read)
-            {
-                @Html.DisplayFor(modelItem => item.Title)
-            }
-            else
-            {
-                <b>@Html.DisplayFor(modelItem => item.Title)</b>
-            }
-        </td>
-        @if (ViewBag.Title == "Reports" || ViewBag.Title == "Surveillance")
+      <td>
+        @if (item.Read)
         {
-            <td>
-                @Html.DisplayFor(modelItem => item.Author)
-            </td>
+          @Html.DisplayFor(modelItem => item.Title)
         }
+        else
+        {
+          <b>@Html.DisplayFor(modelItem => item.Title)</b>
+        }
+      </td>
+      @if (ViewBag.Title == "Reports" || ViewBag.Title == "Surveillance")
+      {
         <td>
-            @Html.DisplayFor(modelItem => item.Date)
+          @Html.DisplayFor(modelItem => item.Author)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Flagged)
-        </td>
-        <td>
-            <a class="btn btn-default" href="@Url.Action("Details", new { id = item.Id })">Read</a>
-            <a class="btn btn-default" href="@Url.Action("Delete", new { id = item.Id })">Delete</a>
-        </td>
+      }
+      <td>
+        @Html.DisplayFor(modelItem => item.Date)
+      </td>
+      <td>
+        @Html.DisplayFor(modelItem => item.Flagged)
+      </td>
+      <td>
+        @using (Html.BeginForm("Delete", "Report", new { id = item.Id }))
+        {
+          @Html.AntiForgeryToken()
+          <a class="btn btn-default" href="@Url.Action("Details", new { id = item.Id })">Read</a>
+          <input type="submit" value="Delete" class="btn btn-default" />
+        } 
+      </td>
     </tr>
-}
+  }
 
 </table>
