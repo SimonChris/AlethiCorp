@@ -156,6 +156,8 @@ namespace AlethiCorp.DAL
       var newReports = new List<Report>();
       bool results = false;
       bool deletedCorrect = !extantReports.Exists(x => x.Name == "DayOnePhoneBrightfieldCarbon");
+      bool flaggedCorrect = flaggedReports.Exists(x => x.Name == "DayOnePhoneBrightfieldCarbon");
+
       var reviewed = new List<string>();
       foreach (var report in flaggedReports.SelectRandomSubset(maxReviewed))
       {
@@ -164,7 +166,7 @@ namespace AlethiCorp.DAL
 
       if (!deletedCorrect)
       {
-        results = true;
+        results = flaggedCorrect;
         newReports.Add(MakeReport("DayTwoSurveillanceCarbon"));
         newReports.Add(MakeReport("DayTwoSurveillanceStudentMeeting"));
         newReports.Add(MakeReport("DayTwoMailCarbonCarpenter"));
@@ -201,7 +203,6 @@ namespace AlethiCorp.DAL
       var extantCount = extantReports.Count();
 
       bool deletedCorrect = !extantReports.Exists(x => x.Name == "DayOnePhoneBrightfieldCarbon");
-
       bool flaggedCorrect = flaggedReports.Exists(x => x.Name == "DayOnePhoneBrightfieldCarbon");
       int flaggedCount = flaggedReports.Count;
 
