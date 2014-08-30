@@ -90,7 +90,11 @@ namespace AlethiCorp.DAL
       }
 
       int results = 0;
-
+      if(reviewed.Contains("DayThreeMailBlackUnknown"))
+      {
+        results++;
+        newReports.Add(MakeReport("DayFourInterviewBlue"));
+      }
       newReports.ForEach(x => db.Reports.Add(x));
       return results;
     }

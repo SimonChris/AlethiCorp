@@ -307,6 +307,7 @@
     <Content Include="Messages\Conclusion\News\ArrestedDeletedAll.html" />
     <Content Include="Messages\DayFour\InterMail\DayFourSandraReminder.html" />
     <Content Include="Messages\DayFour\News\InvestigationUpdate.html" />
+    <Content Include="Messages\DayFour\Reports\DayFourInterviewBlue.html" />
     <Content Include="Messages\DayFour\Reports\DayFourSurveillanceStudentMeeting.html" />
     <Content Include="Messages\DayOne\InterMail\DefaultMail.html" />
     <Content Include="Messages\DayOne\InterMail\SandraWeekly.html" />

@@ -285,5 +285,14 @@
         "Author": "C22",
         "Date": "3",
         "Information": "Messages/DayFour/Reports/DayFourSurveillanceStudentMeeting.html"
+    },
+
+    {
+        "Name": "DayFourInterviewBlue",
+        "Type": "Surveillance",
+        "Title": "Interview with John Blue, aka 'Philip Black'",
+        "Author": "C17",
+        "Date": "3",
+        "Information": "Messages/DayFour/Reports/DayFourInterviewBlue.html"
     }
 ]
