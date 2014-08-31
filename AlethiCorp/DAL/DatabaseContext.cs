@@ -14,10 +14,10 @@ namespace AlethiCorp.DAL
         public DbSet<InterMail> InterMails { get; set; }
         public DbSet<PersonalInfo> PersonalInfos { get; set; }
         public DbSet<NewsItem> NewsItems { get; set; }
-        public DbSet<PersonData> PersonDatas { get; set; }
         public DbSet<Report> Reports { get; set; }
         public DbSet<SocialEvent> SocialEvents { get; set; }
         public DbSet<Course> Courses { get; set; }
         public DbSet<SentMail> SentMails { get; set; }
+        public DbSet<Recommendation> Recommendations { get; set; }
     }
 }

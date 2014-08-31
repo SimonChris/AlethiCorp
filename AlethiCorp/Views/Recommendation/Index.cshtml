@@ -1,0 +1,67 @@
+﻿@model IEnumerable<AlethiCorp.Models.Recommendation>
+
+@{
+  ViewBag.Title = "Recommendations";
+}
+
+<h2>Recommendations</h2>
+
+<p>
+  <a class="btn btn-default" href="@Url.Action("Create")">New recommendation</a>
+</p>
+<table class="table">
+  <tr>
+    <th>
+      @Html.DisplayNameFor(model => model.Name)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => model.ThreatLevel)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => model.ThreatType)
+    </th>
+    @if (ViewBag.DroneStrike)
+    {
+      <th>
+        @Html.DisplayNameFor(model => model.DroneStrike)
+      </th>
+    }
+    <th>
+      @Html.DisplayNameFor(model => model.Comments)
+    </th>
+    <th></th>
+  </tr>
+
+  @foreach (var item in Model)
+  {
+    <tr>
+      <td>
+        @Html.DisplayFor(modelItem => item.Name)
+      </td>
+      <td>
+        @Html.DisplayFor(modelItem => item.ThreatLevel)
+      </td>
+      <td>
+        @Html.DisplayFor(modelItem => item.ThreatType)
+      </td>
+      @if (ViewBag.DroneStrike)
+      {
+        <td>
+          @Html.DisplayFor(modelItem => item.DroneStrike)
+        </td>
+      }
+      <td>
+        @Html.DisplayFor(modelItem => item.Comments)
+      </td>
+      <td>
+        @using (Html.BeginForm("Delete", "Recommendation", new { id = item.Id }))
+        {
+          @Html.AntiForgeryToken()
+          <a class="btn btn-default" href="@Url.Action("Edit", new { id = item.Id })">Edit</a>
+          <input type="submit" value="Delete" class="btn btn-default" />
+        }
+      </td>
+    </tr>
+  }
+
+</table>

@@ -97,8 +97,11 @@ namespace AlethiCorp.DAL
       var newsItems = db.NewsItems.Where(x => x.UserName == userName).ToList();
       newsItems.ForEach(x => db.NewsItems.Remove(x));
 
-      var Reports = db.Reports.Where(x => x.UserName == userName).ToList();
-      Reports.ForEach(x => db.Reports.Remove(x));
+      var reports = db.Reports.Where(x => x.UserName == userName).ToList();
+      reports.ForEach(x => db.Reports.Remove(x));
+
+      var recommendations = db.Recommendations.Where(x => x.UserName == userName).ToList();
+      recommendations.ForEach(x => db.Recommendations.Remove(x));
 
       db.SaveChanges();
     }

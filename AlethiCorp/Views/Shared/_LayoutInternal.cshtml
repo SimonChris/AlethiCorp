@@ -26,10 +26,13 @@
                   {
                     <li>@Html.ActionLink("News", "Index", "Internal")</li>
                     <li>@LinkExtensions.ActionLink(Html, "InterMail" + @ViewBag.InterMailCount, "Index", "InterMail")</li>
-                    @*<li>@Html.ActionLink("myCareer", "myCareer", "Internal")</li>*@
                     <li>@Html.ActionLink("University", "Comply", "Internal")</li>
                     <li>@Html.ActionLink("Social", "Comply", "Internal")</li>
                     <li>@Html.ActionLink("Information", "Comply", "Internal")</li>
+                    if (ViewBag.Recommendation)
+                    {
+                      <li>@Html.ActionLink("Recommendations", "Comply", "Internal")</li>
+                    }
                     <li>@Html.ActionLink("TimeLog", "Comply", "Internal")</li>
                     <li>@Html.ActionLink("Public Page", "Comply", "Internal")</li>
                     @*<li>@Html.ActionLink("Reset", "Reset", "Internal")</li>*@
@@ -38,10 +41,13 @@
                   {
                     <li>@Html.ActionLink("News", "Index", "Internal")</li>
                     <li>@LinkExtensions.ActionLink(Html, "InterMail" + @ViewBag.InterMailCount, "Index", "InterMail")</li>
-                    @*<li>@Html.ActionLink("myCareer", "myCareer", "Internal")</li>*@
                     <li>@Html.ActionLink("Comply", "Comply", "Internal")</li>
                     <li>@Html.ActionLink("Comply", "Comply", "Internal")</li>
                     <li>@Html.ActionLink("Comply", "Comply", "Internal")</li>
+                    if (ViewBag.Recommendation)
+                    {
+                      <li>@Html.ActionLink("Comply", "Comply", "Internal")</li>
+                    }
                     <li>@Html.ActionLink("Comply", "Comply", "Internal")</li>
                     <li>@Html.ActionLink("Comply", "Comply", "Internal")</li>
                     @*<li>@Html.ActionLink("Reset", "Reset", "Internal")</li>*@
@@ -50,10 +56,13 @@
                   {
                     <li>@Html.ActionLink("News", "Index", "Internal")</li>
                     <li>@LinkExtensions.ActionLink(Html, "InterMail" + @ViewBag.InterMailCount, "Index", "InterMail")</li>
-                    @*<li>@Html.ActionLink("myCareer", "myCareer", "Internal")</li>*@
                     <li>@Html.ActionLink("University", "Index", "University")</li>
                     <li>@Html.ActionLink("Social", "Index", "Social")</li>
                     <li>@Html.ActionLink("Information", "Front", "Report")</li>
+                    if (ViewBag.Recommendation)
+                    {
+                      <li>@Html.ActionLink("Recommendations", "Index", "Recommendation")</li>
+                    }
                     <li>@Html.ActionLink("TimeLog", "Create", "TimeLog")</li>
                     <li>@Html.ActionLink("Public Page", "Index", "Home")</li>
                     @*<li>@Html.ActionLink("Reset", "Reset", "Internal")</li>*@

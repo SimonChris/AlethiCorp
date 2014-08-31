@@ -57,7 +57,7 @@
 
     {
         "Name": "InvestigationUpdate",
-        "HeadLine": "AlethiCorp investigations draws to a close",
+        "HeadLine": "AlethiCorp investigation draws to a close",
         "MainText": "Messages/DayFour/News/InvestigationUpdate.html",
         "Date": "3"
     }

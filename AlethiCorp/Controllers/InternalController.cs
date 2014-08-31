@@ -39,11 +39,6 @@ namespace AlethiCorp.Controllers
             return View();
         }
 
-        public ActionResult myCareer()
-        {
-            return View();
-        }
-
         public ActionResult University()
         {
             return View();
