@@ -109,6 +109,15 @@ namespace AlethiCorp.DAL
 
       newMails.Add(MakeMail("DayFourSandraReminder"));
 
+      if(results > 0)
+      {
+        newMails.Add(MakeMail("DayFourSalvinuManyResults"));
+      }
+      else
+      {
+        newMails.Add(MakeMail("DayFourSalvinuNoResults"));
+      }
+
       newMails.ForEach(s => db.InterMails.Add(s));
     }
 

@@ -668,5 +668,29 @@
         "Subject": "Quick reminder",
         "Date": "3",
         "Message": "Messages/DayFour/InterMail/DayFourSandraReminder.html"
+    },
+
+    {
+        "Name": "DayFourSalvinuManyResults",
+        "Author": "Salvinu Manduca",
+        "Subject": "I am impressed :)",
+        "Date": "3",
+        "Message": "Messages/DayFour/InterMail/DayFourSalvinuManyResults.html"
+    },
+
+    {
+        "Name": "DayFourSalvinuResults",
+        "Author": "Salvinu Manduca",
+        "Subject": "Nice job",
+        "Date": "3",
+        "Message": "Messages/DayFour/InterMail/DayFourSalvinuResults.html"
+    },
+
+    {
+        "Name": "DayFourSalvinuNoResults",
+        "Author": "Salvinu Manduca",
+        "Subject": "Let's talk",
+        "Date": "3",
+        "Message": "Messages/DayFour/InterMail/DayFourSalvinuNoResults.html"
     }
 ]
