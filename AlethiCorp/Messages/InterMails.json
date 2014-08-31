@@ -692,5 +692,29 @@
         "Subject": "Let's talk",
         "Date": "3",
         "Message": "Messages/DayFour/InterMail/DayFourSalvinuNoResults.html"
+    },
+
+    {
+        "Name": "DayFourOmegaConcurrency",
+        "Author": "Omega",
+        "Subject": "I am in!",
+        "Date": "3",
+        "Message": "Messages/DayFour/InterMail/DayFourOmegaConcurrency.html"
+    },
+
+    {
+        "Name": "DayFourOmegaInfiltrator",
+        "Author": "Omega",
+        "Subject": "Too bad",
+        "Date": "3",
+        "Message": "Messages/DayFour/InterMail/DayFourOmegaInfiltrator.html"
+    },
+
+    {
+        "Name": "DayFourAlphaNoInfiltrator",
+        "Author": "Alpha",
+        "Subject": "You can do it!",
+        "Date": "3",
+        "Message": "Messages/DayFour/InterMail/DayFourAlphaNoInfiltrator.html"
     }
 ]

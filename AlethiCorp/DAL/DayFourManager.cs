@@ -118,6 +118,20 @@ namespace AlethiCorp.DAL
         newMails.Add(MakeMail("DayFourSalvinuNoResults"));
       }
 
+      var hackingProgression = db.GameStates.Where(s => s.UserName == UserName).Single().HackingProgression;
+      if(hackingProgression == HackingProgression.Concurrency)
+      {
+        newMails.Add(MakeMail("DayFourOmegaConcurrency"));
+      }
+      else if(hackingProgression == HackingProgression.Infiltrator)
+      {
+        newMails.Add(MakeMail("DayFourOmegaInfiltrator"));
+      }
+      else
+      {
+        newMails.Add(MakeMail("DayFourAlphaNoInfiltrator"));
+      }
+
       newMails.ForEach(s => db.InterMails.Add(s));
     }
 

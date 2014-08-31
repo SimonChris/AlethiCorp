@@ -305,10 +305,13 @@
     <Content Include="Messages\Conclusion\InterMail\SandraArrestedDeletedAll.html" />
     <Content Include="Messages\Conclusion\InterMail\VedeninArrested.html" />
     <Content Include="Messages\Conclusion\News\ArrestedDeletedAll.html" />
+    <Content Include="Messages\DayFour\InterMail\DayFourAlphaNoInfiltrator.html" />
+    <Content Include="Messages\DayFour\InterMail\DayFourOmegaInfiltrator.html" />
     <Content Include="Messages\DayFour\InterMail\DayFourSalvinuNoResults.html" />
     <Content Include="Messages\DayFour\InterMail\DayFourSalvinuResults.html" />
     <Content Include="Messages\DayFour\InterMail\DayFourSandraReminder.html" />
     <Content Include="Messages\DayFour\InterMail\DayFourSalvinuManyResults.html" />
+    <Content Include="Messages\DayFour\InterMail\DayFourOmegaConcurrency.html" />
     <Content Include="Messages\DayFour\News\InvestigationUpdate.html" />
     <Content Include="Messages\DayFour\Reports\DayFourInterviewBlue.html" />
     <Content Include="Messages\DayFour\Reports\DayFourSurveillanceStudentMeeting.html" />
