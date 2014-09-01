@@ -118,8 +118,10 @@ namespace AlethiCorp.DAL
           return new DayThreeManager(db, userName);
         case 3:
           return new DayFourManager(db, userName);
+        case 4:
+          return new DayFiveManager(db, userName);
         default:
-          throw new ArgumentException("Day " + (day + 1).ToString() + " has not yet been implemented.");
+          throw new ArgumentException("Day " + (day + 1).ToString() + " has not been implemented.");
       }
     }
 
@@ -173,6 +175,8 @@ namespace AlethiCorp.DAL
           return "April 22";
         case 3:
           return "April 23";
+        case 4:
+          return "April 24";
         default:
           throw new ArgumentException("Day " + (day + 1).ToString() + " has not yet been implemented.");
       }

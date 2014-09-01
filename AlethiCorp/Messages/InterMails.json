@@ -651,7 +651,7 @@
         "Author": "Salvinu Manduca",
         "Subject": "Oh, FIRSTNAME",
         "Date": "3",
-        "Message": "Messages/Conclusion/InterMail/DayFourSalvinuArrested.html"
+        "Message": "Messages/Conclusion/InterMail/SalvinuArrested.html"
     },
 
     {
@@ -659,7 +659,7 @@
         "Author": "Salvinu Manduca",
         "Subject": "Oh, FIRSTNAME",
         "Date": "3",
-        "Message": "Messages/Conclusion/InterMail/DayFourSalvinuArrestedSpatula.html"
+        "Message": "Messages/Conclusion/InterMail/SalvinuArrestedSpatula.html"
     },
 
     {
@@ -716,5 +716,53 @@
         "Subject": "You can do it!",
         "Date": "3",
         "Message": "Messages/DayFour/InterMail/DayFourAlphaNoInfiltrator.html"
+    },
+
+    {
+        "Name": "DayFiveOskarArrestedDeletedAll",
+        "Author": "Oskar Jönsson",
+        "Subject": "Well, that was easy",
+        "Date": "4",
+        "Message": "Messages/Conclusion/InterMail/OskarArrestedDeletedAll.html"
+    },
+
+    {
+        "Name": "DayFiveOskarArrestedDeletedAllMail",
+        "Author": "Oskar Jönsson",
+        "Subject": "Well, that was easy",
+        "Date": "4",
+        "Message": "Messages/Conclusion/InterMail/OskarArrestedDeletedAllMail.html"
+    },
+
+    {
+        "Name": "DayFiveSandraArrestedDeletedAll",
+        "Author": "Sandra Silvern",
+        "Subject": "Disappointed",
+        "Date": "4",
+        "Message": "Messages/Conclusion/InterMail/DayFiveSandraArrestedDeletedAll.html"
+    },
+
+    {
+        "Name": "DayFiveVedeninArrested",
+        "Author": "Vitaly Vedenin",
+        "Subject": "Comply",
+        "Date": "4",
+        "Message": "Messages/Conclusion/InterMail/VedeninArrested.html"
+    },
+
+    {
+        "Name": "DayFiveSalvinuArrested",
+        "Author": "Salvinu Manduca",
+        "Subject": "Oh, FIRSTNAME",
+        "Date": "4",
+        "Message": "Messages/Conclusion/InterMail/SalvinuArrested.html"
+    },
+
+    {
+        "Name": "DayFiveSalvinuArrestedSpatula",
+        "Author": "Salvinu Manduca",
+        "Subject": "Oh, FIRSTNAME",
+        "Date": "4",
+        "Message": "Messages/Conclusion/InterMail/SalvinuArrestedSpatula.html"
     }
 ]

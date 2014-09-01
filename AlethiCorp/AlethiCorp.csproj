@@ -182,6 +182,7 @@
     <Compile Include="Controllers\UniversityController.cs" />
     <Compile Include="DAL\DatabaseContext.cs" />
     <Compile Include="DAL\DataBaseInitializer.cs" />
+    <Compile Include="DAL\DayFiveManager.cs" />
     <Compile Include="DAL\DayManager.cs" />
     <Compile Include="DAL\DayOneManager.cs" />
     <Compile Include="DAL\DayFourManager.cs" />
@@ -298,12 +299,14 @@
     <Content Include="Images\Steam Train.jpg" />
     <Content Include="Images\TrainWithWagon.jpg" />
     <Content Include="Images\Yellow Train.jpg" />
-    <Content Include="Messages\Conclusion\InterMail\DayFourSalvinuArrested.html" />
-    <Content Include="Messages\Conclusion\InterMail\DayFourSalvinuArrestedSpatula.html" />
+    <Content Include="Messages\Conclusion\InterMail\SalvinuArrested.html" />
+    <Content Include="Messages\Conclusion\InterMail\SalvinuArrestedSpatula.html" />
     <Content Include="Messages\Conclusion\InterMail\OskarArrestedDeletedAllMail.html" />
     <Content Include="Messages\Conclusion\InterMail\OskarArrestedDeletedAll.html" />
+    <Content Include="Messages\Conclusion\InterMail\DayFiveSandraArrestedDeletedAll.html" />
     <Content Include="Messages\Conclusion\InterMail\SandraArrestedDeletedAll.html" />
     <Content Include="Messages\Conclusion\InterMail\VedeninArrested.html" />
+    <Content Include="Messages\Conclusion\News\DayFiveArrestedDeletedAll.html" />
     <Content Include="Messages\Conclusion\News\ArrestedDeletedAll.html" />
     <Content Include="Messages\DayFour\InterMail\DayFourAlphaNoInfiltrator.html" />
     <Content Include="Messages\DayFour\InterMail\DayFourOmegaInfiltrator.html" />
@@ -513,7 +516,6 @@
     <Content Include="Views\Report\_ViewStart.cshtml" />
     <Content Include="Views\TimeLog\_ViewStart.cshtml" />
     <Content Include="Views\TimeLog\Create.cshtml" />
-    <Content Include="Views\TimeLog\Final.cshtml" />
     <Content Include="Views\PersonalityTest\Create.cshtml" />
     <Content Include="Views\Social\Create.cshtml" />
     <Content Include="Views\Social\Delete.cshtml" />
@@ -540,6 +542,7 @@
     <Content Include="Views\Recommendation\Edit.cshtml" />
     <Content Include="Views\Recommendation\Index.cshtml" />
     <Content Include="Views\Recommendation\_ViewStart.cshtml" />
+    <Content Include="Views\TimeLog\DroneStrikeConfirmation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,30 @@
+﻿@model int?
+@{
+  ViewBag.Title = "Drone strike confirmation";
+}
+
+<h2>Confirmation of drone strikes</h2>
+
+@if (Model == 1)
+{
+  <p>You have ordered 1 drone strike.</p>
+}
+else
+{
+  <p>You have ordered @Model drone strikes.</p>
+}
+
+<p>In accordance with the Drone Strike Protection Act of 2023, strict safeguards have been put into place to prevent unauthorized or unethical drone strikes.</p>
+
+<p>
+  Before your drones can be launched, you must confirm that you are authorized to order drone strikes, and that you have completed the Ethics course, as part
+  of your onboarding.
+</p>
+
+<p>Click the button below to confirm.</p>
+
+@using (Html.BeginForm())
+{
+  @Html.AntiForgeryToken()
+  <input type="submit" value="Confirm" class="btn btn-default" />
+}
