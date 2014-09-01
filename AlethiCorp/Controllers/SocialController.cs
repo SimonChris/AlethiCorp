@@ -61,8 +61,8 @@ namespace AlethiCorp.Controllers
             recipes.Add("Blueberry-almond bars");
             recipes.Add("Mexican polenta pie");
             recipes.Add("Don't you realize these people are evil? Don't feed the evil! - Alpha");
-            var bear = db.PersonalityTests.Where(x => x.UserName == User.Identity.Name).Single();
-            recipes.Add(bear.BearType);
+            var bearType = db.PersonalityTests.Where(x => x.UserName == User.Identity.Name).Single().BearType;
+            recipes.Add(bearType);
 
             var suggestions = recipes.Where(r => r.ToLower().Contains(term.ToLower()));
             return Json(suggestions, JsonRequestBehavior.AllowGet);

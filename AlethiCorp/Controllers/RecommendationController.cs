@@ -27,6 +27,41 @@ namespace AlethiCorp.Controllers
       return View();
     }
 
+    public ActionResult NameSuggestions(string term)
+    {
+      var names = new List<String>();
+      names.Add("Adam Underwood");
+      names.Add("Benedetto Tornincasa");
+      names.Add("Sandra Silvern");
+      names.Add("Oskar Jönsson");
+      names.Add("Alex DuMaurier");
+      names.Add("Andrea Schueler");
+      names.Add("Vitaly Vedenin");
+      names.Add("Sháo Lingfei");
+      names.Add("Salvinu Manduca");
+
+      names.Add("Martin Brightfield");
+      names.Add("Patricia Carbon");
+      names.Add("Silva Carpenter");
+      names.Add("Alyona Artemieva");
+      names.Add("Alex Jaspers");
+      names.Add("John Blue");
+      names.Add("Cédric Kinsinger");
+      names.Add("Velika Dožić");
+      names.Add("Adroushan Gasparyan");
+      names.Add("John Compass");
+      names.Add("Samuel Compass");
+      names.Add("Hannah Abendroth");
+      names.Add("Absolon Martineau");
+      names.Add("Victor Marian");
+      names.Add("Philip Black");
+      string bearType = db.PersonalityTests.Where(x => x.UserName == User.Identity.Name).Single().BearType;
+      names.Add(bearType);
+
+      var suggestions = names.Where(r => r.ToLower().Contains(term.ToLower()));
+      return Json(suggestions, JsonRequestBehavior.AllowGet);
+    }
+
     // POST: Recommendations/Create
     // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
     // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
