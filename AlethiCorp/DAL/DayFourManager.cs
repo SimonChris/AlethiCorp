@@ -118,7 +118,7 @@ namespace AlethiCorp.DAL
         newMails.Add(MakeMail("DayFourSalvinuNoResults"));
       }
 
-      var hackingProgression = db.GameStates.Where(s => s.UserName == UserName).Single().HackingProgression;
+      var hackingProgression = db.GetHackingProgression(UserName);
       if(hackingProgression == HackingProgression.Concurrency)
       {
         newMails.Add(MakeMail("DayFourOmegaConcurrency"));

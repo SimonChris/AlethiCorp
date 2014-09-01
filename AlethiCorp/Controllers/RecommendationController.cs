@@ -16,14 +16,14 @@ namespace AlethiCorp.Controllers
     // GET: Recommendations
     public ActionResult Index()
     {
-      ViewBag.DroneStrike = db.GameStates.Where(s => s.UserName == User.Identity.Name).Single().HackingProgression == HackingProgression.Concurrency;
+      ViewBag.DroneStrike = db.GetHackingProgression(User.Identity.Name) == HackingProgression.Concurrency;
       return View(db.Recommendations.Where(x => x.UserName == User.Identity.Name).ToList());
     }
 
     // GET: Recommendations/Create
     public ActionResult Create()
     {
-      ViewBag.DroneStrike = db.GameStates.Where(s => s.UserName == User.Identity.Name).Single().HackingProgression == HackingProgression.Concurrency;
+      ViewBag.DroneStrike = db.GetHackingProgression(User.Identity.Name) == HackingProgression.Concurrency;
       return View();
     }
 
@@ -92,7 +92,7 @@ namespace AlethiCorp.Controllers
       {
         return HttpNotFound();
       }
-      ViewBag.DroneStrike = db.GameStates.Where(s => s.UserName == User.Identity.Name).Single().HackingProgression == HackingProgression.Concurrency;
+      ViewBag.DroneStrike = db.GetHackingProgression(User.Identity.Name) == HackingProgression.Concurrency;
       return View(recommendation);
     }
 

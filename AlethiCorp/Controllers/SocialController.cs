@@ -80,8 +80,7 @@ namespace AlethiCorp.Controllers
         {
           var suggestions = new List<String>();
 
-          bool infiltrator = db.GameStates.Where(s => s.UserName == User.Identity.Name).Single()
-            .HackingProgression == HackingProgression.Infiltrator;
+          bool infiltrator = db.GetHackingProgression(User.Identity.Name) == HackingProgression.Infiltrator;
 
           if (infiltrator && term.Length > 1 && term.ToLower().Contains("jack daniel"))
           {

@@ -92,7 +92,7 @@ namespace AlethiCorp.DAL
       var searchResult = sentMails.Where(r => r.Recipient.ToLower().ContainsAny(new string[] { "omega" }));
       if (searchResult.Count() > 0)
       {
-        bool infiltrator = db.GameStates.Where(s => s.UserName == UserName).Single().HackingProgression == HackingProgression.Infiltrator;
+        bool infiltrator = db.GetHackingProgression(UserName) == HackingProgression.Infiltrator;
         var subject = "Re: " + searchResult.First().Subject;
         var searchTerms = new string[] { "oskar", "jönsson"};
         var detailedResult = searchResult.Where(s => s.GetContents().ToLower().ContainsAny(searchTerms));
@@ -249,7 +249,7 @@ namespace AlethiCorp.DAL
       {
         newMails.Add(MakeMail("DayThreeVedeninMany"));
       }
-      bool infiltrator = db.GameStates.Where(s => s.UserName == UserName).Single().HackingProgression == HackingProgression.Infiltrator;
+      bool infiltrator = db.GetHackingProgression(UserName) == HackingProgression.Infiltrator;
       if (infiltrator)
       {
         newMails.Add(MakeMail("DayThreeOmegaInfiltrator"));

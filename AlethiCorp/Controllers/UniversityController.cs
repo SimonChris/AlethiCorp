@@ -77,6 +77,9 @@ namespace AlethiCorp.Controllers
         public ActionResult Haka(int? page)
         {
           ViewBag.Day = db.GetDay(User.Identity.Name);
+          var hackingProgression = db.GetHackingProgression(User.Identity.Name);
+          ViewBag.Infiltrator = hackingProgression == HackingProgression.Infiltrator;
+          ViewBag.Concurrency = hackingProgression == HackingProgression.Concurrency;
           return View(page);
         }
 

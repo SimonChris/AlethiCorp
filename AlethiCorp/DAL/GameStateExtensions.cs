@@ -250,6 +250,12 @@ namespace AlethiCorp.DAL
       return gameState != null ? gameState.GameProgression : GameProgression.Ongoing;
     }
 
+    public static HackingProgression GetHackingProgression(this DatabaseContext db, string userName)
+    {
+      var gameState = db.GameStates.Where(s => s.UserName == userName).SingleOrDefault();
+      return gameState != null ? gameState.HackingProgression : HackingProgression.Innocent;
+    }
+
     public static bool ContainsAny(this string text, string[] terms)
     {
       return terms.Any(t => text.Contains(t));

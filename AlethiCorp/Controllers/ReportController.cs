@@ -150,7 +150,7 @@ namespace AlethiCorp.Controllers
 
     public ActionResult Concurrency()
     {
-      var hackingProgression = db.GameStates.Where(s => s.UserName == User.Identity.Name).Single().HackingProgression;
+      var hackingProgression = db.GetHackingProgression(User.Identity.Name);
       ViewBag.Infiltrator = hackingProgression == HackingProgression.Infiltrator;
       ViewBag.Concurrency = hackingProgression == HackingProgression.Concurrency;
 
