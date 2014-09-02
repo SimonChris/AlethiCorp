@@ -13,17 +13,27 @@ namespace AlethiCorp.DAL
       : base(db, userName)
     { }
 
-    private void EndGameWithDeletionArrest()
+    private void FinishGame()
     {
-      var gameState = db.GameStates.Where(s => s.UserName == UserName).Single();
-      gameState.GameProgression = GameProgression.Arrested;
-      db.Entry(gameState).State = EntityState.Modified;
-
       List<InterMail> interMails = db.InterMails.Where(m => m.UserName == UserName).ToList();
       interMails.ForEach(s => db.InterMails.Remove(s));
 
       List<Report> reports = db.Reports.Where(m => m.UserName == UserName).ToList();
       reports.ForEach(r => db.Reports.Remove(r));
+    }
+
+    private void EndGameWithArrest()
+    {
+      var gameState = db.GameStates.Where(s => s.UserName == UserName).Single();
+      gameState.GameProgression = GameProgression.Arrested;
+      db.Entry(gameState).State = EntityState.Modified;
+
+      FinishGame();
+    }
+
+    private void EndGameWithDeletionArrest()
+    {
+      EndGameWithArrest();
 
       db.NewsItems.Add(MakeNewsItem("DayFiveArrestedDeletedAll"));
 
@@ -58,14 +68,7 @@ namespace AlethiCorp.DAL
 
     private void EndGameWithNoResultsArrest()
     {
-      var gameState = db.GameStates.Where(s => s.UserName == UserName).Single();
-      gameState.GameProgression = GameProgression.Arrested;
-      db.Entry(gameState).State = EntityState.Modified;
-      List<InterMail> interMails = db.InterMails.Where(m => m.UserName == UserName).ToList();
-      interMails.ForEach(s => db.InterMails.Remove(s));
-
-      List<Report> reports = db.Reports.Where(m => m.UserName == UserName).ToList();
-      reports.ForEach(r => db.Reports.Remove(r));
+      EndGameWithArrest();
 
       db.NewsItems.Add(MakeNewsItem("DayFiveArrestedNoResults"));
 
@@ -100,14 +103,7 @@ namespace AlethiCorp.DAL
 
     private void EndGameWithDroneStrikes()
     {
-      var gameState = db.GameStates.Where(s => s.UserName == UserName).Single();
-      gameState.GameProgression = GameProgression.Arrested;
-      db.Entry(gameState).State = EntityState.Modified;
-      List<InterMail> interMails = db.InterMails.Where(m => m.UserName == UserName).ToList();
-      interMails.ForEach(s => db.InterMails.Remove(s));
-
-      List<Report> reports = db.Reports.Where(m => m.UserName == UserName).ToList();
-      reports.ForEach(r => db.Reports.Remove(r));
+      EndGameWithArrest();
 
       db.NewsItems.Add(MakeNewsItem("DayFiveDroneStrikes"));
 
@@ -139,6 +135,11 @@ namespace AlethiCorp.DAL
       }
 
       db.SaveChanges();
+    }
+
+    public void ReleaseBear()
+    {
+
     }
 
     public override void ActivateDay()

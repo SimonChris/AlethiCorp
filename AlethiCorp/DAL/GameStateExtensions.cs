@@ -143,6 +143,12 @@ namespace AlethiCorp.DAL
       MakeDayManager(db, userName, gameState.Day).ActivateDay();
     }
 
+    public static void ReleaseBear(this DatabaseContext db, string userName)
+    {
+      var dayFiveManager = MakeDayManager(db, userName, 4) as DayFiveManager;
+      dayFiveManager.ReleaseBear();
+    }
+
     public static string GetContents(this SentMail sentMail)
     {
       return sentMail.Subject + sentMail.Message;
@@ -258,6 +264,14 @@ namespace AlethiCorp.DAL
     {
       var gameState = db.GameStates.Where(s => s.UserName == userName).SingleOrDefault();
       return gameState != null ? gameState.HackingProgression : HackingProgression.Innocent;
+    }
+
+    public static bool BearEnabled(this DatabaseContext db, string userName)
+    {
+      var bear = db.PersonalityTests.Where(x => x.UserName == userName).Single().BearType.ToLower();
+      int bearCount = db.SocialEvents.Count(s => s.Contribution.ContainsAny(new string[] { "bear", bear }));
+
+      return bearCount > 1;
     }
 
     public static bool ContainsAny(this string text, string[] terms)
