@@ -300,6 +300,14 @@
     <Content Include="Images\Steam Train.jpg" />
     <Content Include="Images\TrainWithWagon.jpg" />
     <Content Include="Images\Yellow Train.jpg" />
+    <Content Include="Messages\Conclusion\DroneStrikes\InterMail\DayFiveBenedettoDroneStrikes.html" />
+    <Content Include="Messages\Conclusion\DroneStrikes\InterMail\DayFiveOskarDroneStrikes.html" />
+    <Content Include="Messages\Conclusion\DroneStrikes\InterMail\DayFiveOskarDroneStrikesMail.html" />
+    <Content Include="Messages\Conclusion\DroneStrikes\InterMail\DayFiveSalvinuDroneStrikes.html" />
+    <Content Include="Messages\Conclusion\DroneStrikes\InterMail\DayFiveSalvinuDroneStrikesSpatula.html" />
+    <Content Include="Messages\Conclusion\DroneStrikes\InterMail\DayFiveSandraDroneStrikes.html" />
+    <Content Include="Messages\Conclusion\DroneStrikes\InterMail\DayFiveVedeninArrestedDroneStrikes.html" />
+    <Content Include="Messages\Conclusion\DroneStrikes\News\DayFiveDroneStrikes.html" />
     <Content Include="Messages\Conclusion\InterMail\DayFiveSandraArrestedNoResults.html" />
     <Content Include="Messages\Conclusion\InterMail\DayFiveOskarArrestedNoResults.html" />
     <Content Include="Messages\Conclusion\InterMail\DayFiveOskarArrestedNoResultsMail.html" />

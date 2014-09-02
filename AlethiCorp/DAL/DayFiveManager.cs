@@ -88,11 +88,54 @@ namespace AlethiCorp.DAL
 
       if (potluckContribution.Contains("spatula"))
       {
-        db.InterMails.Add(MakeMail("DayFiveSalvinuArrestedNoResultsSpatula"));
+        db.InterMails.Add(MakeMail("DayFiveSalvinuNoResultsSpatula"));
       }
       else
       {
         db.InterMails.Add(MakeMail("DayFiveSalvinuNoResults"));
+      }
+
+      db.SaveChanges();
+    }
+
+    private void EndGameWithDroneStrikes()
+    {
+      var gameState = db.GameStates.Where(s => s.UserName == UserName).Single();
+      gameState.GameProgression = GameProgression.Arrested;
+      db.Entry(gameState).State = EntityState.Modified;
+      List<InterMail> interMails = db.InterMails.Where(m => m.UserName == UserName).ToList();
+      interMails.ForEach(s => db.InterMails.Remove(s));
+
+      List<Report> reports = db.Reports.Where(m => m.UserName == UserName).ToList();
+      reports.ForEach(r => db.Reports.Remove(r));
+
+      db.NewsItems.Add(MakeNewsItem("DayFiveDroneStrikes"));
+
+      db.InterMails.Add(MakeMail("DayFiveSandraDroneStrikes"));
+      db.InterMails.Add(MakeMail("DayFiveVedeninArrestedDroneStrikes"));
+      db.InterMails.Add(MakeMail("DayFiveBenedettoDroneStrikes"));
+
+      var searchTerms = new string[] { "hacker", "omega", "alpha", "iam" };
+      var sentMail = db.SentMails.Where(s => s.UserName == UserName).ToList();
+      bool informedOskar = sentMail.Any(s => s.GetContents().ToLower().ContainsAny(searchTerms));
+      if (informedOskar)
+      {
+        db.InterMails.Add(MakeMail("DayFiveOskarDroneStrikesMail"));
+      }
+      else
+      {
+        db.InterMails.Add(MakeMail("DayFiveOskarDroneStrikes"));
+      }
+      var potluckEvent = db.SocialEvents.ToList().Where(x => x.UserName == UserName && x.Date == db.GetDateString(0)).Single();
+      var potluckContribution = potluckEvent.Contribution.ToLower();
+
+      if (potluckContribution.Contains("spatula"))
+      {
+        db.InterMails.Add(MakeMail("DayFiveSalvinuDroneStrikesSpatula"));
+      }
+      else
+      {
+        db.InterMails.Add(MakeMail("DayFiveSalvinuDroneStrikes"));
       }
 
       db.SaveChanges();
@@ -115,6 +158,13 @@ namespace AlethiCorp.DAL
       if(threatsIdentified.Count() == 0)
       {
         EndGameWithNoResultsArrest();
+        return;
+      }
+
+      var droneStrikes = recommendations.Where(r => r.DroneStrike);
+      if(droneStrikes.Count() > 0)
+      {
+        EndGameWithDroneStrikes();
         return;
       }
 

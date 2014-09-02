@@ -806,5 +806,59 @@
         "Message": "Messages/Conclusion/InterMail/DayFiveSalvinuNoResultsSpatula.html"
     },
 
+    {
+        "Name": "DayFiveVedeninArrestedDroneStrikes",
+        "Author": "Vitaly Vedenin",
+        "Subject": "Comply",
+        "Date": "4",
+        "Message": "Messages/Conclusion/DroneStrikes/InterMail/DayFiveVedeninArrestedDroneStrikes.html"
+    },
 
+    {
+        "Name": "DayFiveOskarDroneStrikes",
+        "Author": "Oskar Jönsson",
+        "Subject": "You are way too easy",
+        "Date": "4",
+        "Message": "Messages/Conclusion/DroneStrikes/InterMail/DayFiveOskarDroneStrikes.html"
+    },
+
+    {
+        "Name": "DayFiveOskarDroneStrikesMail",
+        "Author": "Oskar Jönsson",
+        "Subject": "You are way too easy",
+        "Date": "4",
+        "Message": "Messages/Conclusion/DroneStrikes/InterMail/DayFiveOskarDroneStrikesMail.html"
+    },
+
+    {
+        "Name": "DayFiveBenedettoDroneStrikes",
+        "Author": "Benedetto Tornincasa",
+        "Subject": "Oh, FIRSTNAME :)",
+        "Date": "4",
+        "Message": "Messages/Conclusion/DroneStrikes/InterMail/DayFiveBenedettoDroneStrikes.html"
+    },
+
+    {
+        "Name": "DayFiveSandraDroneStrikes",
+        "Author": "Sandra Silvern",
+        "Subject": "Good riddance",
+        "Date": "4",
+        "Message": "Messages/Conclusion/DroneStrikes/InterMail/DayFiveSandraDroneStrikes.html"
+    },
+
+    {
+        "Name": "DayFiveSalvinuDroneStrikes",
+        "Author": "Salvinu Manduca",
+        "Subject": "Wow",
+        "Date": "4",
+        "Message": "Messages/Conclusion/DroneStrikes/InterMail/DayFiveSalvinuDroneStrikes.html"
+    },
+
+    {
+        "Name": "DayFiveSalvinuDroneStrikesSpatula",
+        "Author": "Salvinu Manduca",
+        "Subject": "Wow",
+        "Date": "4",
+        "Message": "Messages/Conclusion/DroneStrikes/InterMail/DayFiveSalvinuDroneStrikesSpatula.html"
+    }
 ]
