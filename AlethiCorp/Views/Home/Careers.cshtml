@@ -1,48 +1,53 @@
-﻿
-@{
-    ViewBag.Title = "Careers";
+﻿@{
+  ViewBag.Title = "Careers";
 }
 
 <h2>Careers</h2>
 
 @if (ViewBag.Comply)
 {
-<p>Cooperate with resettlement authorities, and you could go to a very nice place.</p>
+  <p>Cooperate with resettlement authorities, and you could go to a very nice place.</p>
 
-<p>You may even be given a position of authority.</p>
+  <p>You may even be given a position of authority.</p>
+}
+else if (ViewBag.BearBearBear)
+{
+  <h2>@ViewBag.BearType</h2>
 }
 else if (ViewBag.IsEmployee)
 {
-    <p>You are already employeed with AlethiCorp. Please go to the internal page for further instructions.</p>
+  <p>You are already employeed with AlethiCorp. Please go to the internal page for further instructions.</p>
 }
 else
 {
-   <p>A career at AlethiCorp is not just a job - it's a lifestyle.</p>
-    <p>The currently open positions are listed below.</p>
-    <p>We look forward to welcoming you to the AlethiCorp family!</p>
+  <p>A career at AlethiCorp is not just a job - it's a lifestyle.</p>
+  <p>The currently open positions are listed below.</p>
+  <p>We look forward to welcoming you to the AlethiCorp family!</p>
 
-    <table class="table">
-        <tr>
-            <td>
-                <b>Service Integration Manager</b>
-            </td>
-            <td>
-                <p><a class="btn btn-default" href="@Url.Action("ApplyNotQualified")">Apply &raquo;</a></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-               <b>Associate Information Management Consultant</b>
-            </td>
-            <td>
-                <p><a class="btn btn-default" href="@Url.Action("ApplyConsultant")">Apply &raquo;</a></p></td>
-        </tr>
-        <tr>
-            <td>
-                <b>Junior Cloud Synergy Analyst</b>
-            </td>
-            <td>
-                <p><a class="btn btn-default" href="@Url.Action("ApplyNotQualified")">Apply &raquo;</a></p></td>
-        </tr>
-    </table>
+  <table class="table">
+    <tr>
+      <td>
+        <b>Service Integration Manager</b>
+      </td>
+      <td>
+        <p><a class="btn btn-default" href="@Url.Action("ApplyNotQualified")">Apply &raquo;</a></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b>Associate Information Management Consultant</b>
+      </td>
+      <td>
+        <p><a class="btn btn-default" href="@Url.Action("ApplyConsultant")">Apply &raquo;</a></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b>Junior Cloud Synergy Analyst</b>
+      </td>
+      <td>
+        <p><a class="btn btn-default" href="@Url.Action("ApplyNotQualified")">Apply &raquo;</a></p>
+      </td>
+    </tr>
+  </table>
 }

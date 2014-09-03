@@ -1,52 +1,14 @@
 ﻿@{
-    ViewBag.Title = "AlethiCorp";
+  ViewBag.Title = "AlethiCorp";
 }
 
-@if(!ViewBag.Comply)
-{
-  <div class="jumbotron">
-      <h3>AlethiCorp: The world's premier Information Management company</h3>
-      <p class="lead">
-          Since its foundation in  @(DateTime.Now.Year + 20), AlethiCorp has grown to be become the foremost information
-          management consultancy company in the western world, helping governments, corporations, and all kinds of administrative 
-          bodies make sense of the vast amount of information that must be dealt with in the modern information age.
-      </p>
-  @*    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
-  </div>
-
-  <div class="row">
-      <div class="col-md-4">
-          <h2>Experience</h2>
-          <p>
-              As one of the world's oldest Information Management companies, AlethiCorp has extensive experience managing information 
-              for clients in all sectors. Specializing in large organisations, our clients have included such well known entities as 
-              the Pan-Eurasian Union, The American Alliance, and the Larkhill Resettlement Council.
-          </p>
-          @*<p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>*@
-      </div>
-      <div class="col-md-4">
-          <h2>Globalization</h2>
-          <p>Our more than 300.000 employees can draw on a huge network of expertise from all over the world. No matter what you need, an AlethiCorp
-          employee will be there to provide it.</p>
-          @*<p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>*@
-      </div>
-      <div class="col-md-4">
-          <h2>Values</h2>
-          <p>At AlethiCorp we believe in striving for something higher than mere profit maximisation. All employees are taught to follow the three
-          core values of AlethiCorp: Aletheia, Integrity and Magnanimity. You can rest assured that our employees will take pride in providing
-          the best possible service to you. Corruption and selfishness are unheard of in the AlethiCorp family.</p>
-          @*<p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>*@
-      </div>
-  </div>
-}
-else
+@if (ViewBag.Comply)
 {
   <div class="jumbotron">
     <h2>You can't escape</h2>
     <p class="lead">
       Comply with instructions from Information Acquisition.
     </p>
-    @*    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
   </div>
 
   <div class="row">
@@ -55,21 +17,85 @@ else
       <p>
         <h2>Comply</h2>
       </p>
-      @*<p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>*@
     </div>
     <div class="col-md-4">
       <h2><img src="../../Images/Eye.png" width="95" height="50" /></h2>
       <p>
         <h2>Comply</h2>
       </p>
-      @*<p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>*@
     </div>
     <div class="col-md-4">
       <h2><img src="../../Images/Eye.png" width="95" height="50" /></h2>
       <p>
         <h2>Comply</h2>
       </p>
-      @*<p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>*@
+    </div>
+  </div>
+}
+else if (ViewBag.BearBearBear)
+{
+  <div class="jumbotron">
+    <h2>@ViewBag.BearType</h2>
+    <p class="lead">
+      @ViewBag.BearType
+    </p>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <h2><img src="../../Images/DancingBear.jpg" /></h2>
+      <p>
+        <h2>@ViewBag.BearType</h2>
+      </p>
+    </div>
+    <div class="col-md-4">
+      <h2><img src="../../Images/DancingBear.jpg" /></h2>
+      <p>
+        <h2>@ViewBag.BearType</h2>
+      </p>
+    </div>
+    <div class="col-md-4">
+      <h2><img src="../../Images/DancingBear.jpg" /></h2>
+      <p>
+        <h2>@ViewBag.BearType</h2>
+      </p>
+    </div>
+  </div>
+}
+else
+{
+  <div class="jumbotron">
+    <h3>AlethiCorp: The world's premier Information Management company</h3>
+    <p class="lead">
+      Since its foundation in  @(DateTime.Now.Year + 20), AlethiCorp has grown to be become the foremost information
+      management consultancy company in the western world, helping governments, corporations, and all kinds of administrative
+      bodies make sense of the vast amount of information that must be dealt with in the modern information age.
+    </p>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <h2>Experience</h2>
+      <p>
+        As one of the world's oldest Information Management companies, AlethiCorp has extensive experience managing information
+        for clients in all sectors. Specializing in large organisations, our clients have included such well known entities as
+        the Pan-Eurasian Union, The American Alliance, and the Larkhill Resettlement Council.
+      </p>
+    </div>
+    <div class="col-md-4">
+      <h2>Globalization</h2>
+      <p>
+        Our more than 300.000 employees can draw on a huge network of expertise from all over the world. No matter what you need, an AlethiCorp
+        employee will be there to provide it.
+      </p>
+    </div>
+    <div class="col-md-4">
+      <h2>Values</h2>
+      <p>
+        At AlethiCorp we believe in striving for something higher than mere profit maximisation. All employees are taught to follow the three
+        core values of AlethiCorp: Aletheia, Integrity and Magnanimity. You can rest assured that our employees will take pride in providing
+        the best possible service to you. Corruption and selfishness are unheard of in the AlethiCorp family.
+      </p>
     </div>
   </div>
 }
