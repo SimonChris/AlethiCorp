@@ -25,6 +25,8 @@ namespace AlethiCorp.Controllers
       ViewBag.PhoneCount = db.GetItemCountString(User.Identity.Name, (int)ReportType.Phone, reportList);
       ViewBag.SurveillanceCount = db.GetItemCountString(User.Identity.Name, (int)ReportType.Surveillance, reportList);
       ViewBag.Flagging = db.GetDay(User.Identity.Name) < 3;
+      var progression = db.GetProgression(User.Identity.Name);
+      ViewBag.BearEnding = progression == GameProgression.Bear || progression == GameProgression.BearBearBear;
     }
 
     protected override void Dispose(bool disposing)

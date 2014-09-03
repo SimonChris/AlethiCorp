@@ -552,7 +552,7 @@
     <Content Include="Views\InterMail\Sent.cshtml" />
     <Content Include="Views\InterMail\SentDetails.cshtml" />
     <Content Include="Views\Internal\Comply.cshtml" />
-    <Content Include="Views\Final\Index.cshtml" />
+    <Content Include="Views\Final\Arrested.cshtml" />
     <Content Include="Views\Report\Concurrency.cshtml" />
     <Content Include="Views\Report\Warning.cshtml" />
     <Content Include="Views\Recommendation\Create.cshtml" />
@@ -560,6 +560,8 @@
     <Content Include="Views\Recommendation\Index.cshtml" />
     <Content Include="Views\Recommendation\_ViewStart.cshtml" />
     <Content Include="Views\TimeLog\DroneStrikeConfirmation.cshtml" />
+    <Content Include="Views\Internal\Bear.cshtml" />
+    <Content Include="Views\Final\BearEnding.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

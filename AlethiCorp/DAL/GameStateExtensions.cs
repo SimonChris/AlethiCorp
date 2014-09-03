@@ -37,7 +37,7 @@ namespace AlethiCorp.DAL
       text = text.Replace("POSSESSIVE", personalInfo.Male ? "his" : "her");
       text = text.Replace("TITLE", personalInfo.Male ? "Mr." : "Miss");
       text = text.Replace("GENDERREF", personalInfo.Male ? "guy" : "girl");
-      text = text.Replace("BEARTYPE", db.PersonalityTests.Where(s => s.UserName == userName).Single().BearType);
+      text = text.Replace("BEARTYPE", db.GetBearType(userName));
 
       if (text.ContainsAny(new string[] { "MAILSUBJECT", "MAILBODY" }))
       {
@@ -266,10 +266,15 @@ namespace AlethiCorp.DAL
       return gameState != null ? gameState.HackingProgression : HackingProgression.Innocent;
     }
 
+    public static string GetBearType(this DatabaseContext db, string userName)
+    {
+      return db.PersonalityTests.Where(x => x.UserName == userName).Single().BearType;
+    }
+
     public static bool BearEnabled(this DatabaseContext db, string userName)
     {
-      var bear = db.PersonalityTests.Where(x => x.UserName == userName).Single().BearType.ToLower();
-      int bearCount = db.SocialEvents.Count(s => s.Contribution.ContainsAny(new string[] { "bear", bear }));
+      var bear = db.GetBearType(userName).ToLower();
+      int bearCount = db.SocialEvents.ToList().Count(s => s.Contribution.ToLower().ContainsAny(new string[] { "bear", bear }));
 
       return bearCount > 1;
     }

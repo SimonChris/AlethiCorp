@@ -262,7 +262,7 @@ namespace AlethiCorp.DAL
 
       var potluckEvent = db.SocialEvents.ToList().Where(x => x.UserName == UserName && x.Date == db.GetDateString(0)).Single();
       var potluckContribution = potluckEvent.Contribution.ToLower();
-      var bear = db.PersonalityTests.Where(x => x.UserName == UserName).Single().BearType.ToLower();
+      var bear = db.GetBearType(UserName).ToLower();
       bool bearParty = potluckContribution.ContainsAny(new string[] { "bear", bear });
       if (!potluckEvent.Attending)
       {

@@ -1,101 +1,128 @@
 ﻿@model AlethiCorp.ViewModels.ReportViewModel
 
 @{
-    ViewBag.Title = "Report";
+  ViewBag.Title = "Report";
 }
 
 <h2>Report</h2>
 
 <fieldset>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
+  <hr />
+  <dl class="dl-horizontal">
+    <dt>
+      @Html.DisplayNameFor(model => model.Title)
+    </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Title)
-        </dd>
+    <dd>
+      @Html.DisplayFor(model => model.Title)
+    </dd>
 
-        @if (ViewBag.Type == 0 || ViewBag.Type == 3)
-        {
-            <dt>
-                @Html.DisplayNameFor(model => model.Author)
-            </dt>
+    @if (ViewBag.Type == 0 || ViewBag.Type == 3)
+    {
+      <dt>
+        @Html.DisplayNameFor(model => model.Author)
+      </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.Author)
-            </dd>
-        }
+      <dd>
+        @Html.DisplayFor(model => model.Author)
+      </dd>
+    }
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Date)
-        </dt>
+    <dt>
+      @Html.DisplayNameFor(model => model.Date)
+    </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Date)
-        </dd>
+    <dd>
+      @Html.DisplayFor(model => model.Date)
+    </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Information)
-        </dt>
+    <dt>
+      @Html.DisplayNameFor(model => model.Information)
+    </dt>
 
-        <dd>
-            @Html.Raw(Model.Information)
-        </dd>
-    </dl>
+    <dd>
+      @Html.Raw(Model.Information)
+    </dd>
+  </dl>
 </fieldset>
 
-@if(ViewBag.Flagging)
+@if (ViewBag.Flagging)
 {
   using (Html.BeginForm())
   {
-      @Html.AntiForgeryToken()
+    @Html.AntiForgeryToken()
 
-      <div class="form-horizontal">
-          <h4>Flag suspicious information</h4>
-          <hr />
-          @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-          @Html.HiddenFor(model => model.Id)
-          @Html.HiddenFor(model => model.RowVersion)
+    <div class="form-horizontal">
+      <h4>Flag suspicious information</h4>
+      <hr />
+      @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+      @Html.HiddenFor(model => model.Id)
+      @Html.HiddenFor(model => model.RowVersion)
 
-          <div class="form-group">
-              @Html.LabelFor(model => model, "Flag", htmlAttributes: new { @class = "control-label col-md-2" })
-              <div class="col-md-10">
-                  <div class="checkbox">
-                      @Html.EditorFor(model => model.Flagged)
-                      @Html.ValidationMessageFor(model => model.Flagged, "", new { @class = "text-danger" })
-                  </div>
-              </div>
+      <div class="form-group">
+        @Html.LabelFor(model => model, "Flag", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+          <div class="checkbox">
+            @Html.EditorFor(model => model.Flagged)
+            @Html.ValidationMessageFor(model => model.Flagged, "", new { @class = "text-danger" })
           </div>
-
-          <div class="form-group">
-              <div class="col-md-offset-2 col-md-10">
-                  <input type="submit" value="Save" class="btn btn-default" />
-              </div>
-          </div>
+        </div>
       </div>
+
+      <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+          <input type="submit" value="Save" class="btn btn-default" />
+        </div>
+      </div>
+    </div>
   }
 }
 
 @section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
+  @Scripts.Render("~/bundles/jqueryval")
 }
 
-<p>
+@if (ViewBag.BearReport)
+{
+  <p>
     @switch ((int)ViewBag.Type)
     {
-        case 0:
-            <a class="btn btn-default" href="@Url.Action("Reports", new { id = Model.Id })">Back to List</a>
-            break;
-        case 1:
-            <a class="btn btn-default" href="@Url.Action("EMail", new { id = Model.Id })">Back to List</a>
-            break;
-        case 2:
-            <a class="btn btn-default" href="@Url.Action("Phone", new { id = Model.Id })">Back to List</a>
-            break;
-        case 3:
-            <a class="btn btn-default" href="@Url.Action("Surveillance", new { id = Model.Id })">Back to List</a>
-            break;
+      case 0:
+        <a class="btn btn-default" href="@Url.Action("Reports", new { id = Model.Id })">Back to List</a>
+        <a class="btn btn-default" href="@Url.Action("Index", "Final")">And they all lived happily ever after, and went on amazing bear adventures throughout Europe</a>
+        break;
+      case 1:
+        <a class="btn btn-default" href="@Url.Action("EMail", new { id = Model.Id })">Back to List</a>
+        <a class="btn btn-default" href="@Url.Action("Index", "Final")">And they all lived happily ever after, and went on amazing bear adventures throughout Europe</a>
+        break;
+      case 2:
+        <a class="btn btn-default" href="@Url.Action("Phone", new { id = Model.Id })">Back to List</a>
+        <a class="btn btn-default" href="@Url.Action("Index", "Final")">And they all lived happily ever after, and went on amazing bear adventures throughout Europe</a>
+        break;
+      case 3:
+        <a class="btn btn-default" href="@Url.Action("Surveillance", new { id = Model.Id })">Back to List</a>
+        <a class="btn btn-default" href="@Url.Action("Index", "Final")">And they all lived happily ever after, and went on amazing bear adventures throughout Europe</a>
+        break;
     }
-</p>
+  </p>
+}
+else
+{
+  <p>
+    @switch ((int)ViewBag.Type)
+    {
+      case 0:
+        <a class="btn btn-default" href="@Url.Action("Reports", new { id = Model.Id })">Back to List</a>
+        break;
+      case 1:
+      <a class="btn btn-default" href="@Url.Action("EMail", new { id = Model.Id })">Back to List</a>
+        break;
+      case 2:
+      <a class="btn btn-default" href="@Url.Action("Phone", new { id = Model.Id })">Back to List</a>
+        break;
+      case 3:
+      <a class="btn btn-default" href="@Url.Action("Surveillance", new { id = Model.Id })">Back to List</a>
+        break;
+    }
+  </p>
+}

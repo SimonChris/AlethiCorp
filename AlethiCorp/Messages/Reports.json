@@ -294,5 +294,14 @@
         "Author": "C17",
         "Date": "3",
         "Information": "Messages/DayFour/Reports/DayFourInterviewBlue.html"
+    },
+
+    {
+        "Name": "DayFiveSurveillancePlayer",
+        "Type": "Surveillance",
+        "Title": "Pursuit of FIRSTNAME LASTNAME",
+        "Author": "D06",
+        "Date": "4",
+        "Information": "Messages/Conclusion/Bear/Reports/DayFiveSurveillancePlayer.html"
     }
 ]

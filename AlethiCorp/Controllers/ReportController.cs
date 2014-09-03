@@ -93,6 +93,8 @@ namespace AlethiCorp.Controllers
         db.SaveChanges();
       }
 
+      ViewBag.BearReport = viewReport.Name.Contains("SurveillancePlayer");
+
       viewReport.RowVersion = Report.RowVersion;
       viewReport.Flagged = Report.Flagged;
       viewReport.Date = db.GetDateString(Convert.ToInt32(viewReport.Date));

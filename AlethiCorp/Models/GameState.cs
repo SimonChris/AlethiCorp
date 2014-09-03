@@ -11,7 +11,9 @@ namespace AlethiCorp.Models
     Ongoing,
     Arrested,
     Promoted,
-    Comply
+    Comply,
+    Bear,
+    BearBearBear
     //Finalized
   }
 

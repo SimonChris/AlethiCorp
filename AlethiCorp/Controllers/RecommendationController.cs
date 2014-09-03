@@ -55,7 +55,7 @@ namespace AlethiCorp.Controllers
       names.Add("Absolon Martineau");
       names.Add("Victor Marian");
       names.Add("Philip Black");
-      string bearType = db.PersonalityTests.Where(x => x.UserName == User.Identity.Name).Single().BearType;
+      string bearType = db.GetBearType(User.Identity.Name);
       names.Add(bearType);
 
       var suggestions = names.Where(r => r.ToLower().Contains(term.ToLower()));

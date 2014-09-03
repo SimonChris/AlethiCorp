@@ -1,0 +1,29 @@
+﻿@{
+  Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width" />
+  <title>The End</title>
+</head>
+<body>
+  <div>
+    <p>Mr. Helpmann: He's got away from us, Jack.</p>
+    <p>Jack Lint: 'Fraid you're right, Mr. Helpmann. He's gone.</p>
+
+    <p>Terry Gilliam, "Brazil".</p>
+
+    @if (Request.IsAuthenticated)
+    {
+      using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+      {
+        @Html.AntiForgeryToken()
+        <p><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a> | @Html.ActionLink("Restart game", "ResetAll", "Internal")</p>
+      }
+    }
+  </div>
+</body>
+</html>

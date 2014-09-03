@@ -51,6 +51,10 @@
   {
     <a class="btn btn-default" href="@Url.Action("Index")">Inbox</a>
     <a class="btn btn-default" href="@Url.Action("Index", "Final")">Comply</a>
+    if (ViewBag.BearEnabled)
+    {
+      <a class="btn btn-default" href="@Url.Action("Bear", "Final")">@ViewBag.BearType</a>
+    }
   }
   else
   {

@@ -236,7 +236,7 @@ namespace AlethiCorp.DAL
 
       var socialEvent = db.SocialEvents.Where(x => x.UserName == UserName).Single();
       var contribution = socialEvent.Contribution.ToLower();
-      var bear = db.PersonalityTests.Where(x => x.UserName == UserName).Single().BearType.ToLower();
+      var bear = db.GetBearType(UserName).ToLower();
       bool bearParty = contribution.ContainsAny(new string[] { "bear", bear });
       if (!socialEvent.Attending)
       {

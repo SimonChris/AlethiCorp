@@ -139,7 +139,16 @@ namespace AlethiCorp.DAL
 
     public void ReleaseBear()
     {
+      FinishGame();
 
+      var gameState = db.GameStates.Where(s => s.UserName == UserName).Single();
+      gameState.GameProgression = GameProgression.Bear;
+      db.Entry(gameState).State = EntityState.Modified;
+
+      db.NewsItems.Add(MakeNewsItem("DayFiveBear"));
+      db.Reports.Add(MakeReport("DayFiveSurveillancePlayer"));
+
+      db.SaveChanges();
     }
 
     public override void ActivateDay()

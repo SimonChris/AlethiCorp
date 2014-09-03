@@ -17,16 +17,26 @@ namespace AlethiCorp.Controllers
     // GET: Final
     public ActionResult Index()
     {
-      if (db.GetProgression(User.Identity.Name) == GameProgression.Ongoing)
+      var progression = db.GetProgression(User.Identity.Name);
+      if (progression == GameProgression.Ongoing)
       {
         return HttpNotFound();
       }
-      return View();
+      if(progression == GameProgression.Arrested || progression == GameProgression.Comply)
+      {
+        return View("Arrested");
+      }
+      else if(progression == GameProgression.Bear || progression == GameProgression.BearBearBear)
+      {
+        return View("BearEnding");
+      }
+      return View("Arrested");
     }
 
     public ActionResult Bear()
     {
-      if (db.GetProgression(User.Identity.Name) != GameProgression.Arrested || !db.BearEnabled(User.Identity.Name))
+      var progression = db.GetProgression(User.Identity.Name);
+      if ((progression != GameProgression.Arrested && progression != GameProgression.Comply) || !db.BearEnabled(User.Identity.Name))
       {
         return HttpNotFound();
       }

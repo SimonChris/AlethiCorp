@@ -47,14 +47,23 @@
       <td>
         @Html.DisplayFor(modelItem => item.Flagged)
       </td>
-      <td>
-        @using (Html.BeginForm("Delete", "Report", new { id = item.Id }))
-        {
-          @Html.AntiForgeryToken()
+      @if (ViewBag.BearEnding)
+      {
+        <td>
           <a class="btn btn-default" href="@Url.Action("Details", new { id = item.Id })">Read</a>
-          <input type="submit" value="Delete" class="btn btn-default" />
-        } 
-      </td>
+        </td>
+      }
+      else
+      {
+        <td>
+          @using (Html.BeginForm("Delete", "Report", new { id = item.Id }))
+          {
+            @Html.AntiForgeryToken()
+            <a class="btn btn-default" href="@Url.Action("Details", new { id = item.Id })">Read</a>
+            <input type="submit" value="Delete" class="btn btn-default" />
+          } 
+        </td>
+      }
     </tr>
   }
 
