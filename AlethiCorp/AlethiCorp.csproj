@@ -326,6 +326,7 @@
     <Content Include="Messages\Conclusion\News\DayFiveArrestedNoResults.html" />
     <Content Include="Messages\Conclusion\News\DayFiveArrestedDeletedAll.html" />
     <Content Include="Messages\Conclusion\News\ArrestedDeletedAll.html" />
+    <Content Include="Messages\Conclusion\Success\News\DayFiveSuccess.html" />
     <Content Include="Messages\DayFour\InterMail\DayFourAlphaNoInfiltrator.html" />
     <Content Include="Messages\DayFour\InterMail\DayFourOmegaInfiltrator.html" />
     <Content Include="Messages\DayFour\InterMail\DayFourSalvinuNoResults.html" />
@@ -566,6 +567,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Messages\Conclusion\Success\InterMail\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

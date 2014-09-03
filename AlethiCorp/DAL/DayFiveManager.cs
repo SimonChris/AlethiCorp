@@ -139,16 +139,32 @@ namespace AlethiCorp.DAL
 
     public void ReleaseBear()
     {
-      FinishGame();
-
       var gameState = db.GameStates.Where(s => s.UserName == UserName).Single();
       gameState.GameProgression = GameProgression.Bear;
       db.Entry(gameState).State = EntityState.Modified;
+
+      FinishGame();
 
       db.NewsItems.Add(MakeNewsItem("DayFiveBear"));
       db.Reports.Add(MakeReport("DayFiveSurveillancePlayer"));
 
       db.SaveChanges();
+    }
+
+    public void EndGameWithSuccess()
+    {
+      var gameState = db.GameStates.Where(s => s.UserName == UserName).Single();
+      gameState.GameProgression = GameProgression.Bear;
+      db.Entry(gameState).State = EntityState.Modified;
+
+      FinishGame();
+
+    }
+
+    private string[] GetCredibleThreatNames()
+    {
+      return new string[] { "martin", "patricia", "silva", "alyona", "jaspers", "john blue", "cédric", 
+        "velika", "adroushan", "john compass", "samuel", "hannah", "absolon", "victor" };
     }
 
     public override void ActivateDay()
@@ -175,6 +191,13 @@ namespace AlethiCorp.DAL
       if(droneStrikes.Count() > 0)
       {
         EndGameWithDroneStrikes();
+        return;
+      }
+
+      var credibleThreatCount = threatsIdentified.Where(r => r.Name.ToLower().ContainsAny( GetCredibleThreatNames() )).Count();
+      if(credibleThreatCount > 0)
+      {
+        EndGameWithSuccess();
         return;
       }
 

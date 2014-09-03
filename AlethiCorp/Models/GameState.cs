@@ -10,11 +10,11 @@ namespace AlethiCorp.Models
   {
     Ongoing,
     Arrested,
-    Promoted,
     Comply,
+    Accepted,
+    Promoted,
     Bear,
     BearBearBear
-    //Finalized
   }
 
   public enum HackingProgression
