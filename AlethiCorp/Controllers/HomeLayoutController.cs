@@ -17,8 +17,12 @@ namespace AlethiCorp.Controllers
       ViewBag.IsEmployee = db.IsEmployee(User.Identity.Name);
       var progression = db.GetProgression(User.Identity.Name);
       ViewBag.Comply = progression == GameProgression.Comply;
-      ViewBag.BearBearBear = progression == GameProgression.BearBearBear;
-      ViewBag.BearType = db.GetBearType(User.Identity.Name);
+      var bearBearBear = progression == GameProgression.BearBearBear;
+      ViewBag.BearBearBear = bearBearBear;
+      if (bearBearBear)
+      {
+        ViewBag.BearType = db.GetBearType(User.Identity.Name);
+      }
     }
 
     protected override void Dispose(bool disposing)
