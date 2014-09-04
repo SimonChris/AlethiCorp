@@ -157,7 +157,7 @@ namespace AlethiCorp.DAL
     public void EndGameWithSuccess()
     {
       var gameState = db.GameStates.Where(s => s.UserName == UserName).Single();
-      gameState.GameProgression = GameProgression.Accepted;
+      gameState.GameProgression = GameProgression.Success;
       db.Entry(gameState).State = EntityState.Modified;
 
       FinishGame();
@@ -193,9 +193,48 @@ namespace AlethiCorp.DAL
       db.SaveChanges();
     }
 
+    public void EndGameWithKinsingerArrest()
+    {
+      var gameState = db.GameStates.Where(s => s.UserName == UserName).Single();
+      gameState.GameProgression = GameProgression.Success;
+      db.Entry(gameState).State = EntityState.Modified;
+
+      FinishGame();
+
+      db.NewsItems.Add(MakeNewsItem("DayFiveKinsinger"));
+
+      db.InterMails.Add(MakeMail("DayFiveSandraKinsinger"));
+      db.InterMails.Add(MakeMail("DayFiveVedeninKinsinger"));
+
+      var searchTerms = new string[] { "hacker", "omega", "alpha", "iam" };
+      var sentMail = db.SentMails.Where(s => s.UserName == UserName).ToList();
+      bool informedOskar = sentMail.Any(s => s.GetContents().ToLower().ContainsAny(searchTerms));
+      if (informedOskar)
+      {
+        db.InterMails.Add(MakeMail("DayFiveOskarKinsingerMail"));
+      }
+      else
+      {
+        db.InterMails.Add(MakeMail("DayFiveOskarKinsinger"));
+      }
+      var potluckEvent = db.SocialEvents.ToList().Where(x => x.UserName == UserName && x.Date == db.GetDateString(0)).Single();
+      var potluckContribution = potluckEvent.Contribution.ToLower();
+
+      if (potluckContribution.Contains("spatula"))
+      {
+        db.InterMails.Add(MakeMail("DayFiveSalvinuKinsingerSpatula"));
+      }
+      else
+      {
+        db.InterMails.Add(MakeMail("DayFiveSalvinuKinsinger"));
+      }
+
+      db.SaveChanges();
+    }
+
     private string[] GetCredibleThreatNames()
     {
-      return new string[] { "martin", "patricia", "silva", "alyona", "jaspers", "john blue", "cédric", 
+      return new string[] { "martin", "patricia", "silva", "alyona", "jaspers", "john blue", 
         "velika", "adroushan", "john compass", "samuel", "hannah", "absolon", "victor" };
     }
 
@@ -220,6 +259,12 @@ namespace AlethiCorp.DAL
       }
 
       var threatsIdentified = recommendations.Where(r => r.ThreatLevel > 5);
+      if(threatsIdentified.Any(t => t.Name.ToLower().Contains("kinsinger")))
+      {
+        EndGameWithKinsingerArrest();
+        return;
+      }
+
       var credibleThreatCount = threatsIdentified.Where(r => r.Name.ToLower().ContainsAny( GetCredibleThreatNames() )).Count();
       if(credibleThreatCount > 0)
       {

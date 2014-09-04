@@ -20,7 +20,7 @@ namespace AlethiCorp.Controllers
           ViewBag.Ongoing = progression == GameProgression.Ongoing;
           ViewBag.Arrested = progression == GameProgression.Arrested;
           ViewBag.Comply = progression == GameProgression.Comply;
-          ViewBag.Accepted = progression == GameProgression.Accepted;
+          ViewBag.Success = progression == GameProgression.Success;
           ViewBag.Career = progression == GameProgression.Career;
           ViewBag.BearReleased = progression == GameProgression.Bear;
           ViewBag.BearBearBear = progression == GameProgression.BearBearBear;

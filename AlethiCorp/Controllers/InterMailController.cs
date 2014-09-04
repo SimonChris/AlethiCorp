@@ -66,7 +66,7 @@ namespace AlethiCorp.Controllers
       if(intermail.Name.Contains("SandraSuccess"))
       {
         var state = db.GameStates.Where(s => s.UserName == User.Identity.Name).Single();
-        if(state.GameProgression == GameProgression.Accepted || state.GameProgression == GameProgression.Promoted)
+        if(state.GameProgression == GameProgression.Success)
         {
           state.GameProgression = GameProgression.Career;
           db.Entry(state).State = EntityState.Modified;

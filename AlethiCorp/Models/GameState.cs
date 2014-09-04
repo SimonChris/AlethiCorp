@@ -11,8 +11,7 @@ namespace AlethiCorp.Models
     Ongoing,
     Arrested,
     Comply,
-    Accepted,
-    Promoted,
+    Success,
     Career,
     Bear,
     BearBearBear
