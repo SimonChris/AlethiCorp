@@ -18,19 +18,19 @@ namespace AlethiCorp.Controllers
     public ActionResult Index()
     {
       var progression = db.GetProgression(User.Identity.Name);
-      if (progression == GameProgression.Ongoing)
-      {
-        return HttpNotFound();
-      }
       if(progression == GameProgression.Arrested || progression == GameProgression.Comply)
       {
         return View("Arrested");
+      }
+      else if(progression == GameProgression.Career)
+      {
+        return View("Success");
       }
       else if(progression == GameProgression.Bear || progression == GameProgression.BearBearBear)
       {
         return View("BearEnding");
       }
-      return View("Arrested");
+      return HttpNotFound();
     }
 
     public ActionResult Bear()

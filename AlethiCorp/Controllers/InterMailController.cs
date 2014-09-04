@@ -63,6 +63,16 @@ namespace AlethiCorp.Controllers
         db.Entry(intermail).State = EntityState.Modified;
         db.SaveChanges();
       }
+      if(intermail.Name.Contains("SandraSuccess"))
+      {
+        var state = db.GameStates.Where(s => s.UserName == User.Identity.Name).Single();
+        if(state.GameProgression == GameProgression.Accepted || state.GameProgression == GameProgression.Promoted)
+        {
+          state.GameProgression = GameProgression.Career;
+          db.Entry(state).State = EntityState.Modified;
+          db.SaveChanges(); 
+        }
+      }
 
       ViewBag.Enabled = intermail.Name != "DefaultMail";
       ViewBag.ComplyMail = intermail.Name.Contains("VedeninArrested");

@@ -20,9 +20,12 @@ namespace AlethiCorp.Controllers
           ViewBag.Ongoing = progression == GameProgression.Ongoing;
           ViewBag.Arrested = progression == GameProgression.Arrested;
           ViewBag.Comply = progression == GameProgression.Comply;
+          ViewBag.Accepted = progression == GameProgression.Accepted;
+          ViewBag.Career = progression == GameProgression.Career;
           ViewBag.BearReleased = progression == GameProgression.Bear;
           ViewBag.BearBearBear = progression == GameProgression.BearBearBear;
-          ViewBag.Recommendation = db.GetDay(User.Identity.Name) > 2;
+
+          ViewBag.Recommendation = db.GetDay(User.Identity.Name) == 3;
         }
 
         protected override void Dispose(bool disposing)

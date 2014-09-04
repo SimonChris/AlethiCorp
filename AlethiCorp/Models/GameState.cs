@@ -13,6 +13,7 @@ namespace AlethiCorp.Models
     Comply,
     Accepted,
     Promoted,
+    Career,
     Bear,
     BearBearBear
   }

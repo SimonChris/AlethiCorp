@@ -88,5 +88,12 @@
         "HeadLine": "Holy shit, a motherfucking bear!",
         "MainText": "Messages/Conclusion/Bear/News/DayFiveBear.html",
         "Date": "4"
+    },
+
+    {
+        "Name": "DayFiveSuccess",
+        "HeadLine": "AlethiCorp investigation concludes successfully",
+        "MainText": "Messages/Conclusion/Success/News/DayFiveSuccess.html",
+        "Date": "4"
     }
 ]

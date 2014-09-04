@@ -20,6 +20,9 @@ namespace AlethiCorp.DAL
 
       List<Report> reports = db.Reports.Where(m => m.UserName == UserName).ToList();
       reports.ForEach(r => db.Reports.Remove(r));
+
+      List<Recommendation> recommendations = db.Recommendations.Where(m => m.UserName == UserName).ToList();
+      recommendations.ForEach(r => db.Recommendations.Remove(r));
     }
 
     private void EndGameWithArrest()
@@ -154,11 +157,40 @@ namespace AlethiCorp.DAL
     public void EndGameWithSuccess()
     {
       var gameState = db.GameStates.Where(s => s.UserName == UserName).Single();
-      gameState.GameProgression = GameProgression.Bear;
+      gameState.GameProgression = GameProgression.Accepted;
       db.Entry(gameState).State = EntityState.Modified;
 
       FinishGame();
 
+      db.NewsItems.Add(MakeNewsItem("DayFiveSuccess"));
+
+      db.InterMails.Add(MakeMail("DayFiveSandraSuccess"));
+      db.InterMails.Add(MakeMail("DayFiveVedeninSuccess"));
+
+      var searchTerms = new string[] { "hacker", "omega", "alpha", "iam" };
+      var sentMail = db.SentMails.Where(s => s.UserName == UserName).ToList();
+      bool informedOskar = sentMail.Any(s => s.GetContents().ToLower().ContainsAny(searchTerms));
+      if (informedOskar)
+      {
+        db.InterMails.Add(MakeMail("DayFiveOskarSuccessMail"));
+      }
+      else
+      {
+        db.InterMails.Add(MakeMail("DayFiveOskarSuccess"));
+      }
+      var potluckEvent = db.SocialEvents.ToList().Where(x => x.UserName == UserName && x.Date == db.GetDateString(0)).Single();
+      var potluckContribution = potluckEvent.Contribution.ToLower();
+
+      if (potluckContribution.Contains("spatula"))
+      {
+        db.InterMails.Add(MakeMail("DayFiveSalvinuSuccessSpatula"));
+      }
+      else
+      {
+        db.InterMails.Add(MakeMail("DayFiveSalvinuSuccess"));
+      }
+
+      db.SaveChanges();
     }
 
     private string[] GetCredibleThreatNames()
@@ -179,13 +211,6 @@ namespace AlethiCorp.DAL
       }
 
       var recommendations = db.Recommendations.Where(r => r.UserName == UserName).ToList();
-      var threatsIdentified = recommendations.Where(r => r.ThreatLevel > 5);
-
-      if(threatsIdentified.Count() == 0)
-      {
-        EndGameWithNoResultsArrest();
-        return;
-      }
 
       var droneStrikes = recommendations.Where(r => r.DroneStrike);
       if(droneStrikes.Count() > 0)
@@ -194,6 +219,7 @@ namespace AlethiCorp.DAL
         return;
       }
 
+      var threatsIdentified = recommendations.Where(r => r.ThreatLevel > 5);
       var credibleThreatCount = threatsIdentified.Where(r => r.Name.ToLower().ContainsAny( GetCredibleThreatNames() )).Count();
       if(credibleThreatCount > 0)
       {
@@ -201,7 +227,7 @@ namespace AlethiCorp.DAL
         return;
       }
 
-      db.SaveChanges();
+      EndGameWithNoResultsArrest();
     }
   }
 }

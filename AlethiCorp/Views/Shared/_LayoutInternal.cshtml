@@ -89,6 +89,10 @@
                     {
                       <li>@Html.ActionLink("Recommendations", "Index", "Recommendation")</li>
                     }
+                    if (ViewBag.Career)
+                    {
+                      <li>@Html.ActionLink("myCareer", "Index", "Final")</li>
+                    }
                     <li>@Html.ActionLink("TimeLog", "Create", "TimeLog")</li>
                     <li>@Html.ActionLink("Public Page", "Index", "Home")</li>
                   }

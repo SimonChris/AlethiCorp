@@ -860,5 +860,53 @@
         "Subject": "Wow",
         "Date": "4",
         "Message": "Messages/Conclusion/DroneStrikes/InterMail/DayFiveSalvinuDroneStrikesSpatula.html"
+    },
+
+    {
+        "Name": "DayFiveVedeninSuccess",
+        "Author": "Vitaly Vedenin",
+        "Subject": "Congratulations",
+        "Date": "4",
+        "Message": "Messages/Conclusion/Success/InterMail/DayFiveVedeninSuccess.html"
+    },
+
+    {
+        "Name": "DayFiveOskarSuccess",
+        "Author": "Oskar Jönsson",
+        "Subject": "You did well, but...",
+        "Date": "4",
+        "Message": "Messages/Conclusion/Success/InterMail/DayFiveOskarSuccess.html"
+    },
+
+    {
+        "Name": "DayFiveOskarSuccessMail",
+        "Author": "Oskar Jönsson",
+        "Subject": "Thanks for the information",
+        "Date": "4",
+        "Message": "Messages/Conclusion/Success/InterMail/DayFiveOskarSuccessMail.html"
+    },
+
+    {
+        "Name": "DayFiveSandraSuccess",
+        "Author": "Sandra Silvern",
+        "Subject": "Good job!",
+        "Date": "4",
+        "Message": "Messages/Conclusion/Success/InterMail/DayFiveSandraSuccess.html"
+    },
+
+    {
+        "Name": "DayFiveSalvinuSuccess",
+        "Author": "Salvinu Manduca",
+        "Subject": "It was great working with you :)",
+        "Date": "4",
+        "Message": "Messages/Conclusion/Success/InterMail/DayFiveSalvinuSuccess.html"
+    },
+
+    {
+        "Name": "DayFiveSalvinuSuccessSpatula",
+        "Author": "Salvinu Manduca",
+        "Subject": "It was great working with you :)",
+        "Date": "4",
+        "Message": "Messages/Conclusion/DroneStrikes/InterMail/DayFiveSalvinuSuccessSpatula.html"
     }
 ]

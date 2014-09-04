@@ -290,6 +290,7 @@
     <Content Include="Images\BackgroundWave.jpg" />
     <Content Include="Images\BlackMarble.png" />
     <Content Include="Images\BlackTrain.jpg" />
+    <Content Include="Images\Cargo Train.jpg" />
     <Content Include="Images\CorpBackground.jpg" />
     <Content Include="Images\CorpBackgroundWave.jpg" />
     <Content Include="Images\DancingBear.JPG" />
@@ -326,6 +327,12 @@
     <Content Include="Messages\Conclusion\News\DayFiveArrestedNoResults.html" />
     <Content Include="Messages\Conclusion\News\DayFiveArrestedDeletedAll.html" />
     <Content Include="Messages\Conclusion\News\ArrestedDeletedAll.html" />
+    <Content Include="Messages\Conclusion\Success\InterMail\DayFiveSalvinuSuccess.html" />
+    <Content Include="Messages\Conclusion\Success\InterMail\DayFiveSalvinuSuccessSpatula.html" />
+    <Content Include="Messages\Conclusion\Success\InterMail\DayFiveSandraSuccess.html" />
+    <Content Include="Messages\Conclusion\Success\InterMail\DayFiveVedeninSuccess.html" />
+    <Content Include="Messages\Conclusion\Success\InterMail\DayFiveOskarSuccess.html" />
+    <Content Include="Messages\Conclusion\Success\InterMail\DayFiveOskarSuccessMail.html" />
     <Content Include="Messages\Conclusion\Success\News\DayFiveSuccess.html" />
     <Content Include="Messages\DayFour\InterMail\DayFourAlphaNoInfiltrator.html" />
     <Content Include="Messages\DayFour\InterMail\DayFourOmegaInfiltrator.html" />
@@ -564,10 +571,10 @@
     <Content Include="Views\TimeLog\DroneStrikeConfirmation.cshtml" />
     <Content Include="Views\Internal\Bear.cshtml" />
     <Content Include="Views\Final\BearEnding.cshtml" />
+    <Content Include="Views\Final\Success.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Messages\Conclusion\Success\InterMail\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
