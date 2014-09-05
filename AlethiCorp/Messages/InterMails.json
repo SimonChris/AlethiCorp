@@ -907,6 +907,62 @@
         "Author": "Salvinu Manduca",
         "Subject": "It was great working with you :)",
         "Date": "4",
-        "Message": "Messages/Conclusion/DroneStrikes/InterMail/DayFiveSalvinuSuccessSpatula.html"
+        "Message": "Messages/Conclusion/Success/InterMail/DayFiveSalvinuSuccessSpatula.html"
+    },
+
+    {
+        "Name": "DayFiveVedeninKinsinger",
+        "Author": "Vitaly Vedenin",
+        "Subject": "Congratulations",
+        "Date": "4",
+        "Message": "Messages/Conclusion/Kinsinger/InterMail/DayFiveVedeninKinsinger.html"
+    },
+
+    {
+        "Name": "DayFiveOskarKinsinger",
+        "Author": "Oskar Jönsson",
+        "Subject": "You did very well, but...",
+        "Date": "4",
+        "Message": "Messages/Conclusion/Kinsinger/InterMail/DayFiveOskarKinsinger.html"
+    },
+
+    {
+        "Name": "DayFiveOskarKinsingerMail",
+        "Author": "Oskar Jönsson",
+        "Subject": "Great job, Thanks for the information!",
+        "Date": "4",
+        "Message": "Messages/Conclusion/Kinsinger/InterMail/DayFiveOskarKinsingerMail.html"
+    },
+
+    {
+        "Name": "DayFiveSandraKinsinger",
+        "Author": "Sandra Silvern",
+        "Subject": "Goodbye team!",
+        "Date": "4",
+        "Message": "Messages/Conclusion/Kinsinger/InterMail/DayFiveSandraKinsinger.html"
+    },
+
+    {
+        "Name": "DayFiveVelikaKinsinger",
+        "Author": "Velika Dožić",
+        "Subject": "We're going to be working together!",
+        "Date": "4",
+        "Message": "Messages/Conclusion/Kinsinger/InterMail/DayFiveVelikaKinsinger.html"
+    },
+
+    {
+        "Name": "DayFiveSalvinuKinsinger",
+        "Author": "Salvinu Manduca",
+        "Subject": "It was great working with you :)",
+        "Date": "4",
+        "Message": "Messages/Conclusion/Kinsinger/InterMail/DayFiveSalvinuKinsinger.html"
+    },
+
+    {
+        "Name": "DayFiveSalvinuKinsingerSpatula",
+        "Author": "Salvinu Manduca",
+        "Subject": "It was great working with you :)",
+        "Date": "4",
+        "Message": "Messages/Conclusion/Kinsinger/InterMail/DayFiveSalvinuKinsingerSpatula.html"
     }
 ]

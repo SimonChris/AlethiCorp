@@ -95,5 +95,12 @@
         "HeadLine": "AlethiCorp investigation concludes successfully",
         "MainText": "Messages/Conclusion/Success/News/DayFiveSuccess.html",
         "Date": "4"
+    },
+
+    {
+        "Name": "DayFiveKinsinger",
+        "HeadLine": "Famous journalist exposed as dangerous terrorist!",
+        "MainText": "Messages/Conclusion/Kinsinger/News/DayFiveKinsinger.html",
+        "Date": "4"
     }
 ]

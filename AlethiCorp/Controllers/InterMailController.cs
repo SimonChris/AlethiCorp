@@ -63,7 +63,7 @@ namespace AlethiCorp.Controllers
         db.Entry(intermail).State = EntityState.Modified;
         db.SaveChanges();
       }
-      if(intermail.Name.Contains("SandraSuccess"))
+      if(intermail.Name.Contains("SandraSuccess") || intermail.Name.Contains("VelikaKinsinger"))
       {
         var state = db.GameStates.Where(s => s.UserName == User.Identity.Name).Single();
         if(state.GameProgression == GameProgression.Success)

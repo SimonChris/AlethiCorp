@@ -205,6 +205,7 @@ namespace AlethiCorp.DAL
 
       db.InterMails.Add(MakeMail("DayFiveSandraKinsinger"));
       db.InterMails.Add(MakeMail("DayFiveVedeninKinsinger"));
+      db.InterMails.Add(MakeMail("DayFiveVelikaKinsinger"));
 
       var searchTerms = new string[] { "hacker", "omega", "alpha", "iam" };
       var sentMail = db.SentMails.Where(s => s.UserName == UserName).ToList();
@@ -234,8 +235,8 @@ namespace AlethiCorp.DAL
 
     private string[] GetCredibleThreatNames()
     {
-      return new string[] { "martin", "patricia", "silva", "alyona", "jaspers", "john blue", 
-        "velika", "adroushan", "john compass", "samuel", "hannah", "absolon", "victor" };
+      return new string[] { "martin", "patricia", "silva", "alyona", "jaspers", "john blue",
+        "adroushan", "john compass", "samuel", "hannah", "absolon", "victor" };
     }
 
     public override void ActivateDay()
