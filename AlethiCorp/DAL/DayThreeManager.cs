@@ -29,19 +29,20 @@ namespace AlethiCorp.DAL
       var searchResult = sentMails.Where(r => r.Recipient.ToLower().Contains("andrea"));
       if (searchResult.Count() > 0)
       {
-        var nellieResult = searchResult.Where(r => r.GetContents().ToLower().ContainsAny(new string[] { "nellie", " bly", "nelly" }));
-        var nelieResults = searchResult.Where(r => r.GetContents().ToLower().ContainsAny(new string[] { "nelie", "nely" }));
-        if(nelieResults.Count() > 0)
+        var subject = "Re: " + searchResult.First().Subject;
+        var goldmanResult = searchResult.Where(r => r.GetContents().ToLower().ContainsAny(new string[] { "emma", " goldman", "mother earth" }));
+        var golmanResults = searchResult.Where(r => r.GetContents().ToLower().ContainsAny(new string[] { "golman" }));
+        if (golmanResults.Count() > 0)
         {
-          db.InterMails.Add(MakeMail("DayThreeAndreaNelie", "Re: " + nelieResults.First().Subject));
+          db.InterMails.Add(MakeMail("DayThreeAndreaGolman", "Re: " + golmanResults.First().Subject));
         }
-        else if (nellieResult.Count() > 0)
+        else if (goldmanResult.Count() > 0)
         {
-          db.InterMails.Add(MakeMail("DayThreeAndreaNellie", "Re: " + nellieResult.First().Subject));
+          db.InterMails.Add(MakeMail("DayThreeAndreaGoldman", "Re: " + goldmanResult.First().Subject));
         }
         else
         {
-          db.Reports.Add(MakeReport("DayThreeInterMailReview"));
+          db.InterMails.Add(MakeMail("DayThreeAndreaReply", "Re: " + subject));
         }
       }
     }

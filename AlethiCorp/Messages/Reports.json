@@ -229,15 +229,6 @@
     },
 
     {
-        "Name": "DayThreeInterMailReview",
-        "Type": "Report",
-        "Title": "Analysis of 'MAILSUBJECT' by FIRSTNAME LASTNAME",
-        "Author": "Andrea Schueler",
-        "Date": "2",
-        "Information": "Messages/DayThree/Reports/InterMailReview.html"
-    },
-
-    {
         "Name": "DayThreeMailKinsingerVelika",
         "Type": "EMail",
         "Title": "Cédric Kinsinger and Velika Dožić",
@@ -276,6 +267,15 @@
         "Title": "Cédric Kinsinger and Velika Dožić",
         "Date": "2",
         "Information": "Messages/DayThree/Reports/PhoneKinsingerVelika.html"
+    },
+
+    {
+        "Name": "DayFourInterMailReview",
+        "Type": "Report",
+        "Title": "Analysis of 'MAILSUBJECT' by FIRSTNAME LASTNAME",
+        "Author": "Andrea Schueler",
+        "Date": "3",
+        "Information": "Messages/DayFour/Reports/DayFourInterMailReview.html"
     },
 
     {

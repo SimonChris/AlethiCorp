@@ -349,6 +349,8 @@
     <Content Include="Messages\DayFour\InterMail\DayFourSandraReminder.html" />
     <Content Include="Messages\DayFour\InterMail\DayFourSalvinuManyResults.html" />
     <Content Include="Messages\DayFour\InterMail\DayFourOmegaConcurrency.html" />
+    <Content Include="Messages\DayFour\InterMail\Replies\DayFourAndreaNelie.html" />
+    <Content Include="Messages\DayFour\InterMail\Replies\DayFourAndreaNellie.html" />
     <Content Include="Messages\DayFour\News\InvestigationUpdate.html" />
     <Content Include="Messages\DayFour\Reports\DayFourInterviewBlue.html" />
     <Content Include="Messages\DayFour\Reports\DayFourSurveillanceStudentMeeting.html" />
@@ -384,8 +386,9 @@
     <Content Include="Messages\DayThree\InterMail\OmegaNoInfiltrator.html" />
     <Content Include="Messages\DayThree\InterMail\OmegaInfiltrator.html" />
     <Content Include="Messages\DayThree\InterMail\Replies\DayThreeAlexReply.html" />
-    <Content Include="Messages\DayThree\InterMail\Replies\DayThreeAndreaNelie.html" />
-    <Content Include="Messages\DayThree\InterMail\Replies\DayThreeAndreaNellie.html" />
+    <Content Include="Messages\DayThree\InterMail\Replies\DayThreeAndreaReply.html" />
+    <Content Include="Messages\DayThree\InterMail\Replies\DayThreeAndreaGolman.html" />
+    <Content Include="Messages\DayThree\InterMail\Replies\DayThreeAndreaGoldman.html" />
     <Content Include="Messages\DayThree\InterMail\Replies\BenedettoReply.html" />
     <Content Include="Messages\DayThree\InterMail\Replies\BenedettoIAM.html" />
     <Content Include="Messages\DayThree\InterMail\DayThreeVedeninFound.html" />
@@ -410,7 +413,7 @@
     <Content Include="Messages\DayThree\News\Students.html" />
     <Content Include="Messages\DayThree\News\Synergy.html" />
     <Content Include="Messages\DayThree\Reports\MailBlackUnknown.html" />
-    <Content Include="Messages\DayThree\Reports\InterMailReview.html" />
+    <Content Include="Messages\DayFour\Reports\DayFourInterMailReview.html" />
     <Content Include="Messages\DayThree\Reports\MailBrightfieldCarbon.html" />
     <Content Include="Messages\DayThree\Reports\PhoneKinsingerBrightfield.html" />
     <Content Include="Messages\DayThree\Reports\PhoneKinsingerVelika.html" />

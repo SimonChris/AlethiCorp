@@ -531,20 +531,6 @@
     },
 
     {
-        "Name": "DayThreeAndreaNellie",
-        "Author": "Andrea Schueler",
-        "Date": "2",
-        "Message": "Messages/DayThree/InterMail/Replies/DayThreeAndreaNellie.html"
-    },
-
-    {
-        "Name": "DayThreeAndreaNelie",
-        "Author": "Andrea Schueler",
-        "Date": "2",
-        "Message": "Messages/DayThree/InterMail/Replies/DayThreeAndreaNelie.html"
-    },
-
-    {
         "Name": "DayThreeShaoReply",
         "Author": "Shào Lingfei",
         "Date": "2",
@@ -612,6 +598,41 @@
         "Author": "Vitaly Vedenin",
         "Date": "2",
         "Message": "Messages/DayThree/InterMail/Replies/DayThreeVitalyReply.html"
+    },
+
+    {
+        "Name": "DayThreeAndreaGoldman",
+        "Author": "Andrea Schueler",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/Replies/DayThreeAndreaGoldman.html"
+    },
+
+    {
+        "Name": "DayThreeAndreaGolman",
+        "Author": "Andrea Schueler",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/Replies/DayThreeAndreaGolman.html"
+    },
+
+    {
+        "Name": "DayThreeAndreaReply",
+        "Author": "Andrea Schueler",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/Replies/DayThreeAndreaReply.html"
+    },
+
+    {
+        "Name": "DayFourAndreaNellie",
+        "Author": "Andrea Schueler",
+        "Date": "3",
+        "Message": "Messages/DayFour/InterMail/Replies/DayFourAndreaNellie.html"
+    },
+
+    {
+        "Name": "DayFourAndreaNelie",
+        "Author": "Andrea Schueler",
+        "Date": "3",
+        "Message": "Messages/DayFour/InterMail/Replies/DayFourAndreaNelie.html"
     },
 
     {

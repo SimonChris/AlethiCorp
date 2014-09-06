@@ -18,7 +18,7 @@ namespace AlethiCorp.DAL
     private static string ReplaceMailInfo(this DatabaseContext db, string userName, string text)
     {
       var reviewMail = db.SentMails.Where(r => r.UserName == userName &&
-        r.Date == "1" && r.Recipient.ToLower().Contains("andrea")).First();
+        r.Date == "2" && r.Recipient.ToLower().Contains("andrea")).First();
 
       text = text.Replace("MAILSUBJECT", reviewMail.Subject);
       text = text.Replace("MAILBODY", reviewMail.Message);

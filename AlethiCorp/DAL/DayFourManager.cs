@@ -22,7 +22,24 @@ namespace AlethiCorp.DAL
 
     private void AddAndreaReplies(List<SentMail> sentMails)
     {
-
+      var searchResult = sentMails.Where(r => r.Recipient.ToLower().Contains("andrea"));
+      if (searchResult.Count() > 0)
+      {
+        var nellieResult = searchResult.Where(r => r.GetContents().ToLower().ContainsAny(new string[] { "nellie", " bly", "nelly" }));
+        var nelieResults = searchResult.Where(r => r.GetContents().ToLower().ContainsAny(new string[] { "nelie", " nely" }));
+        if (nelieResults.Count() > 0)
+        {
+          db.InterMails.Add(MakeMail("DayFourAndreaNelie", "Re: " + nelieResults.First().Subject));
+        }
+        else if (nellieResult.Count() > 0)
+        {
+          db.InterMails.Add(MakeMail("DayFourAndreaNellie", "Re: " + nellieResult.First().Subject));
+        }
+        else
+        {
+          db.Reports.Add(MakeReport("DayFourInterMailReview"));
+        }
+      }
     }
 
     private void AddBenedettoReplies(List<SentMail> sentMails)
