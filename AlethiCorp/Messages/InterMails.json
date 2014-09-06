@@ -985,5 +985,13 @@
         "Subject": "It was great working with you :)",
         "Date": "4",
         "Message": "Messages/Conclusion/Kinsinger/InterMail/DayFiveSalvinuKinsingerSpatula.html"
+    },
+
+    {
+        "Name": "DayFiveAndreaArrested",
+        "Author": "Andrea Schueler",
+        "Subject": "Nellie Bly!",
+        "Date": "4",
+        "Message": "Messages/Conclusion/InterMail/DayFiveAndreaArrested.html"
     }
 ]

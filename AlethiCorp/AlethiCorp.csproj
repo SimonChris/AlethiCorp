@@ -312,6 +312,7 @@
     <Content Include="Messages\Conclusion\DroneStrikes\InterMail\DayFiveSandraDroneStrikes.html" />
     <Content Include="Messages\Conclusion\DroneStrikes\InterMail\DayFiveVedeninArrestedDroneStrikes.html" />
     <Content Include="Messages\Conclusion\DroneStrikes\News\DayFiveDroneStrikes.html" />
+    <Content Include="Messages\Conclusion\InterMail\DayFiveAndreaArrested.html" />
     <Content Include="Messages\Conclusion\InterMail\DayFiveSandraArrestedNoResults.html" />
     <Content Include="Messages\Conclusion\InterMail\DayFiveOskarArrestedNoResults.html" />
     <Content Include="Messages\Conclusion\InterMail\DayFiveOskarArrestedNoResultsMail.html" />

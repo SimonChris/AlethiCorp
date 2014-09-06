@@ -13,6 +13,8 @@ namespace AlethiCorp.DAL
       : base(db, userName)
     { }
 
+    private bool andreaImpressed;
+
     private void FinishGame()
     {
       List<InterMail> interMails = db.InterMails.Where(m => m.UserName == UserName).ToList();
@@ -42,6 +44,10 @@ namespace AlethiCorp.DAL
 
       db.InterMails.Add(MakeMail("DayFiveSandraArrestedDeletedAll"));
       db.InterMails.Add(MakeMail("DayFiveVedeninArrested"));
+      if(andreaImpressed)
+      {
+        db.InterMails.Add(MakeMail("DayFiveAndreaArrested"));
+      }
 
       var searchTerms = new string[] { "hacker", "omega", "alpha", "iam" };
       var sentMail = db.SentMails.Where(s => s.UserName == UserName).ToList();
@@ -77,6 +83,10 @@ namespace AlethiCorp.DAL
 
       db.InterMails.Add(MakeMail("DayFiveSandraArrestedNoResults"));
       db.InterMails.Add(MakeMail("DayFiveVedeninArrested"));
+      if (andreaImpressed)
+      {
+        db.InterMails.Add(MakeMail("DayFiveAndreaArrested"));
+      }
 
       var searchTerms = new string[] { "hacker", "omega", "alpha", "iam" };
       var sentMail = db.SentMails.Where(s => s.UserName == UserName).ToList();
@@ -113,6 +123,10 @@ namespace AlethiCorp.DAL
       db.InterMails.Add(MakeMail("DayFiveSandraDroneStrikes"));
       db.InterMails.Add(MakeMail("DayFiveVedeninArrestedDroneStrikes"));
       db.InterMails.Add(MakeMail("DayFiveBenedettoDroneStrikes"));
+      if (andreaImpressed)
+      {
+        db.InterMails.Add(MakeMail("DayFiveAndreaArrested"));
+      }
 
       var searchTerms = new string[] { "hacker", "omega", "alpha", "iam" };
       var sentMail = db.SentMails.Where(s => s.UserName == UserName).ToList();
@@ -243,6 +257,11 @@ namespace AlethiCorp.DAL
     {
       var extantReports = db.Reports.Where(x => x.UserName == UserName).ToList();
       var flaggedReports = extantReports.Where(x => x.Flagged).ToList();
+
+      var andreaMails = db.SentMails.Where(r => r.UserName == UserName && r.Recipient.ToLower().Contains("andrea")).ToList();
+      bool andreaQuestion = andreaMails.Where(r => r.Date == "2" && r.GetContents().ToLower().ContainsAny(new string[] { "nellie", " bly", "nelly" })).Any();
+      bool andreaAnswer = andreaMails.Where(r => r.Date == "3" && r.GetContents().ToLower().ContainsAll(new string[] { "gasp", " laugh" })).Any();
+      andreaImpressed = andreaQuestion && andreaAnswer;
 
       if (extantReports.Count() == 0)
       {
