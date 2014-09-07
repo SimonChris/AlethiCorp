@@ -126,6 +126,11 @@ namespace AlethiCorp.DAL
         results++;
         newReports.Add(MakeReport("DayFourInterviewBlue"));
       }
+      if (db.Reports.Any(r => r.UserName == UserName && r.Name == "DayOneMailBrightfieldGasparyan" && r.Flagged))
+      {
+        results++;
+        newReports.Add(MakeReport("DayFourPhoneBrightfieldGasparyan"));
+      }
       newReports.ForEach(x => db.Reports.Add(x));
       return results;
     }
@@ -140,9 +145,13 @@ namespace AlethiCorp.DAL
 
       newMails.Add(MakeMail("DayFourSandraReminder"));
 
-      if(results > 0)
+      if(results > 1)
       {
         newMails.Add(MakeMail("DayFourSalvinuManyResults"));
+      }
+      else if(results > 0)
+      {
+        newMails.Add(MakeMail("DayFourSalvinuResults"));
       }
       else
       {

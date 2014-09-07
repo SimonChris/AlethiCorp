@@ -297,6 +297,14 @@
     },
 
     {
+        "Name": "DayFourPhoneBrightfieldGasparyan",
+        "Type": "Phone",
+        "Title": "Martin Brightfield and Adroushan Gasparyan",
+        "Date": "3",
+        "Information": "Messages/DayFour/Reports/DayFourPhoneBrightfieldGasparyan.html"
+    },
+
+    {
         "Name": "DayFiveSurveillancePlayer",
         "Type": "Surveillance",
         "Title": "Pursuit of FIRSTNAME LASTNAME",
