@@ -164,7 +164,7 @@ namespace AlethiCorp.Controllers
         if (!forward)
         {
           sentMail.Recipient = mailDetails.Author;
-          sentMail.Subject = "Re: " + mailDetails.Subject;
+          sentMail.Subject = "Re: " + ( mailDetails.Subject ?? intermail.Subject );
         }
         else
         {
