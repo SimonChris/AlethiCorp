@@ -1000,5 +1000,13 @@
         "Subject": "Nellie Bly!",
         "Date": "4",
         "Message": "Messages/Conclusion/InterMail/DayFiveAndreaArrested.html"
+    },
+
+    {
+        "Name": "DayFiveAndreaSuccess",
+        "Author": "Andrea Schueler",
+        "Subject": "Nellie Bly!",
+        "Date": "4",
+        "Message": "Messages/Conclusion/InterMail/DayFiveAndreaSuccess.html"
     }
 ]

@@ -194,6 +194,10 @@ namespace AlethiCorp.DAL
 
       db.InterMails.Add(MakeMail("DayFiveSandraSuccess"));
       db.InterMails.Add(MakeMail("DayFiveVedeninSuccess"));
+      if (andreaImpressed)
+      {
+        db.InterMails.Add(MakeMail("DayFiveAndreaSuccess"));
+      }
 
       var searchTerms = new string[] { "hacker", "omega", "alpha", "iam" };
       var sentMail = db.SentMails.Where(s => s.UserName == UserName).ToList();
@@ -236,7 +240,7 @@ namespace AlethiCorp.DAL
       db.InterMails.Add(MakeMail("DayFiveVelikaKinsinger"));
       if (andreaImpressed)
       {
-        db.InterMails.Add(MakeMail("DayFiveAndreaArrested"));
+        db.InterMails.Add(MakeMail("DayFiveAndreaSuccess"));
       }
 
       var searchTerms = new string[] { "hacker", "omega", "alpha", "iam" };
