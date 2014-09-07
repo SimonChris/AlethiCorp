@@ -424,6 +424,7 @@
     <Content Include="Messages\DayThree\Reports\MailKinsingerVelika.html" />
     <Content Include="Messages\DayThree\Reports\SurveillanceBlack.html" />
     <Content Include="Messages\DayThree\Reports\VisionsOfTheFuture.html" />
+    <Content Include="Messages\DayTwo\InterMail\Replies\AlexSynergy.html" />
     <Content Include="Messages\DayTwo\Reports\Bananas.html" />
     <Content Include="Messages\DayTwo\InterMail\BenedettoGrizzly.html" />
     <Content Include="Messages\DayTwo\InterMail\BenedettoContrib.html" />

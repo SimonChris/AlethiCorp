@@ -20,7 +20,17 @@ namespace AlethiCorp.DAL
       var searchResult = sentMails.Where(r => r.Recipient.ToLower().Contains("alex"));
       if (searchResult.Count() > 0)
       {
-        db.InterMails.Add(MakeMail("AlexReply", "Re: " + searchResult.First().Subject));
+        var subject = "Re: " + searchResult.First().Subject;
+        var searchTerms = new string[] { "synergy", "synergi", "synergos" };
+        var detailedResult = searchResult.Where(r => r.GetContents().ToLower().ContainsAny(searchTerms));
+        if (detailedResult.Count() > 0)
+        {
+          db.InterMails.Add(MakeMail("AlexSynergy", "Re: " + detailedResult.First().Subject));
+        }
+        else
+        {
+          db.InterMails.Add(MakeMail("AlexReply", "Re: " + subject));
+        }
       }
     }
 
