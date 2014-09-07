@@ -195,7 +195,7 @@ namespace AlethiCorp.DAL
       }
 
       int results = 0;
-      if (reviewed.Contains("DayTwoMailKinsingerVelika"))
+      if (reviewed.Contains("DayTwoMailKinsingerVelika") || reviewed.Contains("DayTwoPhoneKinsingerVelika"))
       {
         results++;
         newReports.Add(MakeReport("DayThreeVisionsOfTheFuture"));
