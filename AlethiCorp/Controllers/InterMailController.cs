@@ -81,6 +81,7 @@ namespace AlethiCorp.Controllers
       {
         ViewBag.BearType = db.GetBearType(User.Identity.Name);
       }
+      ViewBag.AndreaEscape = intermail.Name.Contains("AndreaArrested");
 
       var mailList = JsonConvert.DeserializeObject<List<InterMailViewModel>>(
       System.IO.File.ReadAllText(HttpRuntime.AppDomainAppPath + "Messages/InterMails.json"));

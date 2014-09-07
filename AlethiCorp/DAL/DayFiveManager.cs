@@ -168,6 +168,20 @@ namespace AlethiCorp.DAL
       db.SaveChanges();
     }
 
+    internal void JoinAndrea()
+    {
+      var gameState = db.GameStates.Where(s => s.UserName == UserName).Single();
+      gameState.GameProgression = GameProgression.Andrea;
+      db.Entry(gameState).State = EntityState.Modified;
+
+      FinishGame();
+
+      db.NewsItems.Add(MakeNewsItem("DayFiveAndrea"));
+      db.Reports.Add(MakeReport("DayFiveSurveillanceAndrea"));
+
+      db.SaveChanges();
+    }
+
     public void EndGameWithSuccess()
     {
       var gameState = db.GameStates.Where(s => s.UserName == UserName).Single();
@@ -220,6 +234,10 @@ namespace AlethiCorp.DAL
       db.InterMails.Add(MakeMail("DayFiveSandraKinsinger"));
       db.InterMails.Add(MakeMail("DayFiveVedeninKinsinger"));
       db.InterMails.Add(MakeMail("DayFiveVelikaKinsinger"));
+      if (andreaImpressed)
+      {
+        db.InterMails.Add(MakeMail("DayFiveAndreaArrested"));
+      }
 
       var searchTerms = new string[] { "hacker", "omega", "alpha", "iam" };
       var sentMail = db.SentMails.Where(s => s.UserName == UserName).ToList();
@@ -258,10 +276,7 @@ namespace AlethiCorp.DAL
       var extantReports = db.Reports.Where(x => x.UserName == UserName).ToList();
       var flaggedReports = extantReports.Where(x => x.Flagged).ToList();
 
-      var andreaMails = db.SentMails.Where(r => r.UserName == UserName && r.Recipient.ToLower().Contains("andrea")).ToList();
-      bool andreaQuestion = andreaMails.Where(r => r.Date == "2" && r.GetContents().ToLower().ContainsAny(new string[] { "nellie", " bly", "nelly" })).Any();
-      bool andreaAnswer = andreaMails.Where(r => r.Date == "3" && r.GetContents().ToLower().ContainsAll(new string[] { "gasp", " laugh" })).Any();
-      andreaImpressed = andreaQuestion && andreaAnswer;
+      andreaImpressed = db.AndreaImpressed(UserName);
 
       if (extantReports.Count() == 0)
       {

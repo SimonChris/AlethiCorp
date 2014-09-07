@@ -56,6 +56,11 @@
       <a class="btn btn-default" href="@Url.Action("Bear", "Final")">@ViewBag.BearType</a>
     }
   }
+  else if (ViewBag.AndreaEscape)
+  {
+    <a class="btn btn-default" href="@Url.Action("Index")">Inbox</a>
+    <a class="btn btn-default" href="@Url.Action("Andrea", "Final")">Join her</a>
+  }
   else
   {
     <a class="btn btn-default" href="@Url.Action("Index")">Inbox</a>

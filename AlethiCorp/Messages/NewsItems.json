@@ -102,5 +102,12 @@
         "HeadLine": "Famous journalist exposed as dangerous terrorist!",
         "MainText": "Messages/Conclusion/Kinsinger/News/DayFiveKinsinger.html",
         "Date": "4"
+    },
+
+    {
+        "Name": "DayFiveAndrea",
+        "HeadLine": "AlethiCorp investigation turns into a hostage situation",
+        "MainText": "Messages/Conclusion/Andrea/News/DayFiveAndrea.html",
+        "Date": "4"
     }
 ]

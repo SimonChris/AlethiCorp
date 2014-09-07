@@ -13,6 +13,7 @@ namespace AlethiCorp.Models
     Comply,
     Success,
     Career,
+    Andrea,
     Bear,
     BearBearBear
   }

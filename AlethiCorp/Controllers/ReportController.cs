@@ -94,6 +94,7 @@ namespace AlethiCorp.Controllers
       }
 
       ViewBag.BearReport = viewReport.Name.Contains("SurveillancePlayer");
+      ViewBag.AndreaReport = viewReport.Name.Contains("SurveillanceAndrea");
 
       viewReport.RowVersion = Report.RowVersion;
       viewReport.Flagged = Report.Flagged;

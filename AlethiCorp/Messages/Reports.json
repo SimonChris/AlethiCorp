@@ -303,5 +303,14 @@
         "Author": "D06",
         "Date": "4",
         "Information": "Messages/Conclusion/Bear/Reports/DayFiveSurveillancePlayer.html"
+    },
+
+    {
+        "Name": "DayFiveSurveillanceAndrea",
+        "Type": "Surveillance",
+        "Title": "Pursuit of FIRSTNAME LASTNAME, and Andrea Schueler",
+        "Author": "D06",
+        "Date": "4",
+        "Information": "Messages/Conclusion/Andrea/Reports/DayFiveSurveillanceAndrea.html"
     }
 ]

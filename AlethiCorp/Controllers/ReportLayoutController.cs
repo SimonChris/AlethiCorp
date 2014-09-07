@@ -27,6 +27,7 @@ namespace AlethiCorp.Controllers
       ViewBag.Flagging = db.GetDay(User.Identity.Name) < 3;
       var progression = db.GetProgression(User.Identity.Name);
       ViewBag.BearEnding = progression == GameProgression.Bear || progression == GameProgression.BearBearBear;
+      ViewBag.AndreaEnding = progression == GameProgression.Andrea;
     }
 
     protected override void Dispose(bool disposing)

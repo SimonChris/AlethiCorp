@@ -149,6 +149,12 @@ namespace AlethiCorp.DAL
       dayFiveManager.ReleaseBear();
     }
 
+    public static void JoinAndrea(this DatabaseContext db, string userName)
+    {
+      var dayFiveManager = MakeDayManager(db, userName, 4) as DayFiveManager;
+      dayFiveManager.JoinAndrea();
+    }
+
     public static string GetContents(this SentMail sentMail)
     {
       return sentMail.Subject + sentMail.Message;
@@ -277,6 +283,14 @@ namespace AlethiCorp.DAL
       int bearCount = db.SocialEvents.ToList().Count(s => s.Contribution.ToLower().ContainsAny(new string[] { "bear", bear }));
 
       return bearCount > 1;
+    }
+
+    public static bool AndreaImpressed(this DatabaseContext db, string userName)
+    {
+      var andreaMails = db.SentMails.Where(r => r.UserName == userName && r.Recipient.ToLower().Contains("andrea")).ToList();
+      bool andreaQuestion = andreaMails.Where(r => r.Date == "2" && r.GetContents().ToLower().ContainsAny(new string[] { "nellie", " bly", "nelly" })).Any();
+      bool andreaAnswer = andreaMails.Where(r => r.Date == "3" && r.GetContents().ToLower().ContainsAll(new string[] { "gasp", " laugh" })).Any();
+      return andreaQuestion && andreaAnswer;
     }
 
     public static bool ContainsAny(this string text, string[] terms)

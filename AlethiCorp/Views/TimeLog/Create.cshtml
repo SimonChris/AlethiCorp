@@ -16,7 +16,11 @@ else if (ViewBag.Success || ViewBag.Career)
 {
   <h4>Please plan your career before finalising the day.</h4>
 }
-else
+else if(ViewBag.BearReleased || ViewBag.BearBearBear)
+{
+  <h4>Bears do not care about time.</h4>
+}
+else if(ViewBag.Ongoing)
 {
   using (Html.BeginForm())
   {

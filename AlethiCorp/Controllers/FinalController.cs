@@ -30,6 +30,10 @@ namespace AlethiCorp.Controllers
       {
         return View("BearEnding");
       }
+      else if(progression == GameProgression.Andrea)
+      {
+        return View("AndreaEnding");
+      }
       return HttpNotFound();
     }
 
@@ -42,6 +46,18 @@ namespace AlethiCorp.Controllers
       }
 
       db.ReleaseBear(User.Identity.Name);
+      return RedirectToAction("Index", "Internal");
+    }
+
+    public ActionResult Andrea()
+    {
+      var progression = db.GetProgression(User.Identity.Name);
+      if ((progression != GameProgression.Arrested && progression != GameProgression.Comply) || !db.AndreaImpressed(User.Identity.Name))
+      {
+        return HttpNotFound();
+      }
+
+      db.JoinAndrea(User.Identity.Name);
       return RedirectToAction("Index", "Internal");
     }
   }

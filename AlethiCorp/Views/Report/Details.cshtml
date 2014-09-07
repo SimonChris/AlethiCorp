@@ -106,6 +106,30 @@
     }
   </p>
 }
+else if (ViewBag.AndreaReport)
+{
+  <p>
+    @switch ((int)ViewBag.Type)
+    {
+      case 0:
+        <a class="btn btn-default" href="@Url.Action("Reports", new { id = Model.Id })">Back to List</a>
+        <a class="btn btn-default" href="@Url.Action("Index", "Final")">Keep going</a>
+        break;
+      case 1:
+      <a class="btn btn-default" href="@Url.Action("EMail", new { id = Model.Id })">Back to List</a>
+      <a class="btn btn-default" href="@Url.Action("Index", "Final")">Keep going</a>
+        break;
+      case 2:
+      <a class="btn btn-default" href="@Url.Action("Phone", new { id = Model.Id })">Back to List</a>
+      <a class="btn btn-default" href="@Url.Action("Index", "Final")">Keep going</a>
+        break;
+      case 3:
+      <a class="btn btn-default" href="@Url.Action("Surveillance", new { id = Model.Id })">Back to List</a>
+      <a class="btn btn-default" href="@Url.Action("Index", "Final")">Keep going</a>
+        break;
+    }
+  </p>
+}
 else
 {
   <p>

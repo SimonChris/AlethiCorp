@@ -47,7 +47,7 @@
       <td>
         @Html.DisplayFor(modelItem => item.Flagged)
       </td>
-      @if (ViewBag.BearEnding)
+      @if (ViewBag.BearEnding || ViewBag.AndreaEnding)
       {
         <td>
           <a class="btn btn-default" href="@Url.Action("Details", new { id = item.Id })">Read</a>

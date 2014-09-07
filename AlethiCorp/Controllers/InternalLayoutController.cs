@@ -22,6 +22,7 @@ namespace AlethiCorp.Controllers
           ViewBag.Comply = progression == GameProgression.Comply;
           ViewBag.Success = progression == GameProgression.Success;
           ViewBag.Career = progression == GameProgression.Career;
+          ViewBag.Andrea = progression == GameProgression.Andrea;
           ViewBag.BearReleased = progression == GameProgression.Bear;
           ViewBag.BearBearBear = progression == GameProgression.BearBearBear;
 

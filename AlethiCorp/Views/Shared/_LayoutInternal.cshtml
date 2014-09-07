@@ -78,6 +78,11 @@
                     <li>@Html.ActionLink("Bear", "Bear", "Internal")</li>
                     <li>@Html.ActionLink("Bear", "Bear", "Internal")</li>
                   }
+                  else if (ViewBag.Andrea)
+                  {
+                    <li>@Html.ActionLink("News", "Index", "Internal")</li>
+                    <li>@Html.ActionLink("Information", "Front", "Report")</li>
+                  }
                   else
                   {
                     <li>@Html.ActionLink("News", "Index", "Internal")</li>

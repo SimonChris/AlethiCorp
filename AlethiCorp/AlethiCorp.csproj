@@ -302,6 +302,8 @@
     <Content Include="Images\Steam Train.jpg" />
     <Content Include="Images\TrainWithWagon.jpg" />
     <Content Include="Images\Yellow Train.jpg" />
+    <Content Include="Messages\Conclusion\Andrea\News\DayFiveAndrea.html" />
+    <Content Include="Messages\Conclusion\Andrea\Reports\DayFiveSurveillanceAndrea.html" />
     <Content Include="Messages\Conclusion\Bear\News\DayFiveBear.html" />
     <Content Include="Messages\Conclusion\Bear\Reports\DayFiveSurveillancePlayer.html" />
     <Content Include="Messages\Conclusion\DroneStrikes\InterMail\DayFiveBenedettoDroneStrikes.html" />
@@ -584,6 +586,7 @@
     <Content Include="Views\Internal\Bear.cshtml" />
     <Content Include="Views\Final\BearEnding.cshtml" />
     <Content Include="Views\Final\Success.cshtml" />
+    <Content Include="Views\Final\AndreaEnding.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
