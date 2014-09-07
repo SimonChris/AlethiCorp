@@ -643,6 +643,20 @@
     },
 
     {
+        "Name": "DayFourShaoReply",
+        "Author": "Shào Lingfei",
+        "Date": "3",
+        "Message": "Messages/DayFour/InterMail/Replies/DayFourShaoReply.html"
+    },
+
+    {
+        "Name": "DayFourShaoChesterton",
+        "Author": "Shào Lingfei",
+        "Date": "3",
+        "Message": "Messages/DayFour/InterMail/Replies/DayFourShaoChesterton.html"
+    },
+
+    {
         "Name": "DayFourOskarArrestedDeletedAll",
         "Author": "Oskar Jönsson",
         "Subject": "Well, that was easy",

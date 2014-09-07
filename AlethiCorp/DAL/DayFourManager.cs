@@ -49,7 +49,21 @@ namespace AlethiCorp.DAL
 
     private void AddShaoReplies(List<SentMail> sentMails)
     {
-
+      var searchResult = sentMails.Where(r => r.Recipient.ToLower().ContainsAny(new string[] { "sháo", "lingfei" }));
+      if (searchResult.Count() > 0)
+      {
+        var subject = "Re: " + searchResult.First().Subject;
+        var searchTerms = new string[] { "gilbert", "chesterton" };
+        var detailedResult = searchResult.Where(s => s.GetContents().ToLower().ContainsAny(searchTerms));
+        if (detailedResult.Count() > 0)
+        {
+          db.InterMails.Add(MakeMail("DayFourShaoChesterton", "Re: " + detailedResult.First().Subject));
+        }
+        else
+        {
+          db.InterMails.Add(MakeMail("DayFourShaoReply", subject));
+        }
+      }
     }
 
     private void AddOmegaReplies(List<SentMail> sentMails)
