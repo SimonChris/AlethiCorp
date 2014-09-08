@@ -81,6 +81,25 @@ namespace AlethiCorp.DAL
 
     }
 
+    private void AddSalvinuReplies(List<SentMail> sentMails)
+    {
+      var searchResult = sentMails.Where(r => r.Recipient.ToLower().ContainsAny(new string[] { "salvinu" }));
+      if (searchResult.Count() > 0)
+      {
+        var subject = "Re: " + searchResult.First().Subject;
+        var searchTerms = new string[] { "soupe", "recipe" };
+        var detailedResult = searchResult.Where(s => s.GetContents().ToLower().ContainsAny(searchTerms));
+        if (detailedResult.Count() > 0)
+        {
+          db.InterMails.Add(MakeMail("DayFourSalvinuSoupe", "Re: " + detailedResult.First().Subject));
+        }
+        else
+        {
+          db.InterMails.Add(MakeMail("DayFourSalvinuReply", subject));
+        }
+      }
+    }
+
     private void AddVitalyReplies(List<SentMail> sentMails)
     {
 
@@ -101,6 +120,7 @@ namespace AlethiCorp.DAL
       AddOmegaReplies(sentMails);
       AddOskarReplies(sentMails);
       AddSandraReplies(sentMails);
+      AddSalvinuReplies(sentMails);
       AddVitalyReplies(sentMails);
     }
 

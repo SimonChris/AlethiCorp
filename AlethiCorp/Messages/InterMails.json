@@ -657,6 +657,20 @@
     },
 
     {
+        "Name": "DayFourSalvinuReply",
+        "Author": "Salvinu Manduca",
+        "Date": "3",
+        "Message": "Messages/DayFour/InterMail/Replies/DayFourSalvinuReply.html"
+    },
+
+    {
+        "Name": "DayFourSalvinuSoupe",
+        "Author": "Salvinu Manduca",
+        "Date": "3",
+        "Message": "Messages/DayFour/InterMail/Replies/DayFourSalvinuSoupe.html"
+    },
+
+    {
         "Name": "DayFourOskarArrestedDeletedAll",
         "Author": "Oskar Jönsson",
         "Subject": "Well, that was easy",
