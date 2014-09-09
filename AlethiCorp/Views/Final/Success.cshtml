@@ -13,20 +13,25 @@
   <div>
     <p><b>Success</b></p>
 
-    <p>Success is counted sweetest<br>
-    By those who ne'er succeed.<br>
-    To comprehend a nectar<br>
-    Requires sorest need.</p>
+    <p>
+      Success is counted sweetest<br>
+      By those who ne'er succeed.<br>
+      To comprehend a nectar<br>
+      Requires sorest need.
+    </p>
 
-    <p>Not one of all the purple Host<br>
-    Who took the Flag today<br>
-    Can tell the definition<br>
-    So clear of victory</p>
+    <p>
+      Not one of all the purple Host<br>
+      Who took the Flag today<br>
+      Can tell the definition<br>
+      So clear of victory
+    </p>
 
-    <p>As he defeated – dying –<br>
-    On whose forbidden ear<br>
-    The distant strains of triumph<br>
-    Burst agonized and clear!<br>
+    <p>
+      As he defeated – dying –<br>
+      On whose forbidden ear<br>
+      The distant strains of triumph<br>
+      Burst agonized and clear!<br>
 
     <p>Emily Dickinson</p>
 
@@ -36,7 +41,10 @@
       using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
       {
         @Html.AntiForgeryToken()
-        <p><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a> | @Html.ActionLink("Restart game", "ResetAll", "Internal")</p>
+        <p>
+          <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a> | @Html.ActionLink("Restart game", "ResetAll", "Internal") |
+          <a href="http://www.sichris.com/">Author page</a>
+        </p>
       }
     }
   </div>
