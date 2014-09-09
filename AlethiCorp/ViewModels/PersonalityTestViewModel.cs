@@ -27,8 +27,6 @@ namespace AlethiCorp.ViewModels
 
     public class PersonalityTestViewModel
     {
-       // DateTime? _date = NULL; //DateTime.Now.AddYears(40);
-
         [Required(ErrorMessage = "Please enter a valid color.")]
         [Display(Name = "What is your favorite color?")]
         public string FavoriteColor { get; set; }
@@ -37,10 +35,6 @@ namespace AlethiCorp.ViewModels
         [Display(Name = "What is your favorite date?")]
         [Required(ErrorMessage = "You must have a favorite date. How about your birthday, or something?")]
         public DateTime? FavoriteDate { get; set; }
-        //{
-        //    get { return _date; }
-        //    set { _date = value; }
-        //}
 
         [Display(Name = "If you were a bear, what type of bear would you be?")]
         [Required(ErrorMessage = "You must enter a valid type of bear.")]
@@ -54,10 +48,6 @@ namespace AlethiCorp.ViewModels
         [Display(Name = "Which of the three AlethiCorp core values best describe you: Aletheia, Integrity or Magnanimity?")]
         [Required(ErrorMessage = "You must have values.")]
         public ValueType ValueTypeSelection { get; set; }
-
-        //[Display(Name = "Human rights...")]
-        //[Required(ErrorMessage = "You must have an opinion on human rights.")]
-        //public int HumanRights { get; set; }
 
         [Display(Name = "Are necessary to prevent human rights violations")]
         public bool RightsNecessary { get; set; }
