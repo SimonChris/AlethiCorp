@@ -180,11 +180,15 @@ namespace AlethiCorp.Controllers
     [ValidateAntiForgeryToken]
     public ActionResult DeleteConfirmed(int id)
     {
-      Report Report = db.Reports.Find(id);
-      db.Reports.Remove(Report);
-      db.SaveChanges();
+      Report report = db.Reports.Find(id);
+      //Report can be null if the button is clicked twice in close succession
+      if (report != null)
+      {
+        db.Reports.Remove(report);
+        db.SaveChanges();
+      }
 
-      var viewReport = reportList.Find(x => x.Name == Report.Name);
+      var viewReport = reportList.Find(x => x.Name == report.Name);
       return RedirectToType(viewReport.Type);
     }
   }

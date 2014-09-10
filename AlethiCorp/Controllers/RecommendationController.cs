@@ -119,8 +119,12 @@ namespace AlethiCorp.Controllers
     public ActionResult DeleteConfirmed(int id)
     {
       Recommendation recommendation = db.Recommendations.Find(id);
-      db.Recommendations.Remove(recommendation);
-      db.SaveChanges();
+      //Recommendation can be null if the button is clicked twice in close succession
+      if (recommendation != null)
+      {
+        db.Recommendations.Remove(recommendation);
+        db.SaveChanges();
+      }
       return RedirectToAction("Index");
     }
   }
