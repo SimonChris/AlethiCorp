@@ -141,7 +141,7 @@ namespace AlethiCorp.DAL
       }
 
       int results = 0;
-      if(reviewed.Contains("DayThreeMailBlackUnknown"))
+      if (reviewed.Contains("DayThreeMailBlackUnknown"))
       {
         results++;
         newReports.Add(MakeReport("DayFourInterviewBlue"));
@@ -165,11 +165,11 @@ namespace AlethiCorp.DAL
 
       newMails.Add(MakeMail("DayFourSandraReminder"));
 
-      if(results > 1)
+      if (results > 1)
       {
         newMails.Add(MakeMail("DayFourSalvinuManyResults"));
       }
-      else if(results > 0)
+      else if (results > 0)
       {
         newMails.Add(MakeMail("DayFourSalvinuResults"));
       }
@@ -179,40 +179,41 @@ namespace AlethiCorp.DAL
       }
 
       int bearCount = 0;
-      var potluckEvent = db.SocialEvents.ToList().Where( x => x.UserName == UserName && x.Date == db.GetDateString( 0 ) ).Single();
+      var potluckEvent = db.SocialEvents.ToList().Where(x => x.UserName == UserName && x.Date == db.GetDateString(0)).Single();
       var potluckContribution = potluckEvent.Contribution.ToLower();
       var bear = db.GetBearType(UserName).ToLower();
-      if (potluckContribution.ContainsAny( new string[] { "bear", bear } )) 
+      var bearTerms = new string[] { "bear", bear };
+      if (potluckContribution.ContainsAny(bearTerms))
       {
         bearCount++;
       }
-      var onboardingEvent = db.SocialEvents.ToList().Where( x => x.UserName == UserName && x.Date == db.GetDateString( 1 ) ).Single();
+      var onboardingEvent = db.SocialEvents.ToList().Where(x => x.UserName == UserName && x.Date == db.GetDateString(1)).Single();
       var onboardingContribution = onboardingEvent.Contribution.ToLower();
-      if (onboardingContribution.ContainsAny(new string[] { "bear", bear })) 
+      if (onboardingContribution.ContainsAny(bearTerms))
       {
         bearCount++;
       }
-      var clubNightEvent = db.SocialEvents.ToList().Where( x => x.UserName == UserName && x.Date == db.GetDateString( 2 ) ).Single();
+      var clubNightEvent = db.SocialEvents.ToList().Where(x => x.UserName == UserName && x.Date == db.GetDateString(2)).Single();
       var clubNightContribution = clubNightEvent.Contribution.ToLower();
-      var bearNight = clubNightContribution.ContainsAny(new string[] { "bear", bear });
-      if (bearNight) 
+      var bearNight = clubNightContribution.ContainsAny(bearTerms);
+      if (bearNight)
       {
         bearCount++;
       }
-      if (!clubNightEvent.Attending) 
+      if (!clubNightEvent.Attending)
       {
-        newMails.Add(MakeMail( "DayFourBenedettoNoShow"));
+        newMails.Add(MakeMail("DayFourBenedettoNoShow"));
       }
-      else if (clubNightContribution.Count() == 0 ) 
+      else if (clubNightContribution.Count() == 0)
       {
         newMails.Add(MakeMail("DayFourBenedettoNoContrib"));
       }
-      else if (bearNight) 
+      else if (bearNight)
       {
-        switch(bearCount) 
+        switch (bearCount)
         {
           case 1:
-            newMails.Add(MakeMail( "DayFourBenedettoGrizzly"));
+            newMails.Add(MakeMail("DayFourBenedettoGrizzly"));
             break;
           case 2:
             newMails.Add(MakeMail("DayFourBenedettoDoubleGrizzly"));
@@ -222,21 +223,21 @@ namespace AlethiCorp.DAL
             break;
         }
       }
-      else if(clubNightContribution.ToLower().Contains(db.GetFavoriteColor( UserName ).ToLower() )) 
+      else if (clubNightContribution.ToLower().Contains(db.GetFavoriteColor(UserName).ToLower()))
       {
         newMails.Add(MakeMail("DayFourBenedettoColor"));
       }
-      else 
+      else
       {
         newMails.Add(MakeMail("DayFourBenedettoContrib"));
       }
 
       var hackingProgression = db.GetHackingProgression(UserName);
-      if(hackingProgression == HackingProgression.Concurrency)
+      if (hackingProgression == HackingProgression.Concurrency)
       {
         newMails.Add(MakeMail("DayFourOmegaConcurrency"));
       }
-      else if(hackingProgression == HackingProgression.Infiltrator)
+      else if (hackingProgression == HackingProgression.Infiltrator)
       {
         newMails.Add(MakeMail("DayFourOmegaInfiltrator"));
       }
