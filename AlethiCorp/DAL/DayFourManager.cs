@@ -178,6 +178,59 @@ namespace AlethiCorp.DAL
         newMails.Add(MakeMail("DayFourSalvinuNoResults"));
       }
 
+      int bearCount = 0;
+      var potluckEvent = db.SocialEvents.ToList().Where( x => x.UserName == UserName && x.Date == db.GetDateString( 0 ) ).Single();
+      var potluckContribution = potluckEvent.Contribution.ToLower();
+      var bear = db.GetBearType(UserName).ToLower();
+      if (potluckContribution.ContainsAny( new string[] { "bear", bear } )) 
+      {
+        bearCount++;
+      }
+      var onboardingEvent = db.SocialEvents.ToList().Where( x => x.UserName == UserName && x.Date == db.GetDateString( 1 ) ).Single();
+      var onboardingContribution = onboardingEvent.Contribution.ToLower();
+      if (onboardingContribution.ContainsAny(new string[] { "bear", bear })) 
+      {
+        bearCount++;
+      }
+      var clubNightEvent = db.SocialEvents.ToList().Where( x => x.UserName == UserName && x.Date == db.GetDateString( 2 ) ).Single();
+      var clubNightContribution = clubNightEvent.Contribution.ToLower();
+      var bearNight = clubNightContribution.ContainsAny(new string[] { "bear", bear });
+      if (bearNight) 
+      {
+        bearCount++;
+      }
+      if (!clubNightEvent.Attending) 
+      {
+        newMails.Add(MakeMail( "DayFourBenedettoNoShow"));
+      }
+      else if (clubNightContribution.Count() == 0 ) 
+      {
+        newMails.Add(MakeMail("DayFourBenedettoNoContrib"));
+      }
+      else if (bearNight) 
+      {
+        switch(bearCount) 
+        {
+          case 1:
+            newMails.Add(MakeMail( "DayFourBenedettoGrizzly"));
+            break;
+          case 2:
+            newMails.Add(MakeMail("DayFourBenedettoDoubleGrizzly"));
+            break;
+          case 3:
+            newMails.Add(MakeMail("DayFourBenedettoTripleGrizzly"));
+            break;
+        }
+      }
+      else if(clubNightContribution.ToLower().Contains(db.GetFavoriteColor( UserName ).ToLower() )) 
+      {
+        newMails.Add(MakeMail("DayFourBenedettoColor"));
+      }
+      else 
+      {
+        newMails.Add(MakeMail("DayFourBenedettoContrib"));
+      }
+
       var hackingProgression = db.GetHackingProgression(UserName);
       if(hackingProgression == HackingProgression.Concurrency)
       {

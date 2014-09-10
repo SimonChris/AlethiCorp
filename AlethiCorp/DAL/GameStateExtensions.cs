@@ -37,7 +37,9 @@ namespace AlethiCorp.DAL
       text = text.Replace("POSSESSIVE", personalInfo.Male ? "his" : "her");
       text = text.Replace("TITLE", personalInfo.Male ? "Mr." : "Miss");
       text = text.Replace("GENDERREF", personalInfo.Male ? "guy" : "girl");
+      text = text.Replace("DANCEPARTNER", personalInfo.Male ? "Sandra" : "Vita");
       text = text.Replace("BEARTYPE", db.GetBearType(userName));
+      text = text.Replace("FAVORITECOLOR", db.GetFavoriteColor(userName));
 
       if (text.ContainsAny(new string[] { "MAILSUBJECT", "MAILBODY" }))
       {
@@ -275,6 +277,10 @@ namespace AlethiCorp.DAL
     public static string GetBearType(this DatabaseContext db, string userName)
     {
       return db.PersonalityTests.Where(x => x.UserName == userName).Single().BearType;
+    }
+
+    public static string GetFavoriteColor( this DatabaseContext db, string userName ) {
+      return db.PersonalityTests.Where( x => x.UserName == userName ).Single().FavoriteColor;
     }
 
     public static bool BearEnabled(this DatabaseContext db, string userName)

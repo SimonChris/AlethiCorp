@@ -750,6 +750,64 @@
         "Message": "Messages/DayFour/InterMail/DayFourSalvinuNoResults.html"
     },
 
+    ------
+
+    {
+        "Name": "DayFourBenedettoNoShow",
+        "Author": "Benedetto Tornincasa",
+        "Subject": "We missed you!",
+        "Date": "3",
+        "Message": "Messages/DayFour/InterMail/DayFourBenedettoNoShow.html"
+    },
+
+    {
+        "Name": "DayFourBenedettoNoContrib",
+        "Author": "Benedetto Tornincasa",
+        "Subject": "Thanks for last night!",
+        "Date": "3",
+        "Message": "Messages/DayFour/InterMail/DayFourBenedettoNoContrib.html"
+    },
+
+    {
+        "Name": "DayFourBenedettoColor",
+        "Author": "Benedetto Tornincasa",
+        "Subject": "Thanks for last night!",
+        "Date": "3",
+        "Message": "Messages/DayFour/InterMail/DayFourBenedettoColor.html"
+    },
+
+    {
+        "Name": "DayFourBenedettoContrib",
+        "Author": "Benedetto Tornincasa",
+        "Subject": "Thanks for last night!",
+        "Date": "3",
+        "Message": "Messages/DayFour/InterMail/DayFourBenedettoContrib.html"
+    },
+
+    {
+        "Name": "DayFourBenedettoGrizzly",
+        "Author": "Benedetto Tornincasa",
+        "Subject": "AWESOME!",
+        "Date": "3",
+        "Message": "Messages/DayFour/InterMail/DayFourBenedettoGrizzly.html"
+    },
+
+    {
+        "Name": "DayFourBenedettoDoubleGrizzly",
+        "Author": "Benedetto Tornincasa",
+        "Subject": "Hahahaha",
+        "Date": "3",
+        "Message": "Messages/DayFour/InterMail/DayFourBenedettoDoubleGrizzly.html"
+    },
+
+    {
+        "Name": "DayFourBenedettoTripleGrizzly",
+        "Author": "Benedetto Tornincasa",
+        "Subject": "We need to have a word",
+        "Date": "3",
+        "Message": "Messages/DayFour/InterMail/DayFourBenedettoTripleGrizzly.html"
+    },
+
     {
         "Name": "DayFourOmegaConcurrency",
         "Author": "Omega",
