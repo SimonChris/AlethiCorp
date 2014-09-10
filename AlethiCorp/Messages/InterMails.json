@@ -202,7 +202,7 @@
 
     {
         "Name": "ShaoGreeting",
-        "Author": "Shào Lingfei",
+        "Author": "Shào Jingfei",
         "Subject": "Looking forward to working with you",
         "Date": "1",
         "Message": "Messages/DayTwo/InterMail/ShaoGreeting.html"
@@ -210,7 +210,7 @@
 
     {
         "Name": "ShaoBear",
-        "Author": "Shào Lingfei",
+        "Author": "Shào Jingfei",
         "Subject": "Looking forward to working with you",
         "Date": "1",
         "Message": "Messages/DayTwo/InterMail/ShaoBear.html"
@@ -492,7 +492,7 @@
 
     {
         "Name": "DayThreeShaoAllResults",
-        "Author": "Shào Lingfei",
+        "Author": "Shào Jingfei",
         "Subject": "Great job!",
         "Date": "2",
         "Message": "Messages/DayThree/InterMail/DayThreeShaoAllResults.html"
@@ -500,7 +500,7 @@
 
     {
         "Name": "DayThreeShaoResults",
-        "Author": "Shào Lingfei",
+        "Author": "Shào Jingfei",
         "Subject": "Good job",
         "Date": "2",
         "Message": "Messages/DayThree/InterMail/DayThreeShaoResults.html"
@@ -508,7 +508,7 @@
 
     {
         "Name": "DayThreeShaoResultsDeletedSuspicious",
-        "Author": "Shào Lingfei",
+        "Author": "Shào Jingfei",
         "Subject": "Fine job",
         "Date": "2",
         "Message": "Messages/DayThree/InterMail/DayThreeShaoResultsDeletedSuspicious.html"
@@ -516,7 +516,7 @@
 
     {
         "Name": "DayThreeShaoNoResults",
-        "Author": "Shào Lingfei",
+        "Author": "Shào Jingfei",
         "Subject": "You can do better",
         "Date": "2",
         "Message": "Messages/DayThree/InterMail/DayThreeShaoNoResults.html"
@@ -524,7 +524,7 @@
 
     {
         "Name": "DayThreeShaoNoResultsDeletedSuspicious",
-        "Author": "Shào Lingfei",
+        "Author": "Shào Jingfei",
         "Subject": "You can do better than this",
         "Date": "2",
         "Message": "Messages/DayThree/InterMail/DayThreeShaoNoResultsDeletedSuspicious.html"
@@ -539,14 +539,14 @@
 
     {
         "Name": "DayThreeShaoReply",
-        "Author": "Shào Lingfei",
+        "Author": "Shào Jingfei",
         "Date": "2",
         "Message": "Messages/DayThree/InterMail/Replies/DayThreeShaoReply.html"
     },
 
     {
         "Name": "DayThreeShaoZhang",
-        "Author": "Shào Lingfei",
+        "Author": "Shào Jingfei",
         "Date": "2",
         "Message": "Messages/DayThree/InterMail/Replies/DayThreeShaoZhang.html"
     },
@@ -644,14 +644,14 @@
 
     {
         "Name": "DayFourShaoReply",
-        "Author": "Shào Lingfei",
+        "Author": "Shào Jingfei",
         "Date": "3",
         "Message": "Messages/DayFour/InterMail/Replies/DayFourShaoReply.html"
     },
 
     {
         "Name": "DayFourShaoChesterton",
-        "Author": "Shào Lingfei",
+        "Author": "Shào Jingfei",
         "Date": "3",
         "Message": "Messages/DayFour/InterMail/Replies/DayFourShaoChesterton.html"
     },

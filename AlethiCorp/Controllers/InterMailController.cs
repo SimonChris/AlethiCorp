@@ -130,7 +130,7 @@ namespace AlethiCorp.Controllers
       int day = db.GameStates.Where(s => s.UserName == User.Identity.Name).Single().Day;
       if(day > 0)
       {
-        names.Add("Sháo Lingfei");
+        names.Add("Sháo Jingfei");
       }
       if(day > 1)
       {

@@ -49,7 +49,7 @@ namespace AlethiCorp.DAL
 
     private void AddShaoReplies(List<SentMail> sentMails)
     {
-      var searchResult = sentMails.Where(r => r.Recipient.ToLower().ContainsAny(new string[] { "sháo", "lingfei" }));
+      var searchResult = sentMails.Where(r => r.Recipient.ToLower().ContainsAny(new string[] { "sháo", "Jingfei" }));
       if (searchResult.Count() > 0)
       {
         var subject = "Re: " + searchResult.First().Subject;

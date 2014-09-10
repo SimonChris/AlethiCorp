@@ -37,7 +37,7 @@ namespace AlethiCorp.Controllers
       names.Add("Alex DuMaurier");
       names.Add("Andrea Schueler");
       names.Add("Vitaly Vedenin");
-      names.Add("Sháo Lingfei");
+      names.Add("Sháo Jingfei");
       names.Add("Salvinu Manduca");
 
       names.Add("Martin Brightfield");
