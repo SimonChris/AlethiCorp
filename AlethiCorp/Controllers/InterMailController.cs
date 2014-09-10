@@ -107,8 +107,12 @@ namespace AlethiCorp.Controllers
     public ActionResult DeleteConfirmed(int id)
     {
       InterMail intermail = db.InterMails.Find(id);
-      db.InterMails.Remove(intermail);
-      db.SaveChanges();
+      //Intermail can be null if the button is clicked twice in close succession
+      if (intermail != null)
+      {
+        db.InterMails.Remove(intermail);
+        db.SaveChanges();
+      }
       return RedirectToAction("Index");
     }
 
