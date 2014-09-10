@@ -178,7 +178,7 @@ namespace AlethiCorp.Controllers
 
     [HttpPost, ActionName("Delete")]
     [ValidateAntiForgeryToken]
-    public ActionResult DeleteConfirmed(int id)
+    public ActionResult DeleteConfirmed(int id, ReportType type)
     {
       Report report = db.Reports.Find(id);
       //Report can be null if the button is clicked twice in close succession
@@ -187,9 +187,7 @@ namespace AlethiCorp.Controllers
         db.Reports.Remove(report);
         db.SaveChanges();
       }
-
-      var viewReport = reportList.Find(x => x.Name == report.Name);
-      return RedirectToType(viewReport.Type);
+      return RedirectToType(type);
     }
   }
 }

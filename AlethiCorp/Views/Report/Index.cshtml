@@ -56,7 +56,7 @@
       else
       {
         <td>
-          @using (Html.BeginForm("Delete", "Report", new { id = item.Id }))
+          @using (Html.BeginForm("Delete", "Report", new { id = item.Id, type = Model.First().Type }))
           {
             @Html.AntiForgeryToken()
             <a class="btn btn-default" href="@Url.Action("Details", new { id = item.Id })">Read</a>
