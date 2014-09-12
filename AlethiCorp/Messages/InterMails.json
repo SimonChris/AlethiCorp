@@ -919,6 +919,62 @@
     },
 
     {
+        "Name": "DayFiveOskarFramedEmployees",
+        "Author": "Oskar Jönsson",
+        "Subject": "You made that way too easy",
+        "Date": "4",
+        "Message": "Messages/Conclusion/FramedEmployees/InterMail/DayFiveOskarFramedEmployees.html"
+    },
+
+    {
+        "Name": "DayFiveOskarFramedEmployeesMail",
+        "Author": "Oskar Jönsson",
+        "Subject": "You made that way too easy",
+        "Date": "4",
+        "Message": "Messages/Conclusion/FramedEmployees/InterMail/DayFiveOskarFramedEmployeesMail.html"
+    },
+
+    {
+        "Name": "DayFiveSandraFramedEmployees",
+        "Author": "Sandra Silvern",
+        "Subject": "How could you treat your colleagues like that?",
+        "Date": "4",
+        "Message": "Messages/Conclusion/FramedEmployees/InterMail/DayFiveSandraFramedEmployees.html"
+    },
+
+    {
+        "Name": "DayFiveAndreaFramedEmployees",
+        "Author": "Andrea Schueler",
+        "Subject": "Fuck you",
+        "Date": "4",
+        "Message": "Messages/Conclusion/FramedEmployees/InterMail/DayFiveAndreaFramedEmployees.html"
+    },
+
+    {
+        "Name": "DayFiveSalvinuFramedEmployees",
+        "Author": "Salvinu Manduca",
+        "Subject": "Really, FIRSTNAME",
+        "Date": "4",
+        "Message": "Messages/Conclusion/FramedEmployees/InterMail/DayFiveSalvinuFramedEmployees.html"
+    },
+
+    {
+        "Name": "DayFiveSalvinuFramedEmployeesSpatula",
+        "Author": "Salvinu Manduca",
+        "Subject": "Really, FIRSTNAME",
+        "Date": "4",
+        "Message": "Messages/Conclusion/FramedEmployees/InterMail/DayFiveSalvinuFramedEmployeesSpatula.html"
+    },
+
+    {
+        "Name": "DayFiveSalvinuNoResultsSpatula",
+        "Author": "Salvinu Manduca",
+        "Subject": "Oh, FIRSTNAME",
+        "Date": "4",
+        "Message": "Messages/Conclusion/FramedEmployees/InterMail/DayFiveSalvinuNoResultsSpatula.html"
+    },
+
+    {
         "Name": "DayFiveVedeninArrestedDroneStrikes",
         "Author": "Vitaly Vedenin",
         "Subject": "Comply",

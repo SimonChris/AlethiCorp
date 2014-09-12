@@ -114,6 +114,50 @@ namespace AlethiCorp.DAL
       db.SaveChanges();
     }
 
+    private void EndGameWithFramedEmployees(bool framedAndrea)
+    {
+      EndGameWithArrest();
+
+      db.NewsItems.Add(MakeNewsItem("DayFiveFramedEmployees"));
+
+      db.InterMails.Add(MakeMail("DayFiveSandraFramedEmployees"));
+      db.InterMails.Add(MakeMail("DayFiveVedeninArrested"));
+
+      if (framedAndrea)
+      {
+        db.InterMails.Add(MakeMail("DayFiveAndreaFramedEmployees"));
+      }
+      else if (andreaImpressed)
+      {
+        db.InterMails.Add(MakeMail("DayFiveAndreaArrested"));
+      }
+
+      var searchTerms = new string[] { "hacker", "omega", "alpha", "iam" };
+      var sentMail = db.SentMails.Where(s => s.UserName == UserName).ToList();
+      bool informedOskar = sentMail.Any(s => s.GetContents().ToLower().ContainsAny(searchTerms));
+      if (informedOskar)
+      {
+        db.InterMails.Add(MakeMail("DayFiveOskarFramedEmployeesMail"));
+      }
+      else
+      {
+        db.InterMails.Add(MakeMail("DayFiveOskarFramedEmployees"));
+      }
+      var potluckEvent = db.SocialEvents.ToList().Where(x => x.UserName == UserName && x.Date == db.GetDateString(0)).Single();
+      var potluckContribution = potluckEvent.Contribution.ToLower();
+
+      if (potluckContribution.Contains("spatula"))
+      {
+        db.InterMails.Add(MakeMail("DayFiveSalvinuFramedEmployeesSpatula"));
+      }
+      else
+      {
+        db.InterMails.Add(MakeMail("DayFiveSalvinuFramedEmployees"));
+      }
+
+      db.SaveChanges();
+    }
+
     private void EndGameWithDroneStrikes()
     {
       EndGameWithArrest();
@@ -168,7 +212,7 @@ namespace AlethiCorp.DAL
       db.SaveChanges();
     }
 
-    internal void JoinAndrea()
+    public void JoinAndrea()
     {
       var gameState = db.GameStates.Where(s => s.UserName == UserName).Single();
       gameState.GameProgression = GameProgression.Andrea;
@@ -182,7 +226,7 @@ namespace AlethiCorp.DAL
       db.SaveChanges();
     }
 
-    public void EndGameWithSuccess()
+    private void EndGameWithSuccess()
     {
       var gameState = db.GameStates.Where(s => s.UserName == UserName).Single();
       gameState.GameProgression = GameProgression.Success;
@@ -225,7 +269,7 @@ namespace AlethiCorp.DAL
       db.SaveChanges();
     }
 
-    public void EndGameWithKinsingerArrest()
+    private void EndGameWithKinsingerArrest()
     {
       var gameState = db.GameStates.Where(s => s.UserName == UserName).Single();
       gameState.GameProgression = GameProgression.Success;
@@ -275,6 +319,12 @@ namespace AlethiCorp.DAL
         "adroushan", "john compass", "samuel", "hannah", "absolon", "victor" };
     }
 
+    private string[] GetEmployeeNames()
+    {
+      return new string[] { "benedetto", "sandra", "Oskar", "dumaurier", "andrea", "vitaly",
+        "sháo", "jingfei", "salvinu" };
+    }
+
     public override void ActivateDay()
     {
       var extantReports = db.Reports.Where(x => x.UserName == UserName).ToList();
@@ -298,6 +348,13 @@ namespace AlethiCorp.DAL
       }
 
       var threatsIdentified = recommendations.Where(r => r.ThreatLevel > 5);
+      var employeesFramed = threatsIdentified.Where(r => r.Name.ToLower().ContainsAny(GetEmployeeNames()));
+      if (employeesFramed.Count() > 0)
+      {
+        EndGameWithFramedEmployees(employeesFramed.Where(r => r.Name.ToLower().Contains("andrea")).Any());
+        return;
+      }
+
       if(threatsIdentified.Any(t => t.Name.ToLower().Contains("kinsinger")))
       {
         EndGameWithKinsingerArrest();
