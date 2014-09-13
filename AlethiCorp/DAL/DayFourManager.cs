@@ -223,7 +223,7 @@ namespace AlethiCorp.DAL
             break;
         }
       }
-      else if (clubNightContribution.ToLower().Contains(db.GetFavoriteColor(UserName).ToLower()))
+      else if (clubNightContribution.ToLower().Contains(db.GetFavoriteColor(UserName).ToLower() + " russian"))
       {
         newMails.Add(MakeMail("DayFourBenedettoColor"));
       }
