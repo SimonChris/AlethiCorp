@@ -73,7 +73,31 @@ namespace AlethiCorp.DAL
 
     private void AddOskarReplies(List<SentMail> sentMails)
     {
+      var searchResult = sentMails.Where(r => r.Recipient.ToLower().Contains("oskar"));
+      if (searchResult.Count() > 0)
+      {
+        var subject = "Re: " + searchResult.First().Subject;
 
+        var searchTerms = new string[] { "omega", "forwarded message" };
+        var oldSentMail = db.SentMails.Where(s => s.UserName == UserName).ToList().Where(s => Convert.ToInt32(s.Date) < 2);
+        bool informedOskar = oldSentMail.Any(s => s.GetContents().ToLower().ContainsAll(searchTerms));
+        if (informedOskar)
+        {
+          db.InterMails.Add(MakeMail("DayFourOskarOmegaOngoing", subject));
+        }
+        else
+        {
+          var detailedResult = searchResult.Where(r => r.GetContents().ToLower().ContainsAll(searchTerms));
+          if (detailedResult.Count() > 0)
+          {
+            db.InterMails.Add(MakeMail("DayFourOskarOmega", "Re: " + detailedResult.First().Subject));
+          }
+          else
+          {
+            db.InterMails.Add(MakeMail("DayFourOskarReply", subject));
+          }
+        }
+      }
     }
 
     private void AddSandraReplies(List<SentMail> sentMails)

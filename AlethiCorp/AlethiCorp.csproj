@@ -371,10 +371,13 @@
     <Content Include="Messages\DayFour\InterMail\DayFourBenedettoNoShow.html" />
     <Content Include="Messages\DayFour\InterMail\Replies\DayFourAndreaNelie.html" />
     <Content Include="Messages\DayFour\InterMail\Replies\DayFourAndreaNellie.html" />
+    <Content Include="Messages\DayFour\InterMail\Replies\DayFourOskarOmegaOngoing.html" />
     <Content Include="Messages\DayFour\InterMail\Replies\DayFourSalvinuReply.html" />
     <Content Include="Messages\DayFour\InterMail\Replies\DayFourSalvinuSoupe.html" />
     <Content Include="Messages\DayFour\InterMail\Replies\DayFourShaoReply.html" />
     <Content Include="Messages\DayFour\InterMail\Replies\DayFourShaoChesterton.html" />
+    <Content Include="Messages\DayFour\InterMail\Replies\DayFourOskarOmega.html" />
+    <Content Include="Messages\DayFour\InterMail\Replies\DayFourOskarReply.html" />
     <Content Include="Messages\DayFour\News\InvestigationUpdate.html" />
     <Content Include="Messages\DayFour\Reports\DayFourInterviewBlue.html" />
     <Content Include="Messages\DayFour\Reports\DayFourSurveillanceStudentMeeting.html" />

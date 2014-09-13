@@ -670,6 +670,27 @@
         "Message": "Messages/DayFour/InterMail/Replies/DayFourSalvinuSoupe.html"
     },
 
+        {
+        "Name": "DayFourOskarReply",
+        "Author": "Oskar Jönsson",
+        "Date": "3",
+        "Message": "Messages/DayFour/InterMail/Replies/DayFourOskarReply.html"
+    },
+
+    {
+        "Name": "DayFourOskarOmega",
+        "Author": "Oskar Jönsson",
+        "Date": "3",
+        "Message": "Messages/DayFour/InterMail/Replies/DayFourOskarOmega.html"
+    },
+
+    {
+        "Name": "DayFourOskarOmegaOngoing",
+        "Author": "Oskar Jönsson",
+        "Date": "3",
+        "Message": "Messages/DayFour/InterMail/Replies/DayFourOskarOmegaOngoing.html"
+    },
+
     {
         "Name": "DayFourOskarArrestedDeletedAll",
         "Author": "Oskar Jönsson",
