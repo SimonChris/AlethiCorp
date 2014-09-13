@@ -27,7 +27,6 @@
             <p><b>Explain why the Haka Facilitator made this decision:</b></p>
 
         <div class="form-group">
-            @*@Html.LabelFor(model => model.AnswerOne, htmlAttributes: new { @class = "control-label col-md-2" })*@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.AnswerOne, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.AnswerOne, "", new { @class = "text-danger" })
@@ -71,7 +70,6 @@
             <p><b>Explain:</b></p>
 
         <div class="form-group">
-            @*@Html.LabelFor(model => model.AnswerTwo, htmlAttributes: new { @class = "control-label col-md-2" })*@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.AnswerTwo, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.AnswerTwo, "", new { @class = "text-danger" })
@@ -86,7 +84,6 @@
         </p>
 
         <div class="form-group">
-            @*@Html.LabelFor(model => model.AnswerThree, htmlAttributes: new { @class = "control-label col-md-2" })*@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.AnswerThree, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.AnswerThree, "", new { @class = "text-danger" })
@@ -95,7 +92,7 @@
 
         <div class="form-group">
             <div class="col-md-10">
-                <input type="submit" value="Submit answer" class="btn btn-default" />
+                <input type="submit" value="Submit answers" class="btn btn-default" />
             </div>
         </div>
     </div>
