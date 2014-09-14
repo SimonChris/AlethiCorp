@@ -241,7 +241,7 @@ namespace AlethiCorp.DAL
       {
         newMails.Add(MakeMail("DayFourBenedettoNoShow"));
       }
-      else if (clubNightContribution.Count() == 0)
+      else if (clubNightContribution.Count() == 0 || clubNightContribution.Contains("please don't enter this text"))
       {
         newMails.Add(MakeMail("DayFourBenedettoNoContrib"));
       }
