@@ -1,0 +1,72 @@
+﻿
+@{
+  ViewBag.Title = "Recommendations";
+}
+
+<h2>Recommendations</h2>
+
+@if (ViewBag.Comply || ViewBag.BearBearBear)
+{
+  <table class="table">
+    <tr>
+      <th>
+        @Html.DisplayName("Name")
+      </th>
+      <th>
+        @Html.DisplayName("Threat Level")
+      </th>
+      <th>
+        @Html.DisplayName("Threat Type")
+      </th>
+      <th>
+        @Html.DisplayName("Comments")
+      </th>
+      <th></th>
+    </tr>
+  @if(ViewBag.Comply)
+  {
+    <tr>
+      <td>
+        @ViewBag.PlayerName
+      </td>
+      <td>
+        10
+      </td>
+      <td>
+        Infiltrator
+      </td>
+      <td>
+        Undercover IAM operative.
+      </td>
+      <td>
+
+      </td>
+    </tr>
+  }
+  else if (ViewBag.BearBearBear)
+  {
+    <tr>
+      <td>
+        @ViewBag.BearType
+      </td>
+      <td>
+        9000
+      </td>
+      <td>
+        BEAR!
+      </td>
+      <td>
+        Bear Bear Bear Bear Bear Bear Bear Bear Bear Bear Bear Bear Bear Bear Bear Bear Bear Bear Bear Bear Bear.
+      </td>
+      <td></td>
+    </tr>
+  }
+
+  </table>
+}
+else
+{
+  <p>
+    Recommendations are currently unavailable.
+  </p>
+}

@@ -18,7 +18,7 @@ namespace AlethiCorp.Controllers
     {
       if (db.GetDay(User.Identity.Name) != 3)
       {
-        return View("NoRecommendation");
+        return RedirectToAction("Unavailable");
       }
       ViewBag.DroneStrike = db.GetHackingProgression(User.Identity.Name) == HackingProgression.Concurrency;
       return View(db.Recommendations.Where(x => x.UserName == User.Identity.Name).ToList());
@@ -29,7 +29,7 @@ namespace AlethiCorp.Controllers
     {
       if (db.GetDay(User.Identity.Name) != 3)
       {
-        return View("NoRecommendation");
+        return RedirectToAction("Unavailable");
       } 
       ViewBag.DroneStrike = db.GetHackingProgression(User.Identity.Name) == HackingProgression.Concurrency;
       return View();
@@ -93,7 +93,7 @@ namespace AlethiCorp.Controllers
     {
       if (db.GetDay(User.Identity.Name) != 3)
       {
-        return View("NoRecommendation");
+        return RedirectToAction("Unavailable");
       } 
       if (id == null)
       {
@@ -138,6 +138,15 @@ namespace AlethiCorp.Controllers
         db.SaveChanges();
       }
       return RedirectToAction("Index");
+    }
+
+    public ActionResult Unavailable()
+    {
+      var personalInfo = db.PersonalInfos.Where(r => r.UserName == User.Identity.Name).Single();
+      ViewBag.PlayerName = personalInfo.FirstName + " " + personalInfo.LastName;
+      ViewBag.BearType = db.GetBearType(User.Identity.Name);
+
+      return View();
     }
   }
 }
