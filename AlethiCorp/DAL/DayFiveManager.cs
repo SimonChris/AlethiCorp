@@ -22,9 +22,6 @@ namespace AlethiCorp.DAL
 
       List<Report> reports = db.Reports.Where(m => m.UserName == UserName).ToList();
       reports.ForEach(r => db.Reports.Remove(r));
-
-      List<Recommendation> recommendations = db.Recommendations.Where(m => m.UserName == UserName).ToList();
-      recommendations.ForEach(r => db.Recommendations.Remove(r));
     }
 
     private void EndGameWithArrest()
