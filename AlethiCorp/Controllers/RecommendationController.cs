@@ -142,9 +142,12 @@ namespace AlethiCorp.Controllers
 
     public ActionResult Unavailable()
     {
-      var personalInfo = db.PersonalInfos.Where(r => r.UserName == User.Identity.Name).Single();
-      ViewBag.PlayerName = personalInfo.FirstName + " " + personalInfo.LastName;
-      ViewBag.BearType = db.GetBearType(User.Identity.Name);
+      if (db.IsEmployee(User.Identity.Name))
+      {
+        var personalInfo = db.PersonalInfos.Where(r => r.UserName == User.Identity.Name).Single();
+        ViewBag.PlayerName = personalInfo.FirstName + " " + personalInfo.LastName;
+        ViewBag.BearType = db.GetBearType(User.Identity.Name);
+      }
 
       return View();
     }
