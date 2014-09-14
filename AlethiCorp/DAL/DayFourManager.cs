@@ -17,7 +17,20 @@ namespace AlethiCorp.DAL
 
     private void AddAlexReplies(List<SentMail> sentMails)
     {
-
+      var searchResult = sentMails.Where(r => r.Recipient.ToLower().Contains("alex"));
+      if (searchResult.Count() > 0)
+      {
+        var subject = "Re: " + searchResult.First().Subject;
+        var contactAttempts = db.SentMails.Where(r => r.UserName == UserName).ToList().Where(r => r.Recipient.ToLower().Contains("alex"));
+        if (contactAttempts.Count() > 2)
+        {
+          db.InterMails.Add(MakeMail("DayFourAlexPersistence", subject));
+        }
+        else
+        {
+          db.InterMails.Add(MakeMail("DayFourAlexReply", subject));
+        }
+      }
     }
 
     private void AddAndreaReplies(List<SentMail> sentMails)

@@ -29,7 +29,7 @@ namespace AlethiCorp.DAL
         }
         else
         {
-          db.InterMails.Add(MakeMail("AlexReply", "Re: " + subject));
+          db.InterMails.Add(MakeMail("AlexReply", subject));
         }
       }
     }

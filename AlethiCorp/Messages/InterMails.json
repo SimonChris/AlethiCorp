@@ -692,6 +692,20 @@
     },
 
     {
+        "Name": "DayFourAlexReply",
+        "Author": "Alex DuMaurier",
+        "Date": "3",
+        "Message": "Messages/DayFour/InterMail/Replies/DayFourAlexReply.html"
+    },
+
+    {
+        "Name": "DayFourAlexPersistence",
+        "Author": "Alex DuMaurier",
+        "Date": "3",
+        "Message": "Messages/DayFour/InterMail/Replies/DayFourAlexPersistence.html"
+    },
+
+    {
         "Name": "DayFourOskarArrestedDeletedAll",
         "Author": "Oskar Jönsson",
         "Subject": "Well, that was easy",
