@@ -615,6 +615,7 @@
     <Content Include="Views\Final\BearEnding.cshtml" />
     <Content Include="Views\Final\Success.cshtml" />
     <Content Include="Views\Final\AndreaEnding.cshtml" />
+    <Content Include="Views\Recommendation\NoRecommendation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

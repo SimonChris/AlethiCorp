@@ -16,6 +16,10 @@ namespace AlethiCorp.Controllers
     // GET: Recommendations
     public ActionResult Index()
     {
+      if (db.GetDay(User.Identity.Name) != 3)
+      {
+        return View("NoRecommendation");
+      }
       ViewBag.DroneStrike = db.GetHackingProgression(User.Identity.Name) == HackingProgression.Concurrency;
       return View(db.Recommendations.Where(x => x.UserName == User.Identity.Name).ToList());
     }
@@ -23,6 +27,10 @@ namespace AlethiCorp.Controllers
     // GET: Recommendations/Create
     public ActionResult Create()
     {
+      if (db.GetDay(User.Identity.Name) != 3)
+      {
+        return View("NoRecommendation");
+      } 
       ViewBag.DroneStrike = db.GetHackingProgression(User.Identity.Name) == HackingProgression.Concurrency;
       return View();
     }
@@ -83,6 +91,10 @@ namespace AlethiCorp.Controllers
     // GET: Recommendations/Edit/5
     public ActionResult Edit(int? id)
     {
+      if (db.GetDay(User.Identity.Name) != 3)
+      {
+        return View("NoRecommendation");
+      } 
       if (id == null)
       {
         return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
