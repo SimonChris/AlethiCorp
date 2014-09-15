@@ -447,6 +447,7 @@
     <Content Include="Messages\DayThree\Reports\MailBrightfieldCarbon.html" />
     <Content Include="Messages\DayThree\Reports\PhoneKinsingerBrightfield.html" />
     <Content Include="Messages\DayThree\Reports\PhoneKinsingerVelika.html" />
+    <Content Include="Messages\DayThree\Reports\DayThreeSurveillanceMarian.html" />
     <Content Include="Messages\DayThree\Reports\SurveillanceStudentMeeting.html" />
     <Content Include="Messages\DayThree\Reports\MailKinsingerVelika.html" />
     <Content Include="Messages\DayThree\Reports\SurveillanceBlack.html" />

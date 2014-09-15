@@ -227,6 +227,11 @@ namespace AlethiCorp.DAL
           newReports.Add(MakeReport("DayThreeSurveillanceStudentMeeting"));
         }
       }
+      if(reviewed.Contains("DayTwoSurveillanceKinsinger"))
+      {
+        results++;
+        newReports.Add(MakeReport("DayThreeSurveillanceMarian"));
+      }
       newReports.ForEach(x => db.Reports.Add(x));
       return results;
     }

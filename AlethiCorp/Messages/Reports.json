@@ -221,6 +221,15 @@
     },
 
     {
+        "Name": "DayThreeSurveillanceMarian",
+        "Type": "Surveillance",
+        "Title": "Surveillance Report B1688A - Subject: Victor Marian",
+        "Author": "A27",
+        "Date": "2",
+        "Information": "Messages/DayThree/Reports/DayThreeSurveillanceMarian.html"
+    },
+
+    {
         "Name": "DayThreeMailBlackUnknown",
         "Type": "EMail",
         "Title": "Philip Black and Unknown",
