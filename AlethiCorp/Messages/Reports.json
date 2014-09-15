@@ -297,6 +297,15 @@
     },
 
     {
+        "Name": "DayFourSurveillanceMarian",
+        "Type": "Surveillance",
+        "Title": "Surveillance Report B1792A - Subject: Victor Marian",
+        "Author": "A27",
+        "Date": "3",
+        "Information": "Messages/DayFour/Reports/DayFourSurveillanceMarian.html"
+    },
+
+    {
         "Name": "DayFourInterviewBlue",
         "Type": "Surveillance",
         "Title": "Interview with John Blue, aka 'Philip Black'",

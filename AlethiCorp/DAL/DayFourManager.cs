@@ -183,6 +183,11 @@ namespace AlethiCorp.DAL
         results++;
         newReports.Add(MakeReport("DayFourInterviewBlue"));
       }
+      if(reviewed.Contains("DayThreeSurveillanceMarian"))
+      {
+        results++;
+        newReports.Add(MakeReport("DayFourSurveillanceMarian"));
+      }
       if (db.Reports.Any(r => r.UserName == UserName && r.Name == "DayOneMailBrightfieldGasparyan" && r.Flagged))
       {
         results++;
