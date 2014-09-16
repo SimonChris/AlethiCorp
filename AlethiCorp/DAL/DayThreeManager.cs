@@ -404,7 +404,7 @@ namespace AlethiCorp.DAL
 
       var searchTerms = new string[] { "hacker", "omega", "alpha", "iam" };
       var sentMail = db.SentMails.Where(s => s.UserName == UserName).ToList();
-      bool informedOskar = sentMail.Any(s => s.GetContents().ToLower().ContainsAny(searchTerms));
+      bool informedOskar = sentMail.Any(s => s.Recipient.ToLower().Contains("oskar") && s.GetContents().ToLower().ContainsAny(searchTerms));
       if (informedOskar)
       {
         db.InterMails.Add(MakeMail("OskarArrestedDeletedAllMail"));

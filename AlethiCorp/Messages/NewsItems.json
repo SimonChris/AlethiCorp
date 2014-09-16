@@ -91,6 +91,13 @@
     },
 
     {
+        "Name": "DayFiveDroneStrikesInformedOskar",
+        "HeadLine": "AlethiCorp employee exposed as dangerous terrorist",
+        "MainText": "Messages/Conclusion/DroneStrikes/News/DayFiveDroneStrikesInformedOskar.html",
+        "Date": "4"
+    },
+
+    {
         "Name": "DayFiveBear",
         "HeadLine": "Holy shit, a motherfucking bear!",
         "MainText": "Messages/Conclusion/Bear/News/DayFiveBear.html",

@@ -315,6 +315,7 @@
     <Content Include="Messages\Conclusion\DroneStrikes\InterMail\DayFiveSalvinuDroneStrikesSpatula.html" />
     <Content Include="Messages\Conclusion\DroneStrikes\InterMail\DayFiveSandraDroneStrikes.html" />
     <Content Include="Messages\Conclusion\DroneStrikes\InterMail\DayFiveVedeninArrestedDroneStrikes.html" />
+    <Content Include="Messages\Conclusion\DroneStrikes\News\DayFiveDroneStrikesInformedOskar.html" />
     <Content Include="Messages\Conclusion\DroneStrikes\News\DayFiveDroneStrikes.html" />
     <Content Include="Messages\Conclusion\FramedEmployees\InterMail\DayFiveOskarFramedEmployees.html" />
     <Content Include="Messages\Conclusion\FramedEmployees\InterMail\DayFiveOskarFramedEmployeesMail.html" />

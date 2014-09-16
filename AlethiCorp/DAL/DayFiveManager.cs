@@ -33,6 +33,13 @@ namespace AlethiCorp.DAL
       FinishGame();
     }
 
+    private bool InformedOskar()
+    {
+      var searchTerms = new string[] { "hacker", "omega", "alpha", "iam" };
+      var sentMail = db.SentMails.Where(s => s.UserName == UserName).ToList();
+      return sentMail.Any(s => s.Recipient.ToLower().Contains("oskar") && s.GetContents().ToLower().ContainsAny(searchTerms));
+    }
+
     private void EndGameWithDeletionArrest()
     {
       EndGameWithArrest();
@@ -46,10 +53,7 @@ namespace AlethiCorp.DAL
         db.InterMails.Add(MakeMail("DayFiveAndreaArrested"));
       }
 
-      var searchTerms = new string[] { "hacker", "omega", "alpha", "iam" };
-      var sentMail = db.SentMails.Where(s => s.UserName == UserName).ToList();
-      bool informedOskar = sentMail.Any(s => s.GetContents().ToLower().ContainsAny(searchTerms));
-      if (informedOskar)
+      if (InformedOskar())
       {
         db.InterMails.Add(MakeMail("DayFiveOskarArrestedDeletedAllMail"));
       }
@@ -85,10 +89,7 @@ namespace AlethiCorp.DAL
         db.InterMails.Add(MakeMail("DayFiveAndreaArrested"));
       }
 
-      var searchTerms = new string[] { "hacker", "omega", "alpha", "iam" };
-      var sentMail = db.SentMails.Where(s => s.UserName == UserName).ToList();
-      bool informedOskar = sentMail.Any(s => s.GetContents().ToLower().ContainsAny(searchTerms));
-      if (informedOskar)
+      if (InformedOskar())
       {
         db.InterMails.Add(MakeMail("DayFiveOskarArrestedNoResultsMail"));
       }
@@ -129,10 +130,7 @@ namespace AlethiCorp.DAL
         db.InterMails.Add(MakeMail("DayFiveAndreaArrested"));
       }
 
-      var searchTerms = new string[] { "hacker", "omega", "alpha", "iam" };
-      var sentMail = db.SentMails.Where(s => s.UserName == UserName).ToList();
-      bool informedOskar = sentMail.Any(s => s.GetContents().ToLower().ContainsAny(searchTerms));
-      if (informedOskar)
+      if (InformedOskar())
       {
         db.InterMails.Add(MakeMail("DayFiveOskarFramedEmployeesMail"));
       }
@@ -159,7 +157,14 @@ namespace AlethiCorp.DAL
     {
       EndGameWithArrest();
 
-      db.NewsItems.Add(MakeNewsItem("DayFiveDroneStrikes"));
+      if (InformedOskar())
+      {
+        db.NewsItems.Add(MakeNewsItem("DayFiveDroneStrikesInformedOskar"));
+      }
+      else
+      {
+        db.NewsItems.Add(MakeNewsItem("DayFiveDroneStrikes"));
+      }
 
       db.InterMails.Add(MakeMail("DayFiveSandraDroneStrikes"));
       db.InterMails.Add(MakeMail("DayFiveVedeninArrestedDroneStrikes"));
@@ -169,10 +174,7 @@ namespace AlethiCorp.DAL
         db.InterMails.Add(MakeMail("DayFiveAndreaArrested"));
       }
 
-      var searchTerms = new string[] { "hacker", "omega", "alpha", "iam" };
-      var sentMail = db.SentMails.Where(s => s.UserName == UserName).ToList();
-      bool informedOskar = sentMail.Any(s => s.GetContents().ToLower().ContainsAny(searchTerms));
-      if (informedOskar)
+      if (InformedOskar())
       {
         db.InterMails.Add(MakeMail("DayFiveOskarDroneStrikesMail"));
       }
@@ -240,10 +242,7 @@ namespace AlethiCorp.DAL
         db.InterMails.Add(MakeMail("DayFiveAndreaSuccess"));
       }
 
-      var searchTerms = new string[] { "hacker", "omega", "alpha", "iam" };
-      var sentMail = db.SentMails.Where(s => s.UserName == UserName).ToList();
-      bool informedOskar = sentMail.Any(s => s.GetContents().ToLower().ContainsAny(searchTerms));
-      if (informedOskar)
+      if (InformedOskar())
       {
         db.InterMails.Add(MakeMail("DayFiveOskarSuccessMail"));
       }
@@ -284,10 +283,7 @@ namespace AlethiCorp.DAL
         db.InterMails.Add(MakeMail("DayFiveAndreaSuccess"));
       }
 
-      var searchTerms = new string[] { "hacker", "omega", "alpha", "iam" };
-      var sentMail = db.SentMails.Where(s => s.UserName == UserName).ToList();
-      bool informedOskar = sentMail.Any(s => s.GetContents().ToLower().ContainsAny(searchTerms));
-      if (informedOskar)
+      if (InformedOskar())
       {
         db.InterMails.Add(MakeMail("DayFiveOskarKinsingerMail"));
       }
