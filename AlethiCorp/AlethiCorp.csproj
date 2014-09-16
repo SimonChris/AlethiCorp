@@ -491,6 +491,7 @@
     <Content Include="Messages\DayTwo\News\SiChrisConsulting.html" />
     <Content Include="Messages\DayTwo\Reports\MailKinsingerCarpenter.html" />
     <Content Include="Messages\DayTwo\Reports\MailKinsingerVelika.html" />
+    <Content Include="Messages\DayTwo\Reports\DayTwoOnTheTracksRecursive.html" />
     <Content Include="Messages\DayTwo\Reports\Pamphlets.html" />
     <Content Include="Messages\DayTwo\Reports\MailCarbonCarpenter.html" />
     <Content Include="Messages\DayTwo\Reports\PhoneBrightfieldMartineau.html" />

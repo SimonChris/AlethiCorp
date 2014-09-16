@@ -93,6 +93,15 @@
     },
 
     {
+        "Name": "DayTwoOnTheTracksRecursive",
+        "Type": "Report",
+        "Title": "Analysis of ''Analysis of 'On the Tracks', by Martin Brightfield''",
+        "Author": "Andrea Schueler",
+        "Date": "1",
+        "Information": "Messages/DayTwo/Reports/DayTwoOnTheTracksRecursive.html"
+    },
+
+    {
         "Name": "DayTwoBananas",
         "Type": "Report",
         "Title": "Analysis of Crate of Bananas",

@@ -203,6 +203,10 @@ namespace AlethiCorp.DAL
         newReports.Add(MakeReport("DayTwoSurveillanceAbendroth"));
         newReports.Add(MakeReport("DayTwoBananas"));
       }
+      if (reviewed.Contains("DayOneOnTheTracks"))
+      {
+        newReports.Add(MakeReport("DayTwoOnTheTracksRecursive"));
+      }
       newReports.ForEach(x => db.Reports.Add(x));
       return results;
     }
