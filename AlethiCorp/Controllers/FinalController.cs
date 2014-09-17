@@ -34,7 +34,7 @@ namespace AlethiCorp.Controllers
       {
         return View("AndreaEnding");
       }
-      return HttpNotFound();
+      return View("ManualEnding");
     }
 
     public ActionResult Bear()

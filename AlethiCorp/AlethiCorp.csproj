@@ -620,6 +620,7 @@
     <Content Include="Views\Final\Success.cshtml" />
     <Content Include="Views\Final\AndreaEnding.cshtml" />
     <Content Include="Views\Recommendation\Unavailable.cshtml" />
+    <Content Include="Views\Final\ManualEnding.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
