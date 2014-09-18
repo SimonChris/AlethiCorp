@@ -57,7 +57,25 @@ namespace AlethiCorp.DAL
 
     private void AddBenedettoReplies(List<SentMail> sentMails)
     {
+      var searchResult = sentMails.Where(r => r.Recipient.ToLower().Contains("benedetto"));
+      if (searchResult.Count() > 0)
+      {
+        var hackingProgression = db.GetHackingProgression(UserName);
+        var subject = "Re: " + searchResult.First().Subject;
+        if (hackingProgression == HackingProgression.Concurrency)
+        {
+          db.InterMails.Add(MakeMail("DayFourBenedettoConcurrency", subject));
+        }
+        else if (hackingProgression == HackingProgression.Infiltrator)
+        {
+          db.InterMails.Add(MakeMail("DayFourBenedettoInfiltrator", subject));
 
+        }
+        else
+        {
+          db.InterMails.Add(MakeMail("DayFourBenedettoReply", subject));
+        }
+      }
     }
 
     private void AddShaoReplies(List<SentMail> sentMails)

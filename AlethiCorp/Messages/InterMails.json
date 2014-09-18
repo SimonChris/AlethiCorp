@@ -643,6 +643,27 @@
     },
 
     {
+        "Name": "DayFourBenedettoReply",
+        "Author": "Benedetto Tornincasa",
+        "Date": "3",
+        "Message": "Messages/DayFour/InterMail/Replies/DayFourBenedettoReply.html"
+    },
+
+    {
+        "Name": "DayFourBenedettoInfiltrator",
+        "Author": "Benedetto Tornincasa",
+        "Date": "3",
+        "Message": "Messages/DayFour/InterMail/Replies/DayFourBenedettoInfiltrator.html"
+    },
+
+        {
+        "Name": "DayFourBenedettoConcurrency",
+        "Author": "Benedetto Tornincasa",
+        "Date": "3",
+        "Message": "Messages/DayFour/InterMail/Replies/DayFourBenedettoConcurrency.html"
+    },
+
+    {
         "Name": "DayFourShaoReply",
         "Author": "Shào Jingfei",
         "Date": "3",

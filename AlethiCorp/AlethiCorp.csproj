@@ -370,6 +370,9 @@
     <Content Include="Messages\DayFour\InterMail\DayFourBenedettoContrib.html" />
     <Content Include="Messages\DayFour\InterMail\DayFourBenedettoGrizzly.html" />
     <Content Include="Messages\DayFour\InterMail\DayFourBenedettoNoShow.html" />
+    <Content Include="Messages\DayFour\InterMail\Replies\DayFourBenedettoConcurrency.html" />
+    <Content Include="Messages\DayFour\InterMail\Replies\DayFourBenedettoInfiltrator.html" />
+    <Content Include="Messages\DayFour\InterMail\Replies\DayFourBenedettoReply.html" />
     <Content Include="Messages\DayFour\InterMail\Replies\DayFourAlexPersistence.html" />
     <Content Include="Messages\DayFour\InterMail\Replies\DayFourAndreaNelie.html" />
     <Content Include="Messages\DayFour\InterMail\Replies\DayFourAndreaNellie.html" />
