@@ -1,5 +1,7 @@
 ﻿using AlethiCorp.DAL;
 using AlethiCorp.Models;
+using AlethiCorp.ViewModels;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -201,6 +203,29 @@ namespace AlethiCorp.Controllers
       {
         return RedirectToAction("Register", "PersonalityTest");
       }
+      return View();
+    }
+
+    public ActionResult DumpAllText()
+    {
+      var mailList = JsonConvert.DeserializeObject<List<InterMailViewModel>>(
+      System.IO.File.ReadAllText(HttpRuntime.AppDomainAppPath + "Messages/InterMails.json"));
+
+      var reportList = JsonConvert.DeserializeObject<List<ReportViewModel>>(
+      System.IO.File.ReadAllText(HttpRuntime.AppDomainAppPath + "Messages/Reports.json"));
+
+      var newsList = JsonConvert.DeserializeObject<List<NewsItemViewModel>>(
+      System.IO.File.ReadAllText(HttpRuntime.AppDomainAppPath + "Messages/NewsItems.json"));
+
+      var allText = "";
+      allText += "<h3>InterMails</h3>";
+      mailList.ForEach(m => allText += db.GetHTMLString("", m.Message) + "</br>");
+      allText += "<h3>Reports</h3>";
+      reportList.ForEach(r => allText += db.GetHTMLString("", r.Information) + "</br>");
+      allText += "<h3>News</h3>";
+      newsList.ForEach(n => allText += db.GetHTMLString("", n.MainText) + "</br>");
+      ViewBag.AllText = allText;
+
       return View();
     }
   }

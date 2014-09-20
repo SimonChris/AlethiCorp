@@ -52,7 +52,7 @@ namespace AlethiCorp.DAL
     public static string GetHTMLString(this DatabaseContext db, string userName, string directory)
     {
       string html = File.ReadAllText(HttpRuntime.AppDomainAppPath + directory);
-      return db.ReplaceTextTokens(userName, html);
+      return userName == "" ? html : db.ReplaceTextTokens(userName, html);
     }
 
     public static void CleanUpOldUserInfo(this DatabaseContext db, string userName, bool includeEmployment = true)
