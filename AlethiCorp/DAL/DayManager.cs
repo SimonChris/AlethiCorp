@@ -86,6 +86,7 @@ namespace AlethiCorp.DAL
         HackingProgression = db.GetHackingProgression(UserName),
         FavoriteColor = db.GetFavoriteColor(UserName),
         BearType = db.GetBearType(UserName),
+        TimeStamp = DateTime.Now,
         EkstraInfo = ""
       });
     }

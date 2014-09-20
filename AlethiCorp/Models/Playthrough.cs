@@ -21,6 +21,8 @@ namespace AlethiCorp.Models
 
     public string BearType { get; set; }
 
+    public DateTime TimeStamp { get; set; }
+
     public string EkstraInfo { get; set; }
   }
 }
