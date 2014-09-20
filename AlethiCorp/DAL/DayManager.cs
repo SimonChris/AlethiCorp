@@ -75,6 +75,21 @@ namespace AlethiCorp.DAL
       };
     }
 
+    protected void CachePlaythroughInformation(string ending)
+    {
+      var personalInfo = db.PersonalInfos.Where(r => r.UserName == UserName).Single();
+      db.Playthroughs.Add(new Playthrough
+      {
+        UserName = UserName,
+        PlayerName = personalInfo.FirstName + " " + personalInfo.LastName,
+        Ending = ending,
+        HackingProgression = db.GetHackingProgression(UserName),
+        FavoriteColor = db.GetFavoriteColor(UserName),
+        BearType = db.GetBearType(UserName),
+        EkstraInfo = ""
+      });
+    }
+
     public abstract void ActivateDay();
   }
 }

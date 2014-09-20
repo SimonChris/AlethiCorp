@@ -44,6 +44,8 @@ namespace AlethiCorp.DAL
     {
       EndGameWithArrest();
 
+      CachePlaythroughInformation("DayFiveArrestedDeletedAll");
+
       db.NewsItems.Add(MakeNewsItem("DayFiveArrestedDeletedAll"));
 
       db.InterMails.Add(MakeMail("DayFiveSandraArrestedDeletedAll"));
@@ -80,6 +82,8 @@ namespace AlethiCorp.DAL
     {
       EndGameWithArrest();
 
+      CachePlaythroughInformation("ArrestedNoResults");
+
       db.NewsItems.Add(MakeNewsItem("DayFiveArrestedNoResults"));
 
       db.InterMails.Add(MakeMail("DayFiveSandraArrestedNoResults"));
@@ -115,6 +119,8 @@ namespace AlethiCorp.DAL
     private void EndGameWithFramedEmployees(bool framedAndrea)
     {
       EndGameWithArrest();
+
+      CachePlaythroughInformation("FramedEmployees");
 
       db.NewsItems.Add(MakeNewsItem("DayFiveFramedEmployees"));
 
@@ -156,6 +162,8 @@ namespace AlethiCorp.DAL
     private void EndGameWithDroneStrikes()
     {
       EndGameWithArrest();
+
+      CachePlaythroughInformation("DroneStrikes");
 
       if (InformedOskar())
       {
@@ -203,6 +211,8 @@ namespace AlethiCorp.DAL
       gameState.GameProgression = GameProgression.Bear;
       db.Entry(gameState).State = EntityState.Modified;
 
+      CachePlaythroughInformation("Bear");
+
       FinishGame();
 
       db.NewsItems.Add(MakeNewsItem("DayFiveBear"));
@@ -217,6 +227,8 @@ namespace AlethiCorp.DAL
       gameState.GameProgression = GameProgression.Andrea;
       db.Entry(gameState).State = EntityState.Modified;
 
+      CachePlaythroughInformation("JoinAndrea");
+
       FinishGame();
 
       db.NewsItems.Add(MakeNewsItem("DayFiveAndrea"));
@@ -230,6 +242,8 @@ namespace AlethiCorp.DAL
       var gameState = db.GameStates.Where(s => s.UserName == UserName).Single();
       gameState.GameProgression = GameProgression.Success;
       db.Entry(gameState).State = EntityState.Modified;
+
+      CachePlaythroughInformation("Success");
 
       FinishGame();
 
@@ -270,6 +284,8 @@ namespace AlethiCorp.DAL
       var gameState = db.GameStates.Where(s => s.UserName == UserName).Single();
       gameState.GameProgression = GameProgression.Success;
       db.Entry(gameState).State = EntityState.Modified;
+
+      CachePlaythroughInformation("Kinsinger");
 
       FinishGame();
 

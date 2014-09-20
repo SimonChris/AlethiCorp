@@ -391,6 +391,8 @@ namespace AlethiCorp.DAL
       gameState.GameProgression = GameProgression.Arrested;
       db.Entry(gameState).State = EntityState.Modified;
 
+      CachePlaythroughInformation("DayThreeArrestedDeletedAll");
+
       List<InterMail> interMails = db.InterMails.Where(m => m.UserName == UserName).ToList();
       interMails.ForEach(s => db.InterMails.Remove(s));
 

@@ -19,5 +19,6 @@ namespace AlethiCorp.DAL
         public DbSet<Course> Courses { get; set; }
         public DbSet<SentMail> SentMails { get; set; }
         public DbSet<Recommendation> Recommendations { get; set; }
+        public DbSet<Playthrough> Playthroughs { get; set; }
     }
 }
