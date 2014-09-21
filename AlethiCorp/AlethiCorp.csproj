@@ -387,6 +387,7 @@
     <Content Include="Messages\DayFour\InterMail\Replies\DayFourAlexReply.html" />
     <Content Include="Messages\DayFour\InterMail\Replies\DayFourSandraReply.html" />
     <Content Include="Messages\DayFour\InterMail\Replies\DayFourSandraTrain.html" />
+    <Content Include="Messages\DayFour\InterMail\Replies\DayFourVitalyReply.html" />
     <Content Include="Messages\DayFour\News\InvestigationUpdate.html" />
     <Content Include="Messages\DayFour\Reports\DayFourInterviewBlue.html" />
     <Content Include="Messages\DayFour\Reports\DayFourSurveillanceStudentMeeting.html" />

@@ -170,7 +170,11 @@ namespace AlethiCorp.DAL
 
     private void AddVitalyReplies(List<SentMail> sentMails)
     {
-
+      var searchResult = sentMails.Where(r => r.Recipient.ToLower().Contains("vitaly"));
+      if (searchResult.Count() > 0)
+      {
+        db.InterMails.Add(MakeMail("DayFourVitalyReply", "Re: " + searchResult.First().Subject));
+      }
     }
 
     private void AddReplies()

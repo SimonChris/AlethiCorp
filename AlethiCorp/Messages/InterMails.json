@@ -720,6 +720,13 @@
     },
 
     {
+        "Name": "DayFourVitalyReply",
+        "Author": "Vitaly Vedening",
+        "Date": "3",
+        "Message": "Messages/DayFour/InterMail/Replies/DayFourVitalyReply.html"
+    },
+
+    {
         "Name": "DayFourOskarReply",
         "Author": "Oskar Jönsson",
         "Date": "3",
