@@ -519,7 +519,6 @@
     <Content Include="Messages\InterMails.json" />
     <Content Include="Messages\Reports.json" />
     <Content Include="Messages\NewsItems.json" />
-    <None Include="Properties\PublishProfiles\AlethiCorp %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\AlethiCorp.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
