@@ -133,7 +133,20 @@ namespace AlethiCorp.DAL
 
     private void AddSandraReplies(List<SentMail> sentMails)
     {
-
+      var searchResult = sentMails.Where(r => r.Recipient.ToLower().Contains("sandra"));
+      if (searchResult.Count() > 0)
+      {
+        var subject = "Re: " + searchResult.First().Subject;
+        var trainResult = searchResult.Where(r => r.GetContents().ToLower().ContainsAny(new string[] { "train" }));
+        if (trainResult.Count() > 0)
+        {
+          db.InterMails.Add(MakeMail("DayFourSandraTrain", "Re: " + trainResult.First().Subject));
+        }
+        else
+        {
+          db.InterMails.Add(MakeMail("DayFourSandraReply", "Re: " + subject));
+        }
+      }
     }
 
     private void AddSalvinuReplies(List<SentMail> sentMails)

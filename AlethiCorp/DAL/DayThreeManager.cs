@@ -146,7 +146,16 @@ namespace AlethiCorp.DAL
       var searchResult = sentMails.Where(r => r.Recipient.ToLower().Contains("sandra"));
       if (searchResult.Count() > 0)
       {
-        db.InterMails.Add(MakeMail("DayThreeSandraReply", "Re: " + searchResult.First().Subject));
+        var subject = "Re: " + searchResult.First().Subject;
+        var trainResult = searchResult.Where(r => r.GetContents().ToLower().ContainsAny(new string[] { "train" }));
+        if (trainResult.Count() > 0)
+        {
+          db.InterMails.Add(MakeMail("DayThreeSandraTrain", "Re: " + trainResult.First().Subject));
+        }
+        else
+        {
+          db.InterMails.Add(MakeMail("DayThreeSandraReply", "Re: " + subject));
+        }
       }
     }
 

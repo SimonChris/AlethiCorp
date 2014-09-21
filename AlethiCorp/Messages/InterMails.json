@@ -294,6 +294,13 @@
     },
 
     {
+        "Name": "DayTwoSandraTrain",
+        "Author": "Sandra Silvern",
+        "Date": "1",
+        "Message": "Messages/DayTwo/InterMail/Replies/DayTwoSandraTrain.html"
+    },
+
+    {
         "Name": "VitalyReply",
         "Author": "Vitaly Vedenin",
         "Date": "1",
@@ -601,6 +608,13 @@
     },
 
     {
+        "Name": "DayThreeSandraTrain",
+        "Author": "Sandra Silvern",
+        "Date": "2",
+        "Message": "Messages/DayThree/InterMail/Replies/DayThreeSandraTrain.html"
+    },
+
+    {
         "Name": "DayThreeVitalyReply",
         "Author": "Vitaly Vedenin",
         "Date": "2",
@@ -689,6 +703,20 @@
         "Author": "Salvinu Manduca",
         "Date": "3",
         "Message": "Messages/DayFour/InterMail/Replies/DayFourSalvinuSoupe.html"
+    },
+
+    {
+        "Name": "DayFourSandraReply",
+        "Author": "Sandra Silvern",
+        "Date": "3",
+        "Message": "Messages/DayFour/InterMail/Replies/DayFourSandraReply.html"
+    },
+
+    {
+        "Name": "DayFourSandraTrain",
+        "Author": "Sandra Silvern",
+        "Date": "3",
+        "Message": "Messages/DayFour/InterMail/Replies/DayFourSandraTrain.html"
     },
 
     {

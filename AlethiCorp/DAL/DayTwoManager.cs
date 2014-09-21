@@ -106,11 +106,15 @@ namespace AlethiCorp.DAL
       if (searchResult.Count() > 0)
       {
         var subject = "Re: " + searchResult.First().Subject;
-        var searchTerms = new string[] { "haka", "facilitator", "underwood" };
-        var detailedResult = searchResult.Where(r => r.GetContents().ToLower().ContainsAny(searchTerms));
-        if (detailedResult.Count() > 0)
+        var hakaResult = searchResult.Where(r => r.GetContents().ToLower().ContainsAny(new string[] { "haka", "facilitator", "underwood" }));
+        var trainResult = searchResult.Where(r => r.GetContents().ToLower().ContainsAny(new string[] { "train" }));
+        if (hakaResult.Count() > 0)
         {
-          db.InterMails.Add(MakeMail("SandraHaka", "Re: " + detailedResult.First().Subject));
+          db.InterMails.Add(MakeMail("SandraHaka", "Re: " + hakaResult.First().Subject));
+        }
+        else if(trainResult.Count() > 0)
+        {
+          db.InterMails.Add(MakeMail("DayTwoSandraTrain", "Re: " + trainResult.First().Subject));
         }
         else
         {

@@ -385,6 +385,8 @@
     <Content Include="Messages\DayFour\InterMail\Replies\DayFourOskarOmega.html" />
     <Content Include="Messages\DayFour\InterMail\Replies\DayFourOskarReply.html" />
     <Content Include="Messages\DayFour\InterMail\Replies\DayFourAlexReply.html" />
+    <Content Include="Messages\DayFour\InterMail\Replies\DayFourSandraReply.html" />
+    <Content Include="Messages\DayFour\InterMail\Replies\DayFourSandraTrain.html" />
     <Content Include="Messages\DayFour\News\InvestigationUpdate.html" />
     <Content Include="Messages\DayFour\Reports\DayFourInterviewBlue.html" />
     <Content Include="Messages\DayFour\Reports\DayFourSurveillanceStudentMeeting.html" />
@@ -438,6 +440,7 @@
     <Content Include="Messages\DayThree\InterMail\DayThreeShaoAllResults.html" />
     <Content Include="Messages\DayThree\InterMail\Replies\DayThreeOmegaNoInfiltratorReply.html" />
     <Content Include="Messages\DayThree\InterMail\Replies\DayThreeOmegaOskarNoInfiltrator.html" />
+    <Content Include="Messages\DayThree\InterMail\Replies\DayThreeSandraTrain.html" />
     <Content Include="Messages\DayThree\InterMail\Replies\DayThreeShaoReply.html" />
     <Content Include="Messages\DayThree\InterMail\Replies\DayThreeShaoZhang.html" />
     <Content Include="Messages\DayThree\InterMail\Replies\DayThreeOmegaOskarInfiltrator.html" />
@@ -459,6 +462,7 @@
     <Content Include="Messages\DayThree\Reports\SurveillanceBlack.html" />
     <Content Include="Messages\DayThree\Reports\VisionsOfTheFuture.html" />
     <Content Include="Messages\DayTwo\InterMail\Replies\AlexSynergy.html" />
+    <Content Include="Messages\DayTwo\InterMail\Replies\DayTwoSandraTrain.html" />
     <Content Include="Messages\DayTwo\Reports\Bananas.html" />
     <Content Include="Messages\DayTwo\InterMail\BenedettoGrizzly.html" />
     <Content Include="Messages\DayTwo\InterMail\BenedettoContrib.html" />
@@ -515,6 +519,7 @@
     <Content Include="Messages\InterMails.json" />
     <Content Include="Messages\Reports.json" />
     <Content Include="Messages\NewsItems.json" />
+    <None Include="Properties\PublishProfiles\AlethiCorp %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\AlethiCorp.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
