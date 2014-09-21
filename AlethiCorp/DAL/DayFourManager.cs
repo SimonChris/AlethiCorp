@@ -99,7 +99,24 @@ namespace AlethiCorp.DAL
 
     private void AddOmegaReplies(List<SentMail> sentMails)
     {
-
+      var searchResult = sentMails.Where(r => r.Recipient.ToLower().ContainsAny(new string[] { "omega" }));
+      if (searchResult.Count() > 0)
+      {
+        var hackingProgression = db.GetHackingProgression(UserName);
+        var subject = "Re: " + searchResult.First().Subject;
+        switch(hackingProgression)
+        {
+          case HackingProgression.Innocent:
+            db.InterMails.Add(MakeMail("DayFourOmegaInnocentReply", subject));
+            break;
+          case HackingProgression.Infiltrator:
+            db.InterMails.Add(MakeMail("DayFourOmegaInfiltratorReply", subject));
+            break;
+          case HackingProgression.Concurrency:
+            db.InterMails.Add(MakeMail("DayFourOmegaConcurrencyReply", subject));
+            break;
+        }
+      }
     }
 
     private void AddOskarReplies(List<SentMail> sentMails)

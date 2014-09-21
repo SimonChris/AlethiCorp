@@ -727,6 +727,27 @@
     },
 
     {
+        "Name": "DayFourOmegaInnocentReply",
+        "Author": "Omega",
+        "Date": "3",
+        "Message": "Messages/DayFour/InterMail/Replies/DayFourOmegaInnocentReply.html"
+    },
+
+    {
+        "Name": "DayFourOmegaInfiltratorReply",
+        "Author": "Omega",
+        "Date": "3",
+        "Message": "Messages/DayFour/InterMail/Replies/DayFourOmegaInfiltratorReply.html"
+    },
+
+    {
+        "Name": "DayFourOmegaConcurrencyReply",
+        "Author": "Omega",
+        "Date": "3",
+        "Message": "Messages/DayFour/InterMail/Replies/DayFourOmegaConcurrencyReply.html"
+    },
+
+    {
         "Name": "DayFourOskarReply",
         "Author": "Oskar Jönsson",
         "Date": "3",
