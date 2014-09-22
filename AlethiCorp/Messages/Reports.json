@@ -221,6 +221,15 @@
     },
 
     {
+        "Name": "DayThreePamphletsRecursive",
+        "Type": "Report",
+        "Title": "Analysis of ''Analysis of Crate of Pamphlets''",
+        "Author": "Andrea Schueler",
+        "Date": "1",
+        "Information": "Messages/DayThree/Reports/DayThreePamphletsRecursive.html"
+    },
+
+    {
         "Name": "DayThreeSurveillanceBlack",
         "Type": "Surveillance",
         "Title": "Surveillance Report B1577A - Subject: Philip Black",

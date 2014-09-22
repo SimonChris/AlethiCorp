@@ -455,6 +455,7 @@
     <Content Include="Messages\DayThree\InterMail\Replies\DayThreeVitalyReply.html" />
     <Content Include="Messages\DayThree\News\Students.html" />
     <Content Include="Messages\DayThree\News\Synergy.html" />
+    <Content Include="Messages\DayThree\Reports\DayThreePamphletsRecursive.html" />
     <Content Include="Messages\DayThree\Reports\MailBlackUnknown.html" />
     <Content Include="Messages\DayFour\Reports\DayFourInterMailReview.html" />
     <Content Include="Messages\DayThree\Reports\MailBrightfieldCarbon.html" />

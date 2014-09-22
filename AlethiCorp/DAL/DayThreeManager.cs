@@ -241,6 +241,10 @@ namespace AlethiCorp.DAL
         results++;
         newReports.Add(MakeReport("DayThreeSurveillanceMarian"));
       }
+      if(reviewed.Contains("DayTwoPamphlets"))
+      {
+        newReports.Add(MakeReport("DayThreePamphletsRecursive"));
+      }
       newReports.ForEach(x => db.Reports.Add(x));
       return results;
     }
