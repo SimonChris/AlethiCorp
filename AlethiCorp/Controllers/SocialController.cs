@@ -86,7 +86,7 @@ namespace AlethiCorp.Controllers
           {
             suggestions.Add(@"Ok, listen up. There is a security vulnerability in the database, but as an HR guy
             I don't have the necessary access to exploit it. 
-            This is where you come in. Open a report in two different browser windows/tabs simultaneously, and try to flag
+            This is where you come in. Open a report in two different browser windows/tabs simultaneously and try to flag
             it from both of them. This should trigger the vulnerability. 
             Omega will slip through during the window of opportunity. Good luck.
             Oh, and I really shouldn't have to say this, but please don't enter this text into the contribution
