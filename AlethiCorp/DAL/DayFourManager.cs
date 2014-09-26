@@ -131,7 +131,15 @@ namespace AlethiCorp.DAL
         bool informedOskar = oldSentMail.Any(s => s.GetContents().ToLower().ContainsAll(searchTerms));
         if (informedOskar)
         {
-          db.InterMails.Add(MakeMail("DayFourOskarOmegaOngoing", subject));
+          var detailedResult = searchResult.Where(r => r.GetContents().ToLower().ContainsAll(new string[] { "benedetto", "forwarded message" }));
+          if (detailedResult.Count() > 0)
+          {
+            db.InterMails.Add(MakeMail("DayFourOskarOmegaBenedetto", "Re: " + detailedResult.First().Subject));
+          }
+          else
+          {
+            db.InterMails.Add(MakeMail("DayFourOskarOmegaOngoing", subject));
+          }
         }
         else
         {

@@ -377,6 +377,7 @@
     <Content Include="Messages\DayFour\InterMail\Replies\DayFourAlexPersistence.html" />
     <Content Include="Messages\DayFour\InterMail\Replies\DayFourAndreaNelie.html" />
     <Content Include="Messages\DayFour\InterMail\Replies\DayFourAndreaNellie.html" />
+    <Content Include="Messages\DayFour\InterMail\Replies\DayFourOskarOmegaBenedetto.html" />
     <Content Include="Messages\DayFour\InterMail\Replies\DayFourOskarOmegaOngoing.html" />
     <Content Include="Messages\DayFour\InterMail\Replies\DayFourSalvinuReply.html" />
     <Content Include="Messages\DayFour\InterMail\Replies\DayFourSalvinuSoupe.html" />
