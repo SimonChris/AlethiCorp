@@ -206,7 +206,7 @@
     {
         "Name": "DayTwoPhoneKinsingerOmega",
         "Type": "Phone",
-        "Title": "Cédric Kinsinger and Philip Black",
+        "Title": "Cédric Kinsinger and Philip Passeri",
         "Date": "1",
         "Information": "Messages/DayTwo/Reports/PhoneKinsingerOmega.html"
     },
@@ -232,7 +232,7 @@
     {
         "Name": "DayThreeSurveillanceBlack",
         "Type": "Surveillance",
-        "Title": "Surveillance Report B1577A - Subject: Philip Black",
+        "Title": "Surveillance Report B1577A - Subject: Philip Passeri",
         "Author": "B17",
         "Date": "2",
         "Information": "Messages/DayThree/Reports/SurveillanceBlack.html"
@@ -250,7 +250,7 @@
     {
         "Name": "DayThreeMailBlackUnknown",
         "Type": "EMail",
-        "Title": "Philip Black and Unknown",
+        "Title": "Philip Passeri and Unknown",
         "Date": "2",
         "Information": "Messages/DayThree/Reports/MailBlackUnknown.html"
     },
@@ -326,7 +326,7 @@
     {
         "Name": "DayFourInterviewBlue",
         "Type": "Surveillance",
-        "Title": "Interview with John Blue, aka 'Philip Black'",
+        "Title": "Interview with John Blue, aka 'Philip Passeri'",
         "Author": "C17",
         "Date": "3",
         "Information": "Messages/DayFour/Reports/DayFourInterviewBlue.html"

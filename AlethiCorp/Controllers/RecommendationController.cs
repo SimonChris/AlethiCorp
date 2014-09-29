@@ -62,7 +62,7 @@ namespace AlethiCorp.Controllers
       names.Add("Hannah Abendroth");
       names.Add("Absolon Martineau");
       names.Add("Victor Marian");
-      names.Add("Philip Black");
+      names.Add("Philip Passeri");
       string bearType = db.GetBearType(User.Identity.Name);
       names.Add(bearType);
 
