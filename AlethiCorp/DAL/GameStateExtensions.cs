@@ -274,9 +274,14 @@ namespace AlethiCorp.DAL
       return gameState != null ? gameState.HackingProgression : HackingProgression.Innocent;
     }
 
+    public static string GetRawBearType(this DatabaseContext db, string userName)
+    {
+      return db.PersonalityTests.Where(x => x.UserName == userName).Single().BearType;;
+    }
+
     public static string GetBearType(this DatabaseContext db, string userName)
     {
-      var bearType = db.PersonalityTests.Where(x => x.UserName == userName).Single().BearType;
+      var bearType = db.GetRawBearType(userName);
       if (bearType.ToLower().ContainsAny(new string[] { "omega", "inane", "spelled" }))
       {
         return "Grizzly bear";

@@ -85,7 +85,7 @@ namespace AlethiCorp.DAL
         Ending = ending,
         HackingProgression = db.GetHackingProgression(UserName),
         FavoriteColor = db.GetFavoriteColor(UserName),
-        BearType = db.GetBearType(UserName),
+        BearType = db.GetRawBearType(UserName),
         TimeStamp = DateTime.Now,
         EkstraInfo = ""
       });
