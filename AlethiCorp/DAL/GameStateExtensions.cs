@@ -276,7 +276,12 @@ namespace AlethiCorp.DAL
 
     public static string GetBearType(this DatabaseContext db, string userName)
     {
-      return db.PersonalityTests.Where(x => x.UserName == userName).Single().BearType;
+      var bearType = db.PersonalityTests.Where(x => x.UserName == userName).Single().BearType;
+      if (bearType.ToLower().ContainsAny(new string[] { "omega", "inane", "spelled" }))
+      {
+        return "Grizzly bear";
+      }
+      return bearType;
     }
 
     public static string GetFavoriteColor( this DatabaseContext db, string userName ) {

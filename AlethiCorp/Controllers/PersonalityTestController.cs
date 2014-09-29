@@ -145,15 +145,6 @@ namespace AlethiCorp.Controllers
 
     }
 
-    private string NormalizeBear(string bear)
-    {
-      if(bear.ToLower().ContainsAny(new string[] { "omega", "inane", "spelled" }))
-      {
-        return "Grizzly bear";
-      }
-      return bear;
-    }
-
     private static readonly DateTime minimumDate = new DateTime(1753, 1, 1);
 
     private DateTime NormalizeDate(DateTime date)
@@ -193,7 +184,7 @@ namespace AlethiCorp.Controllers
           UserName = User.Identity.Name,
           FavoriteColor = personalitytest.FavoriteColor,
           FavoriteDate = NormalizeDate(personalitytest.FavoriteDate.Value),
-          BearType = NormalizeBear(personalitytest.BearType),
+          BearType = personalitytest.BearType,
           TeamPlayer = personalitytest.TeamPlayer,
           ValueTypeSelection = (int)personalitytest.ValueTypeSelection,
           MaxCivilians = personalitytest.MaxCivilians,
