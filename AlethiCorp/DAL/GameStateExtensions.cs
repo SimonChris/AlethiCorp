@@ -296,7 +296,7 @@ namespace AlethiCorp.DAL
     public static bool BearEnabled(this DatabaseContext db, string userName)
     {
       var bear = db.GetBearType(userName).ToLower();
-      int bearCount = db.SocialEvents.ToList().Count(s => s.Contribution.ToLower().ContainsAny(new string[] { "bear", bear }));
+      int bearCount = db.SocialEvents.Where(s => s.UserName == userName).ToList().Count(s => s.Contribution.ToLower().ContainsAny(new string[] { "bear", bear }));
 
       return bearCount > 1;
     }
