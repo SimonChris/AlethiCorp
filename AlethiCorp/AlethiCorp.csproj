@@ -636,6 +636,8 @@
     <Content Include="Views\Recommendation\Unavailable.cshtml" />
     <Content Include="Views\Final\ManualEnding.cshtml" />
     <Content Include="Views\Home\DumpAllText.cshtml" />
+    <Content Include="Views\Final\Amusing.cshtml" />
+    <Content Include="Views\Final\ManualAmusing.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

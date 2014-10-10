@@ -46,6 +46,7 @@
         @Html.AntiForgeryToken()
         <p>
           <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a> | @Html.ActionLink("Restart game", "ResetAll", "Internal") |
+          @Html.ActionLink("Things to try", "Amusing", "Final") |
           <a href="http://www.sichris.com/">Author page</a>
         </p>
       }

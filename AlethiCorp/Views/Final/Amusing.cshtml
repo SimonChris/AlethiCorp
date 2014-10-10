@@ -1,0 +1,63 @@
+﻿@{
+  Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width" />
+  <title>Amusing</title>
+</head>
+<body>
+  <div>
+
+    <p><b>Amusing</b></p>
+
+    <p>
+      AlethiCorp has a lot of hidden content that you will have to go off the beaten path to find.
+      Here are a couple of hints for things to try:
+    </p>
+
+    <p>
+      @ViewBag.BearTypeLower. @ViewBag.BearType. @ViewBag.BearTypeCapital! You must be proactive with your bear.
+      Bears love proactivity.
+    </p>
+
+    <p>
+      Andrea Schueler could use a friend.
+    </p>
+
+    <p>
+      Sandra Silvern likes talking about trains.
+    </p>
+
+    <p>
+      A spatula can be used to make delicious crêpes.
+    </p>
+
+    <p>
+      Just because there is no link to a location doesn't mean you can't go there. You can navigate
+      the website manually by typing URL's into the address bar. Or use bookmarks to remember locations.
+    </p>
+
+    <p>
+      You can reset the game at any time, without losing your employment status, by navigating
+      to @Html.ActionLink("alethicorp.com/Internal/Reset", "Reset", "Internal"). Using the restart link below
+      will require you to reapply for the position.
+    </p>
+
+    @if (Request.IsAuthenticated)
+    {
+      using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+      {
+        @Html.AntiForgeryToken()
+        <p>
+          <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a> | @Html.ActionLink("Restart game", "ResetAll", "Internal") |
+          <a href="http://www.sichris.com/">Author page</a>
+        </p>
+      }
+    }
+  </div>
+</body>
+</html>

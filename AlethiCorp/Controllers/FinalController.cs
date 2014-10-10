@@ -60,5 +60,19 @@ namespace AlethiCorp.Controllers
       db.JoinAndrea(User.Identity.Name);
       return RedirectToAction("Index", "Internal");
     }
+
+    public ActionResult Amusing()
+    {
+      var progression = db.GetProgression(User.Identity.Name);
+      if (progression == GameProgression.Ongoing)
+      {
+        return View("ManualAmusing");
+      }
+
+      ViewBag.BearTypeLower = db.GetBearType(User.Identity.Name).ToLower();
+      ViewBag.BearType = db.GetBearType(User.Identity.Name);
+      ViewBag.BearTypeCapital = db.GetBearType(User.Identity.Name).ToUpper();
+      return View();
+    }
   }
 }
