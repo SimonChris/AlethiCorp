@@ -52,7 +52,7 @@ namespace AlethiCorp.Controllers
 
     public ActionResult Details(int id = 0)
     {
-      InterMail intermail = db.InterMails.Find(id);
+      InterMail intermail = db.InterMails.Where(x => x.UserName == User.Identity.Name && x.Id == id).SingleOrDefault();
       if (intermail == null)
       {
         intermail = new InterMail() { Name = "DefaultMail", Read = true };

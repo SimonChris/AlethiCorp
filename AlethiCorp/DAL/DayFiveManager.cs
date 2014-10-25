@@ -320,7 +320,7 @@ namespace AlethiCorp.DAL
       }
 
       db.SaveChanges();
-    }
+   } 
 
     private string[] GetCredibleThreatNames()
     {
@@ -330,7 +330,7 @@ namespace AlethiCorp.DAL
 
     private string[] GetEmployeeNames()
     {
-      return new string[] { "benedetto", "sandra", "Oskar", "dumaurier", "andrea", "vitaly",
+      return new string[] { "benedetto", "sandra", "oskar", "dumaurier", "andrea", "vitaly",
         "sháo", "jingfei", "salvinu" };
     }
 
