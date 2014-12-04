@@ -287,12 +287,14 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Images\BackgroundLight.jpg" />
+    <Content Include="Images\BackgroundLightDarker.jpg" />
     <Content Include="Images\BackgroundSimple.jpg" />
     <Content Include="Images\BackgroundWave.jpg" />
     <Content Include="Images\BlackMarble.png" />
     <Content Include="Images\BlackTrain.jpg" />
     <Content Include="Images\Cargo Train.jpg" />
     <Content Include="Images\CorpBackground.jpg" />
+    <Content Include="Images\CorpBackgroundLighter.jpg" />
     <Content Include="Images\CorpBackgroundWave.jpg" />
     <Content Include="Images\DancingBear.JPG" />
     <Content Include="Images\Eye.png" />
