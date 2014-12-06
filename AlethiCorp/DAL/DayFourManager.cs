@@ -281,7 +281,8 @@ namespace AlethiCorp.DAL
       }
 
       int bearCount = 0;
-      var potluckEvent = db.SocialEvents.ToList().Where(x => x.UserName == UserName && x.Date == db.GetDateString(0)).Single();
+      var dayOne = db.GetDateString(0);
+      var potluckEvent = db.SocialEvents.Where(x => x.UserName == UserName && x.Date == dayOne).Single();
       var potluckContribution = potluckEvent.Contribution.ToLower();
       var bear = db.GetBearType(UserName).ToLower();
       var bearTerms = new string[] { "bear", bear };
@@ -289,13 +290,15 @@ namespace AlethiCorp.DAL
       {
         bearCount++;
       }
-      var onboardingEvent = db.SocialEvents.ToList().Where(x => x.UserName == UserName && x.Date == db.GetDateString(1)).Single();
+      var dayTwo = db.GetDateString(1);
+      var onboardingEvent = db.SocialEvents.Where(x => x.UserName == UserName && x.Date == dayTwo).Single();
       var onboardingContribution = onboardingEvent.Contribution.ToLower();
       if (onboardingContribution.ContainsAny(bearTerms))
       {
         bearCount++;
       }
-      var clubNightEvent = db.SocialEvents.ToList().Where(x => x.UserName == UserName && x.Date == db.GetDateString(2)).Single();
+      var dayThree = db.GetDateString(2);
+      var clubNightEvent = db.SocialEvents.Where(x => x.UserName == UserName && x.Date == dayThree).Single();
       var clubNightContribution = clubNightEvent.Contribution.ToLower();
       var bearNight = clubNightContribution.ContainsAny(bearTerms);
       if (bearNight)
@@ -399,7 +402,8 @@ namespace AlethiCorp.DAL
       {
         db.InterMails.Add(MakeMail("DayFourOskarArrestedDeletedAll"));
       }
-      var potluckEvent = db.SocialEvents.ToList().Where(x => x.UserName == UserName && x.Date == db.GetDateString(0)).Single();
+      var dayOne = db.GetDateString(0);
+      var potluckEvent = db.SocialEvents.Where(x => x.UserName == UserName && x.Date == dayOne).Single();
       var potluckContribution = potluckEvent.Contribution.ToLower();
 
       if (potluckContribution.Contains("spatula"))

@@ -279,7 +279,8 @@ namespace AlethiCorp.DAL
         newMails.Add(MakeMail("DayThreeAlphaNoInfiltrator"));
       }
 
-      var potluckEvent = db.SocialEvents.ToList().Where(x => x.UserName == UserName && x.Date == db.GetDateString(0)).Single();
+      var dayOne = db.GetDateString(0);
+      var potluckEvent = db.SocialEvents.Where(x => x.UserName == UserName && x.Date == dayOne).Single();
       var potluckContribution = potluckEvent.Contribution.ToLower();
       var bear = db.GetBearType(UserName).ToLower();
       bool bearParty = potluckContribution.ContainsAny(new string[] { "bear", bear });
@@ -304,7 +305,8 @@ namespace AlethiCorp.DAL
         newMails.Add(MakeMail("DayThreeSalvinuContrib"));
       }
 
-      var onboardingEvent = db.SocialEvents.ToList().Where(x => x.UserName == UserName && x.Date == db.GetDateString(1)).Single();
+      var dayTwo = db.GetDateString(1);
+      var onboardingEvent = db.SocialEvents.ToList().Where(x => x.UserName == UserName && x.Date == dayTwo).Single();
       var onboardingContribution = onboardingEvent.Contribution.ToLower();
       var bearBoarding = onboardingContribution.ContainsAny(new string[] { "bear", bear });
       if (!onboardingEvent.Attending)

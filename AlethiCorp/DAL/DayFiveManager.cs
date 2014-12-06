@@ -63,7 +63,8 @@ namespace AlethiCorp.DAL
       {
         db.InterMails.Add(MakeMail("DayFiveOskarArrestedDeletedAll"));
       }
-      var potluckEvent = db.SocialEvents.ToList().Where(x => x.UserName == UserName && x.Date == db.GetDateString(0)).Single();
+      var dayOne = db.GetDateString(0);
+      var potluckEvent = db.SocialEvents.Where(x => x.UserName == UserName && x.Date == dayOne).Single();
       var potluckContribution = potluckEvent.Contribution.ToLower();
 
       if (potluckContribution.Contains("spatula"))
@@ -101,7 +102,8 @@ namespace AlethiCorp.DAL
       {
         db.InterMails.Add(MakeMail("DayFiveOskarArrestedNoResults"));
       }
-      var potluckEvent = db.SocialEvents.ToList().Where(x => x.UserName == UserName && x.Date == db.GetDateString(0)).Single();
+      var dayOne = db.GetDateString(0);
+      var potluckEvent = db.SocialEvents.Where(x => x.UserName == UserName && x.Date == dayOne).Single();
       var potluckContribution = potluckEvent.Contribution.ToLower();
 
       if (potluckContribution.Contains("spatula"))
@@ -144,7 +146,8 @@ namespace AlethiCorp.DAL
       {
         db.InterMails.Add(MakeMail("DayFiveOskarFramedEmployees"));
       }
-      var potluckEvent = db.SocialEvents.ToList().Where(x => x.UserName == UserName && x.Date == db.GetDateString(0)).Single();
+      var dayOne = db.GetDateString(0);
+      var potluckEvent = db.SocialEvents.Where(x => x.UserName == UserName && x.Date == dayOne).Single();
       var potluckContribution = potluckEvent.Contribution.ToLower();
 
       if (potluckContribution.Contains("spatula"))
@@ -190,7 +193,8 @@ namespace AlethiCorp.DAL
       {
         db.InterMails.Add(MakeMail("DayFiveOskarDroneStrikes"));
       }
-      var potluckEvent = db.SocialEvents.ToList().Where(x => x.UserName == UserName && x.Date == db.GetDateString(0)).Single();
+      var dayOne = db.GetDateString(0);
+      var potluckEvent = db.SocialEvents.Where(x => x.UserName == UserName && x.Date == dayOne).Single();
       var potluckContribution = potluckEvent.Contribution.ToLower();
 
       if (potluckContribution.Contains("spatula"))
@@ -264,7 +268,8 @@ namespace AlethiCorp.DAL
       {
         db.InterMails.Add(MakeMail("DayFiveOskarSuccess"));
       }
-      var potluckEvent = db.SocialEvents.ToList().Where(x => x.UserName == UserName && x.Date == db.GetDateString(0)).Single();
+      var dayOne = db.GetDateString(0);
+      var potluckEvent = db.SocialEvents.Where(x => x.UserName == UserName && x.Date == dayOne).Single();
       var potluckContribution = potluckEvent.Contribution.ToLower();
 
       if (potluckContribution.Contains("spatula"))
@@ -307,7 +312,8 @@ namespace AlethiCorp.DAL
       {
         db.InterMails.Add(MakeMail("DayFiveOskarKinsinger"));
       }
-      var potluckEvent = db.SocialEvents.ToList().Where(x => x.UserName == UserName && x.Date == db.GetDateString(0)).Single();
+      var dayOne = db.GetDateString(0);
+      var potluckEvent = db.SocialEvents.Where(x => x.UserName == UserName && x.Date == dayOne).Single();
       var potluckContribution = potluckEvent.Contribution.ToLower();
 
       if (potluckContribution.Contains("spatula"))
