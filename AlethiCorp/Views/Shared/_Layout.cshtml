@@ -18,22 +18,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href=@Url.Action("Index", "Home")>
-                  <img src="../../Images/Eye.png" width="95" height="50" />
-                </a>
+                @Html.ActionLink("Front Page", "Index", "Home", null, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Front Page", "Index", "Home")</li>
-                    <li>@Html.ActionLink("History", "About", "Home")</li>
-                    <li>@Html.ActionLink("Values", "Values", "Home")</li>
-                    <li>@Html.ActionLink("Services", "Services", "Home")</li>
-                    @*<li>@Html.ActionLink("Who Are We?", "About", "Home")</li>*@
-                    <li>@Html.ActionLink("Careers", "Careers", "Home")</li>
-                    <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("History", "About", "Home", null, new { @class = "navbar-brand" })</li>
+                    <li>@Html.ActionLink("Values", "Values", "Home", null, new { @class = "navbar-brand" })</li>
+                    <li>@Html.ActionLink("Services", "Services", "Home", null, new { @class = "navbar-brand" })</li>
+                    <li>@Html.ActionLink("Careers", "Careers", "Home", null, new { @class = "navbar-brand" })</li>
+                    <li>@Html.ActionLink("Contact Us", "Contact", "Home", null, new { @class = "navbar-brand" })</li>
                     @if (ViewBag.IsEmployee)
                     {
-                        <li>@Html.ActionLink("Internal", "Index", "Internal")</li>
+                        <li>@Html.ActionLink("Internal", "Index", "Internal", null, new { @class = "navbar-brand" })</li>
                     }
                 </ul>
                 @Html.Partial("_LoginPartial")

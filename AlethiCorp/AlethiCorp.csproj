@@ -286,6 +286,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\Logo.png" />
     <Content Include="Images\BackgroundLight.jpg" />
     <Content Include="Images\BackgroundLightDarker.jpg" />
     <Content Include="Images\BackgroundSimple.jpg" />
@@ -527,6 +528,7 @@
     <Content Include="Messages\InterMails.json" />
     <Content Include="Messages\Reports.json" />
     <Content Include="Messages\NewsItems.json" />
+    <None Include="Properties\PublishProfiles\AlethiCorp %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\AlethiCorp.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

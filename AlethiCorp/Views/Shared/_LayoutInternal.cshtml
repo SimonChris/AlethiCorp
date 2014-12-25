@@ -18,90 +18,82 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href=@Url.Action("Index", "Internal")>
-                  <img src="../../Images/Eye.png" width="95" height="50" />
-                </a>
             </div>
+            @Html.ActionLink("News", "Index", "Internal", null, new { @class = "navbar-brand" })
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                   @if (ViewBag.Arrested)
                   {
-                    <li>@Html.ActionLink("News", "Index", "Internal")</li>
-                    <li>@LinkExtensions.ActionLink(Html, "InterMail" + @ViewBag.InterMailCount, "Index", "InterMail")</li>
-                    <li>@Html.ActionLink("University", "Comply", "Internal")</li>
-                    <li>@Html.ActionLink("Social", "Comply", "Internal")</li>
-                    <li>@Html.ActionLink("Information", "Comply", "Internal")</li>
+                    <li>@LinkExtensions.ActionLink(Html, "InterMail" + @ViewBag.InterMailCount, "Index", "InterMail", null, new { @class = "navbar-brand" })</li>
+                    <li>@Html.ActionLink("University", "Comply", "Internal", null, new { @class = "navbar-brand" })</li>
+                    <li>@Html.ActionLink("Social", "Comply", "Internal", null, new { @class = "navbar-brand" })</li>
+                    <li>@Html.ActionLink("Information", "Comply", "Internal", null, new { @class = "navbar-brand" })</li>
                     if (ViewBag.Recommendation)
                     {
-                      <li>@Html.ActionLink("Recommendations", "Comply", "Internal")</li>
+                      <li>@Html.ActionLink("Recommendations", "Comply", "Internal", null, new { @class = "navbar-brand" })</li>
                     }
-                    <li>@Html.ActionLink("TimeLog", "Comply", "Internal")</li>
-                    <li>@Html.ActionLink("Public Page", "Comply", "Internal")</li>
+                    <li>@Html.ActionLink("TimeLog", "Comply", "Internal", null, new { @class = "navbar-brand" })</li>
+                    <li>@Html.ActionLink("Public Page", "Comply", "Internal", null, new { @class = "navbar-brand" })</li>
                   }
                   else if(ViewBag.Comply)
                   {
-                    <li>@Html.ActionLink("News", "Index", "Internal")</li>
-                    <li>@LinkExtensions.ActionLink(Html, "InterMail" + @ViewBag.InterMailCount, "Index", "InterMail")</li>
-                    <li>@Html.ActionLink("Comply", "Comply", "Internal")</li>
-                    <li>@Html.ActionLink("Comply", "Comply", "Internal")</li>
-                    <li>@Html.ActionLink("Comply", "Comply", "Internal")</li>
+                    <li>@LinkExtensions.ActionLink(Html, "InterMail" + @ViewBag.InterMailCount, "Index", "InterMail", null, new { @class = "navbar-brand" })</li>
+                    <li>@Html.ActionLink("Comply", "Comply", "Internal", null, new { @class = "navbar-brand" })</li>
+                    <li>@Html.ActionLink("Comply", "Comply", "Internal", null, new { @class = "navbar-brand" })</li>
+                    <li>@Html.ActionLink("Comply", "Comply", "Internal", null, new { @class = "navbar-brand" })</li>
                     if (ViewBag.Recommendation)
                     {
-                      <li>@Html.ActionLink("Comply", "Comply", "Internal")</li>
+                      <li>@Html.ActionLink("Comply", "Comply", "Internal", null, new { @class = "navbar-brand" })</li>
                     }
-                    <li>@Html.ActionLink("Comply", "Comply", "Internal")</li>
-                    <li>@Html.ActionLink("Comply", "Comply", "Internal")</li>
+                    <li>@Html.ActionLink("Comply", "Comply", "Internal", null, new { @class = "navbar-brand" })</li>
+                    <li>@Html.ActionLink("Comply", "Comply", "Internal", null, new { @class = "navbar-brand" })</li>
                   }
                   else if (ViewBag.BearReleased)
                   {
-                    <li>@Html.ActionLink("News", "Index", "Internal")</li>
-                    <li>@LinkExtensions.ActionLink(Html, "InterMail", "Bear", "Internal")</li>
-                    <li>@Html.ActionLink("University", "Bear", "Internal")</li>
-                    <li>@Html.ActionLink("Social", "Bear", "Internal")</li>
-                    <li>@Html.ActionLink("Information", "Front", "Report")</li>
+                    <li>@LinkExtensions.ActionLink(Html, "InterMail", "Bear", "Internal", null, new { @class = "navbar-brand" })</li>
+                    <li>@Html.ActionLink("University", "Bear", "Internal", null, new { @class = "navbar-brand" })</li>
+                    <li>@Html.ActionLink("Social", "Bear", "Internal", null, new { @class = "navbar-brand" })</li>
+                    <li>@Html.ActionLink("Information", "Front", "Report", null, new { @class = "navbar-brand" })</li>
                     if (ViewBag.Recommendation)
                     {
-                      <li>@Html.ActionLink("Recommendations", "Bear", "Internal")</li>
+                      <li>@Html.ActionLink("Recommendations", "Bear", "Internal", null, new { @class = "navbar-brand" })</li>
                     }
-                    <li>@Html.ActionLink("TimeLog", "Bear", "Internal")</li>
-                    <li>@Html.ActionLink("Public Page", "Bear", "Internal")</li>
+                    <li>@Html.ActionLink("TimeLog", "Bear", "Internal", null, new { @class = "navbar-brand" })</li>
+                    <li>@Html.ActionLink("Public Page", "Bear", "Internal", null, new { @class = "navbar-brand" })</li>
                   }
                   else if (ViewBag.BearBearBear)
                   {
-                    <li>@Html.ActionLink("News", "Index", "Internal")</li>
-                    <li>@LinkExtensions.ActionLink(Html, "Bear", "Bear", "Internal")</li>
-                    <li>@Html.ActionLink("Bear", "Bear", "Internal")</li>
-                    <li>@Html.ActionLink("Bear", "Bear", "Internal")</li>
-                    <li>@Html.ActionLink("Information", "Front", "Report")</li>
+                    <li>@LinkExtensions.ActionLink(Html, "Bear", "Bear", "Internal", null, new { @class = "navbar-brand" })</li>
+                    <li>@Html.ActionLink("Bear", "Bear", "Internal", null, new { @class = "navbar-brand" })</li>
+                    <li>@Html.ActionLink("Bear", "Bear", "Internal", null, new { @class = "navbar-brand" })</li>
+                    <li>@Html.ActionLink("Information", "Front", "Report", null, new { @class = "navbar-brand" })</li>
                     if (ViewBag.Recommendation)
                     {
-                      <li>@Html.ActionLink("Bear", "Bear", "Internal")</li>
+                      <li>@Html.ActionLink("Bear", "Bear", "Internal", null, new { @class = "navbar-brand" })</li>
                     }
-                    <li>@Html.ActionLink("Bear", "Bear", "Internal")</li>
-                    <li>@Html.ActionLink("Bear", "Bear", "Internal")</li>
+                    <li>@Html.ActionLink("Bear", "Bear", "Internal", null, new { @class = "navbar-brand" })</li>
+                    <li>@Html.ActionLink("Bear", "Bear", "Internal", null, new { @class = "navbar-brand" })</li>
                   }
                   else if (ViewBag.Andrea)
                   {
-                    <li>@Html.ActionLink("News", "Index", "Internal")</li>
-                    <li>@Html.ActionLink("Information", "Front", "Report")</li>
+                    <li>@Html.ActionLink("Information", "Front", "Report", null, new { @class = "navbar-brand" })</li>
                   }
                   else
                   {
-                    <li>@Html.ActionLink("News", "Index", "Internal")</li>
-                    <li>@LinkExtensions.ActionLink(Html, "InterMail" + @ViewBag.InterMailCount, "Index", "InterMail")</li>
-                    <li>@Html.ActionLink("University", "Index", "University")</li>
-                    <li>@Html.ActionLink("Social", "Index", "Social")</li>
-                    <li>@Html.ActionLink("Information", "Front", "Report")</li>
+                    <li>@LinkExtensions.ActionLink(Html, "InterMail" + @ViewBag.InterMailCount, "Index", "InterMail", null, new { @class = "navbar-brand" })</li>
+                    <li>@Html.ActionLink("University", "Index", "University", null, new { @class = "navbar-brand" })</li>
+                    <li>@Html.ActionLink("Social", "Index", "Social", null, new { @class = "navbar-brand" })</li>
+                    <li>@Html.ActionLink("Information", "Front", "Report", null, new { @class = "navbar-brand" })</li>
                     if (ViewBag.Recommendation)
                     {
-                      <li>@Html.ActionLink("Recommendations", "Index", "Recommendation")</li>
+                      <li>@Html.ActionLink("Recommendations", "Index", "Recommendation", null, new { @class = "navbar-brand" })</li>
                     }
                     if (ViewBag.Career)
                     {
-                      <li>@Html.ActionLink("myCareer", "Index", "Final")</li>
+                      <li>@Html.ActionLink("myCareer", "Index", "Final", null, new { @class = "navbar-brand" })</li>
                     }
-                    <li>@Html.ActionLink("TimeLog", "Create", "TimeLog")</li>
-                    <li>@Html.ActionLink("Public Page", "Index", "Home")</li>
+                    <li>@Html.ActionLink("TimeLog", "Create", "TimeLog", null, new { @class = "navbar-brand" })</li>
+                    <li>@Html.ActionLink("Public Page", "Index", "Home", null, new { @class = "navbar-brand" })</li>
                   }
                 </ul>
                 @Html.Partial("_LoginPartial")
