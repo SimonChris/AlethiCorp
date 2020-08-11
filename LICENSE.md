@@ -13,7 +13,7 @@ https://creativecommons.org/publicdomain/zero/1.0/deed.en
   <br />
   To the extent possible under law,
   <a rel="dct:publisher"
-     href="https://github.com/SimonChris/AlethiCorp">
+     href="http://www.sichris.com/Games/AlethiCorp">
     <span property="dct:title">Simon Christiansen</span></a>
   has waived all copyright and related or neighboring rights to
   <span property="dct:title">AlethiCorp</span>.
