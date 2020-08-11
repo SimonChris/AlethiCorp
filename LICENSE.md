@@ -1,10 +1,3 @@
-CC0 1.0 Universal (CC0 1.0)
-Public Domain Dedication
-
-No Rights Reserved
-
-https://creativecommons.org/publicdomain/zero/1.0/deed.en
-
 <p xmlns:dct="http://purl.org/dc/terms/" xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
   <a rel="license"
      href="http://creativecommons.org/publicdomain/zero/1.0/">
