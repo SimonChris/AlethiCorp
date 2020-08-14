@@ -18,4 +18,4 @@ This work is published from:
 
 Note that this only applies to the code. Rights to the logo still reside with the artist, Alan Cooper from http://phylodox.com/.
 
-The illustrations are from Wikimedia Commons and mostly have attributation licenses, which I missed at the time. If you would like to be credited for one of these pictures, please contact me at simon@sichris.com.
+The pictures are from Wikimedia Commons and mostly use attributation licenses, which I missed at the time. If you would like to be credited for one of these pictures, please contact me at simon@sichris.com.
