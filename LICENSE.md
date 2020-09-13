@@ -19,3 +19,5 @@ This work is published from:
 The license includes both the code and the logo. The logo is by Alan Cooper from http://phylodox.com/, who has given me permission to release it along with the game.
 
 The pictures are from Wikimedia Commons and mostly use attributation licenses, which I missed at the time. If you would like to be credited for one of these pictures, please contact me at simon@sichris.com.
+
+Please note that "moral rights" (https://en.wikipedia.org/wiki/Moral_rights) to attribution and the integrity of the work still apply. Danish law does not allow me to waive these rights, except on a case-by-case basis.
