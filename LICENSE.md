@@ -16,6 +16,6 @@ This work is published from:
   Danmark</span>.
 </p>
 
-Note that this only applies to the code. Rights to the logo still reside with the artist, Alan Cooper from http://phylodox.com/.
+The license includes both the code and the logo. The logo is by Alan Cooper from http://phylodox.com/, who has given me permission to release it along with the game.
 
 The pictures are from Wikimedia Commons and mostly use attributation licenses, which I missed at the time. If you would like to be credited for one of these pictures, please contact me at simon@sichris.com.
